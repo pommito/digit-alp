@@ -1,26 +1,32 @@
 ---
-import Burger from "./Burger.astro";
+import { getCollection } from "astro:content";
 
+import Burger from "./Burger.astro";
+import Link from "./Link.astro";
+
+const expertises = await getCollection('expertises');
+
+console.log(expertises);
 
 
 ---
 
 <div class="relative">
   <Burger />
-  <nav id="menu_nav" aria-hidden="true" class="fixed inset-0 bg-da text-da-white font-title flex flex-col justify-center px-8  transition-transform duration-500 ease-in-out z-40 pointer-events-auto translate-y-0 aria-hidden:pointer-events-none aria-hidden:translate-y-full">
-    <ul class="text-2xl space-y-4 md:text-5xl md:space-y-8">
+  <nav id="menu_nav" aria-hidden="false" class="fixed inset-0 bg-da text-da-white font-title flex flex-col justify-center px-8  transition-transform duration-500 ease-in-out z-40 pointer-events-auto translate-y-0 aria-hidden:pointer-events-none aria-hidden:translate-y-full">
+    <ul class="text-2xl space-y-4 md:text-6xl md:space-y-8">
       <li class=""><a href="/">Accueil</a></li>
       <li class="">
         <a href="/expertises">Expertises</a>
-        <ul class="text-xl opacity-85 mt-4 pl-4 space-y-3 md:text-4xl md:space-y-6 md:mt-8 md:pl-8">
-          <li class=""><a href="/realisations">Création de site web performant</a></li>
-          <li class=""><a href="/realisations">E-commerce</a></li>
-          <li class=""><a href="/realisations">Développement personnalisé</a></li>
-          <li class=""><a href="/realisations">Référencement naturel</a></li>
-          <li class=""><a href="/realisations">Maintenance & Infogérance</a></li>
+        <ul class="text-xl opacity-85 mt-4 pl-4 space-y-3 md:text-3xl md:space-y-6 md:mt-8 md:pl-8">
+          {expertises.map((expertise) => (
+            <li class="">
+              <Link text={expertise.data.title} url={`/expertises/${expertise.id}`} />
+            </li>
+          ))}
         </ul>
       </li>
-      <li class=""><a href="/realisations">Réalisations</a></li>
+      <li class=""><a href="/realisations">Projets</a></li>
       <li class=""><a href="/a-propos">A propos</a></li>
       <li class=""><a href="/contact">Contact</a></li>
     </ul>

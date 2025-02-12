@@ -9,8 +9,8 @@
 }
 
 @font-face {
-  font-family: 'Miguer Sans';
-  src: url('/assets/fonts/MiguerSans-medium.woff2') format('woff2');
+  font-family: 'MiguerSans';
+  src: url('/assets/fonts/MiguerSans-Medium.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -44,7 +44,7 @@ p {
 
 @theme {
   --font-sans: 'Inter', 'sans-serif';
-  --font-title: 'Miguer Sans', 'sans-serif';
+  --font-title: 'MiguerSans', 'sans-serif';
 
   --color-da: #0a2b8d;
   --color-da-white: #e9edff;
