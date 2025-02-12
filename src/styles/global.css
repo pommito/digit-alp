@@ -1,1 +1,41 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter-var.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Miguer Sans';
+  src: url('/assets/fonts/MiguerSans-medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-title text-pretty leading-none;
+}
+
+p {
+  @apply text-balance leading-normal opacity-85;
+}
+
+::selection {
+}
+
+::-moz-selection {
+}
+
+@theme {
+  --font-sans: 'Inter', 'sans-serif';
+  --font-title: 'Miguer Sans', 'sans-serif';
+}
