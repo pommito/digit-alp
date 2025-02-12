@@ -22,20 +22,26 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-title text-pretty leading-none;
+  @apply font-title  text-pretty leading-none;
 }
 
 p {
-  @apply text-balance leading-normal opacity-85;
+  @apply font-sans text-balance leading-normal opacity-85;
 }
 
 ::selection {
+  @apply bg-da text-da-white;
 }
 
 ::-moz-selection {
+  @apply bg-da text-da-white;
 }
 
 @theme {
   --font-sans: 'Inter', 'sans-serif';
   --font-title: 'Miguer Sans', 'sans-serif';
+
+  --color-da: #0a2b8d;
+  --color-da-white: #e9edff;
+  --color-da-black: #030b24;
 }
