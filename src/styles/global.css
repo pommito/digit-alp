@@ -16,6 +16,11 @@
   font-display: swap;
 }
 
+html,
+body {
+  @apply bg-da-white text-da-black;
+}
+
 h1,
 h2,
 h3,
