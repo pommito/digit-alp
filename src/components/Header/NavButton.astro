@@ -1,0 +1,38 @@
+---
+import PerspectiveText from "./PerspectiveText.astro";
+
+
+---
+
+
+<div id="nav_btn" class="absolute top-0 right-0 group h-10 w-24 rounded-full cursor-pointer overflow-hidden" aria-expanded="false" aria-haspopup="true">
+
+  <div class="group/button relative h-full w-full transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-aria-expanded:-translate-y-full">
+
+    <div class=" w-full h-full text-da-white bg-da">
+      <PerspectiveText label="Menu" />
+    </div>
+    <div class="absolute w-full h-full top-full bg-da-light text-da-white">
+      <PerspectiveText label="Close" />
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  const btnElem = document.getElementById("nav_btn");
+  const menuElem = document.getElementById("nav_menu");
+ 
+  if(btnElem && menuElem) {
+    btnElem.addEventListener("click", () => {
+      const isExpanded = btnElem.getAttribute("aria-expanded") === "true";
+
+      menuElem.setAttribute("aria-hidden", (isExpanded).toString());
+      btnElem.setAttribute("aria-expanded", (!isExpanded).toString());
+
+      
+    });
+  }
+ 
+ </script>

@@ -1,10 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Button from '@/components/ui/Button.astro';
 
 ---
 
 <Layout title='Digit Alp'>
-	<div class="h-[75dvh] w-full bg-da text-da-white pt-40 z-0">
-		Work in progress...
+	<div class="relative h-[75dvh] w-full bg-da text-da-white p-20"> 
+		<div class="container h-full flex flex-col justify-end items-end mx-auto pt-40 px-4 md:px-12">
+			<h1 class="opacity-0">Agence Web à Chambery</h1>
+			<h2 class="text-3xl self-start md:w-5xl md:text-6xl">Ensemble construisons des sites performants et éco-concus</h2>
+			<p class="md:w-lg">Micro agence web à Chambéry, nous vous accompagnons dans tous vos projets. Création, optimisation, sécurisation : ensemble développons des solutions digitales impactantes pour votre activité.</p>
+			<Button text="J'ai un projet !" />
+		</div>
 	</div>
+	<section class="h-screen w-full"></section>
 </Layout>

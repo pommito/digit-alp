@@ -1,0 +1,12 @@
+---
+type Props = {
+  label : string;
+}
+
+const { label } = Astro.props;
+---
+
+<div class="w-full h-full uppercase flex items-center justify-center transition-transform transform-3d duration-750 ease-[cubic-bezier(0.76,0,0.24,1)]  group-hover/button:rotate-x-90">
+  <span class="transition-all duration-750 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover/button:-translate-y-full group-hover/button:opacity-0">{label}</span>
+  <span class="absolute opacity-0 transition-all duration-750 ease-[cubic-bezier(0.76,0,0.24,1)] -rotate-x-90 group-hover/button:opacity-100">{label}</span>
+</div>

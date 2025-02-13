@@ -31,7 +31,7 @@ h6 {
 }
 
 p {
-  @apply font-sans text-balance leading-normal opacity-85;
+  @apply font-sans leading-normal opacity-85;
 }
 
 ::selection {
