@@ -5,15 +5,15 @@ import PerspectiveText from "./PerspectiveText.astro";
 ---
 
 
-<div id="nav_btn" class="absolute top-0 right-0 group h-10 w-24 rounded-full cursor-pointer overflow-hidden" aria-expanded="false" aria-haspopup="true">
+<div id="nav_btn" class="absolute top-0 right-0 group h-12 w-30 rounded-full cursor-pointer overflow-hidden" aria-expanded="false">
 
   <div class="group/button relative h-full w-full transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-aria-expanded:-translate-y-full">
 
-    <div class=" w-full h-full text-da-white bg-da">
+    <div class=" w-full h-full text-lg text-da-white bg-da">
       <PerspectiveText label="Menu" />
     </div>
-    <div class="absolute w-full h-full top-full bg-da-light text-da-white">
-      <PerspectiveText label="Close" />
+    <div class="absolute w-full h-full top-full text-lg bg-da-white text-da">
+      <PerspectiveText label="Fermer" />
     </div>
 
   </div>
@@ -21,18 +21,25 @@ import PerspectiveText from "./PerspectiveText.astro";
 </div>
 
 <script>
-  const btnElem = document.getElementById("nav_btn");
-  const menuElem = document.getElementById("nav_menu");
- 
-  if(btnElem && menuElem) {
-    btnElem.addEventListener("click", () => {
-      const isExpanded = btnElem.getAttribute("aria-expanded") === "true";
+const btnElem = document.getElementById("nav_btn");
+const menuElem = document.getElementById("nav_menu");
 
-      menuElem.setAttribute("aria-hidden", (isExpanded).toString());
-      btnElem.setAttribute("aria-expanded", (!isExpanded).toString());
+if(btnElem && menuElem) {
+  const toggleMenu = () => {
+    const isExpanded = btnElem.getAttribute("aria-expanded") === "true";
 
-      
-    });
-  }
+    menuElem.setAttribute("aria-hidden", (isExpanded).toString());
+    btnElem.setAttribute("aria-expanded", (!isExpanded).toString());
+  };
+
+  btnElem.addEventListener("click", toggleMenu);
+  
+  document.addEventListener("click", (event) => {
+    const isExpanded = btnElem.getAttribute("aria-expanded") === "true";
+    if (isExpanded && !menuElem.contains(event.target) && !btnElem.contains(event.target)) {
+      toggleMenu();
+    }
+  });
+}
  
  </script>

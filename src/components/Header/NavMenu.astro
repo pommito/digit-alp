@@ -1,4 +1,50 @@
 ---
+import { Image } from "astro:assets"
+
+import logo from '@/assets/logo.svg';
+
+const navLinks = [
+  { label: "Accueil", slug: "/" },
+  { label: "Projets", slug: "/contact" },
+  { label: "Expertises", slug: "/contact" },
+  { label: "A propos", slug: "/a-propos" },
+  { label: "Contact", slug: "/contact" },
+]
+
+const subNavLinks = [
+  { label: "Email", slug: "mailto:hello@digit-alp.fr" },
+  { label: "Linkedin", slug: "#" },
+  { label: "Github", slug: "#" },
+]
+
 ---
 
-<div id="nav_menu" class="relative w-[480px] h-[650px] -top-6 -right-6 bg-da rounded-3xl transition-all duration-750 ease-[cubic-bezier(0.76,0,0.24,1)] aria-hidden:w-24 aria-hidden:h-10 aria-hidden:top-0 aria-hidden:right-0" aria-hidden="true"></div>
+<div id="nav_menu" class="group/menu relative w-[480px] h-[575px] -top-6 -right-6 bg-da  text-da-white rounded-3xl transition-all duration-750 ease-[cubic-bezier(0.76,0,0.24,1)] aria-hidden:w-30 aria-hidden:h-12 aria-hidden:top-0 aria-hidden:right-0 aria-hidden:delay-350" aria-hidden="true">
+  <div class="flex flex-col h-full box-border  pt-24 pb-6 px-9">
+
+    <ul id="nav_links" class="group/links space-y-4">
+      {navLinks.map((link, i) => (
+        <div class="block overflow-hidden p-1 ">
+          <li  class="font-title opacity-100 translate-y-0 transition-all duration-750 delay-400 ease-[cubic-bezier(0.76,0,0.24,1)] group-aria-hidden/menu:opacity-0 group-aria-hidden/menu:translate-y-full group-aria-hidden/menu:delay-0 group-aria-hidden/menu:duration-500">
+            <a href={link.slug} class={`group/link flex items-center text-5xl leading-none font-light`}>
+              <figure class={`w-0 h-0 transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] rounded-full bg-da-white group-hover/link:w-2 group-hover/link:h-2 group-hover/link:mr-4`}></figure>
+              <span>{link.label}</span>
+            </a>
+          </li>
+        </div>
+      ))}
+    </ul>
+
+    <ul class="flex justify-between items-center mt-auto">
+      {subNavLinks.map((link, i) => (
+        <li class="opacity-100 transition-opacity duration-750 delay-750 ease-[cubic-bezier(0.76,0,0.24,1)] group-aria-hidden/menu:opacity-0 group-aria-hidden/menu:delay-0 group-aria-hidden/menu:duration-500">
+          <a href={link.slug} class="relative after:content-[''] after:absolute after:w-0 after:h-0.25 after:bg-da-white after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-500 after:ease-[cubic-bezier(.215,.61,.355,1)] ">
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+
+  </div>
+</div>

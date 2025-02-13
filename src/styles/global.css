@@ -3,7 +3,23 @@
 @font-face {
   font-family: 'Inter';
   src: url('/assets/fonts/Inter-var.woff2') format('woff2');
-  font-weight: normal;
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MiguerSans';
+  src: url('/assets/fonts/MiguerSans-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MiguerSans';
+  src: url('/assets/fonts/MiguerSans-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -11,7 +27,7 @@
 @font-face {
   font-family: 'MiguerSans';
   src: url('/assets/fonts/MiguerSans-Medium.woff2') format('woff2');
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -27,7 +43,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-title  text-pretty leading-none;
+  @apply font-title text-pretty leading-none;
 }
 
 p {
