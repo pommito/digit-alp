@@ -1,11 +1,18 @@
 ---
+import PerspectiveText from '../Header/PerspectiveText.astro';
+
 type Props = {
-  text : string;
+  label : string;
 }
 
-const { text } = Astro.props;
+const { label } = Astro.props;
 ---
 
-<a href="#" class="border border-da-white px-6 py-4 w-fit">
-  {text}
-</a>
+<div class="group/button w-fit h-fit text-lg text-da bg-da-white font-medium py-4 px-6 rounded-full cursor-pointer">
+
+  <a class="w-full h-full flex items-center justify-center transition-transform transform-3d duration-750 ease-[cubic-bezier(0.76,0,0.24,1)]  group-hover/button:rotate-x-90">
+    <span class="transition-all duration-750 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover/button:-translate-y-full group-hover/button:opacity-0">{label}</span>
+    <span class="absolute opacity-0 transition-all duration-750 ease-[cubic-bezier(0.76,0,0.24,1)] -rotate-x-90 group-hover/button:opacity-100">{label}</span>
+  </a>
+
+</div>
