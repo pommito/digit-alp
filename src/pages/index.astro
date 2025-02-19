@@ -1,6 +1,43 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Button from '@/components/ui/Button.astro';
+
+import WebdevIcon from '@/assets/creation_site_web.svg';
+import ServiceItem from '@/components/ServiceItem.astro';
+
+const services = [
+	{
+		title: 'Création de site web',
+		description: 'Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit.',
+		link: '/creation-site-web'
+	},
+	{
+		title: 'Création de site web',
+		description: 'Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit.',
+		link: '/creation-site-web'
+	},
+	{
+		title: 'Création de site web',
+		description: 'Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit.',
+		link: '/creation-site-web'
+	},
+	{
+		title: 'Création de site web',
+		description: 'Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit.',
+		link: '/creation-site-web'
+	},
+	{
+		title: 'Création de site web',
+		description: 'Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit.',
+		link: '/creation-site-web'
+	},
+	{
+		title: 'Création de site web',
+		description: 'Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit.',
+		link: '/creation-site-web'
+	},
+]
 
 ---
 
@@ -19,11 +56,18 @@ import Button from '@/components/ui/Button.astro';
 				<Button label="J'ai un projet !" link='/contact' />
 			</div>
 	</div>
-	<section class="h-screen w-full bg-blue-200 px-4 py-10 md:px-12">
+
+	<section class="h-screen w-full bg-blue-200 px-4 py-20 space-y-6 md:px-12">
 		<h2 class="hidden">Agence web savoyarde</h2>
-		<div class="grid grid-cols-1 items-end gap-4 md:grid-cols-2 md:gap-0">
+		<div class="grid grid-cols-1 items-end gap-4 mb-20 md:grid-cols-2 md:gap-0">
       <h3 class="text-4xl md:text-5xl">Une agence web aux multiples casquettes</h3>
       <p class="text-balance">Digit'Alp propose des services complémentaires pour vous accompagner dans la création ou le développement de votre présence digitale. Nous proposons des solutions sur mesure et performantes avec un regard vers l'avenir et l'éco-conception.</p>
   	</div>
+		<ul class="grid grid-cols-1 gap-4 container mx-auto md:grid-cols-2 md:gap-20">
+			{services.map ( service => (
+				<ServiceItem />
+			))}
+			
+		</ul>
 	</section>
 </Layout>
