@@ -5,6 +5,7 @@ import Button from '@/components/ui/Button.astro';
 
 import WebdevIcon from '@/assets/creation_site_web.svg';
 import ServiceItem from '@/components/ServiceItem.astro';
+import FeaturedWorks from '@/components/FeaturedWorks.astro';
 
 const services = [
 	{
@@ -43,7 +44,7 @@ const services = [
 
 <Layout title='Digit Alp'>
 	<div class="h-[75dvh] bg-da-black text-da-white w-full flex flex-col justify-end items-center  pb-8  gap-6 px-4 md:px-12"> 
-			<div class="flex flex-col items-center">
+			<div class=" flex flex-col items-center">
 				<div class="flex items-center gap-2 py-2 px-4 border border-da-white rounded-full w-fit">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-house"><path d="M15 22a1 1 0 0 1-1-1v-4a1 1 0 0 1 .445-.832l3-2a1 1 0 0 1 1.11 0l3 2A1 1 0 0 1 22 17v4a1 1 0 0 1-1 1z"/><path d="M18 10a8 8 0 0 0-16 0c0 4.993 5.539 10.193 7.399 11.799a1 1 0 0 0 .601.2"/><path d="M18 22v-3"/><circle cx="10" cy="10" r="3"/></svg>
 					Grenoble, Chambéry, Lyon
@@ -53,21 +54,23 @@ const services = [
 			</div>
 			<div class="flex justify-between items-end w-full">
 				<p class="md:w-lg pt-80 xl:text-xl xl:w-2xl">Micro agence web à Chambéry, nous vous accompagnons dans tous vos projets. Création, optimisation, sécurisation : ensemble développons des solutions digitales impactantes pour votre activité.</p>
-				<Button label="J'ai un projet !" link='/contact' />
+				<Button label="J'ai un projet !" link='/contact' style="secondary" />
 			</div>
 	</div>
 
-	<section class="h-screen w-full bg-blue-200 px-4 py-20 space-y-6 md:px-12">
+	<section class="container mx-auto w-full  px-4 py-20 space-y-6">
 		<h2 class="hidden">Agence web savoyarde</h2>
 		<div class="grid grid-cols-1 items-end gap-4 mb-20 md:grid-cols-2 md:gap-0">
       <h3 class="text-4xl md:text-5xl">Une agence web aux multiples casquettes</h3>
       <p class="text-balance">Digit'Alp propose des services complémentaires pour vous accompagner dans la création ou le développement de votre présence digitale. Nous proposons des solutions sur mesure et performantes avec un regard vers l'avenir et l'éco-conception.</p>
   	</div>
-		<ul class="grid grid-cols-1 gap-4 container mx-auto md:grid-cols-2 md:gap-20">
+		<ul class="grid grid-cols-1 gap-4 container mx-auto md:grid-cols-2">
 			{services.map ( service => (
 				<ServiceItem />
 			))}
-			
 		</ul>
 	</section>
+
+	<FeaturedWorks />
+
 </Layout>

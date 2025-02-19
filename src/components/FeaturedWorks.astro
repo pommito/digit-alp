@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+
+import Button from "@/components/ui/Button.astro";
+import Card from "@/components/ui/Card.astro";
+
+const featuredWorks = await getCollection('works', entry => entry.data.isFeatured);
+
+---
+
+<section class="py-10 md:py-20">
+  <div class="container flex flex-col items-center h-full mx-auto">
+    <h2 class="text-base self-start leading-none uppercase mb-2">Réalisations</h2>
+    <h2 class="text-4xl self-start  mb-8 md:mb-16 md:text-5xl">Nos clients, des projets uniques</h2>
+    <div class="grid grid-cols-1 w-full md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 md:mb-16">
+      {featuredWorks.map(work => (
+        <Card work={work} />
+      ))}
+    </div>
+    <Button label="Voir toutes les réalisations" link="/realisations" style="primary"/>
+  </div>
+</section>
