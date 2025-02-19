@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
-import ArrowIcon from "./ArrowIcon.astro";
 
 type Props = {
   work: CollectionEntry<"works">;
@@ -20,7 +19,7 @@ const { title, featuredImage, client } = work.data;
     <div class="relative flex justify-between bg-da-white rounded-md w-full py-6 p-4 z-10 gap-2">
       <header>
         <h3 class="mb-2 text-lg">{title}</h3>
-        <h4 class="font-sans text-sm opacity-80">{client}</h4>
+        <h4 class="font-sans opacity-80">{client}</h4>
       </header>
       <div class="flex items-center justify-center bg-da-primary size-12 rounded-md group-hover:bg-da-secondary group-hover:rotate-45 transition-all">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="-rotate-45"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
