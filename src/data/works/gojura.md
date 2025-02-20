@@ -1,7 +1,7 @@
 ---
 title: Création d'un site e-commerce wordpress
 description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
-featuredImage: ./gojura.webp
+featuredImage: ./featuredImages/gojura.webp
 client: Gojura
 category: SEO
 date: 2024-10-01

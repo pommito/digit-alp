@@ -1,16 +1,25 @@
 ---
 import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
 
 import WebdevIcon from '@/assets/creation_site_web.svg';
+
+type Props = {
+  expertise: CollectionEntry<"expertises">;
+}
+
+const { expertise } = Astro.props as Props;
+
+const { title, description, icon } = expertise.data;
 
 
 ---
 
-<li class="flex gap-6 items-center  px-12 py-8">
-  <Image src={WebdevIcon} alt="Webdev" class="w-16 h-16 md:w-20 md:h-20" />
+<li class="flex gap-6 items-center px-12 py-8">
+  <Image src={icon} alt={title} class="w-16 h-16 md:w-20 md:h-20" />
   <div class="space-y-2">
-    <h3 class="text-2xl">Création de site web</h3>
-    <p class="text-balance">Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit.</p>
-    <a href="/creation-site-web" class="">Découvrir</a>
+    <h3 class="text-2xl">{title}</h3>
+    <p class="text-balance">{description}</p>
+    <a href=`/expertises/${expertise.id}` class="relative after:content-[''] after:absolute after:w-full after:h-0.25 after:bg-da-black after:bottom-0 after:right-0 hover:after:w-0 after:transition-all after:origin-left after:duration-500 after:ease-[cubic-bezier(.215,.61,.355,1)]">Découvrir</a>
   </div>
 </li>

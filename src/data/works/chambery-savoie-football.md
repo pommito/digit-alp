@@ -1,7 +1,7 @@
 ---
 title: Refonte de site internet wordpress
 description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
-featuredImage: ./csf.webp
+featuredImage: ./featuredImages/csf.webp
 client: Chambéry Savoie Football
 category: Creation site web
 date: 2023-07-01

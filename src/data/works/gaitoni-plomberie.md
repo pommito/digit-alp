@@ -1,7 +1,7 @@
 ---
 title: Création d'un site web wordpress
 description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
-featuredImage: ./gaitoni.webp
+featuredImage: ./featuredImages/gaitoni.webp
 client: Gaïtoni Plomberie
 category: Creation site web
 date: 2024-07-01
