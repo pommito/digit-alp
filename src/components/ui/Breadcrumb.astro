@@ -1,0 +1,22 @@
+---
+const { pathname } = Astro.url;
+const paths = pathname.split("/").filter(segment => segment);
+
+const breadcrumbs = paths.map((segment, index) => {
+    const breadcrumbPath = '/' + paths.slice(0, index + 1).join('/');
+    return {
+        name: segment,
+        path: breadcrumbPath
+    };
+});
+---
+
+<ul class="flex gap-1 text-sm uppercase ">
+  <li ><a href="/" class="relative">Accueil</a> <span> / </span></li>
+  {breadcrumbs.map((breadcrumb, index) => (
+    <li>
+      <a href={`${breadcrumb.path}`} class="relative" >{breadcrumb.name}</a>
+      {index < breadcrumbs.length - 1 && <span> / </span>}
+    </li>
+  ))}
+</ul>
