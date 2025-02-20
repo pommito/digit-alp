@@ -3,10 +3,11 @@ import { z, defineCollection, reference } from 'astro:content';
 
 const expertises = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/data/expertises' }),
-  schema: () =>
+  schema: ({ image }) =>
     z.object({
       title: z.string(),
       description: z.string(),
+      icon: image(),
     }),
 });
 
