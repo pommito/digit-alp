@@ -1,11 +1,12 @@
 ---
 import { Image } from 'astro:assets';
+
 import Layout from '../layouts/Layout.astro';
 import Button from '@/components/ui/Button.astro';
-
-import WebdevIcon from '@/assets/creation_site_web.svg';
 import ServiceItem from '@/components/ServiceItem.astro';
 import FeaturedWorks from '@/components/FeaturedWorks.astro';
+
+import ctaBannerIcon from '@/assets/cta_banner_icon.svg';
 
 const services = [
 	{
@@ -97,6 +98,21 @@ const services = [
 			<li class="w-full aspect-square flex items-center justify-center col-span-1 bg-neutral-300">Client</li>
 			<li class="w-full aspect-square flex items-center justify-center col-span-1 bg-neutral-300">Client</li>
 		</ul>
+	</section>
+
+	<section class="bg-da-black text-da-white">
+		<div class="container flex flex-col items-center justify-center mx-auto w-full  px-4 py-20">
+			<p class="text-4xl md:text-6xl mb-10">Alors pourquoi pas <em class="font-title">vous</em> ?</p>
+			<div class="flex gap-20 max-w-3xl">
+				<Image src={ctaBannerIcon} alt="Icone de prise de rendez-vous"/>
+				<div class="space-y-4">
+					<p class="text-balance">
+						Chaque projet est un nouveau défi pour notre équipe : repenser votre site Internet, améliorer votre visibilité sur les moteurs de recherche, développer une solutions pour votre activité... Discutons-en !
+					</p>
+					<Button label="Prendre rendez-vous" link='/contact' style="primary" />
+				</div>
+			</div>
+		</div>
 	</section>
 
 </Layout>
