@@ -1,14 +1,14 @@
 ---
-title: Refonte d'un site web multilingue
+title: Interventions technique sur sites clients
 description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
-featuredImage: ./featuredImages/montyon.jpg
-logo: ./logos/montyon.png
+# featuredImage: ./featuredImages/miicom.jpg
+logo: ./logos/miicom.png
 client: Montyon Capital
 category: Creation site web
 date: 2024-10-01
-clientSector: Fond d'investissement
-technologies: [Wordpress, Javascript, Elementor]
-siteurl: https://montyon-capital.com/
+clientSector: Agence web
+technologies: [Wordpress, Php, Javascript]
+siteurl: https://www.miicom.fr/
 isFeatured: false
 relatedWorks: ['chambery-savoie-football', 'gojura', 'gastini']
 ---

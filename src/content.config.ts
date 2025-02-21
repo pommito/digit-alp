@@ -17,7 +17,8 @@ const works = defineCollection({
     z.object({
       title: z.string(),
       description: z.string(),
-      featuredImage: image(),
+      featuredImage: image().optional(),
+      logo: image(),
       client: z.string(),
       category: z.enum(['Creation site web', 'Ecommerce', 'SEO', 'Developpement', 'Maintenance & Infogérance']),
       date: z.date(),

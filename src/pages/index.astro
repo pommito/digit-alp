@@ -10,6 +10,10 @@ import ctaBannerIcon from '@/assets/cta_banner_icon.svg';
 
 
 const expertises = await getCollection('expertises');
+const clients = await getCollection('works')
+
+// TODO : change logos and maybe add a link to the linked project
+
 
 ---
 
@@ -57,16 +61,11 @@ const expertises = await getCollection('expertises');
 	<section class="container mx-auto w-full px-4 py-20">
 		<h3 class="text-4xl md:text-5xl mb-10">Ils nous font confiance <br/> pour leur projet web</h3>
 		<ul class="grid grid-cols-2 gap-2 md:grid-cols-5 px-6">
-			<li class="w-full aspect-square flex items-center justify-center col-span-1 bg-neutral-300">Client</li>
-			<li class="w-full aspect-square flex items-center justify-center col-span-1 bg-neutral-300">Client</li>
-			<li class="w-full aspect-square flex items-center justify-center col-span-1 bg-neutral-300">Client</li>
-			<li class="w-full aspect-square flex items-center justify-center col-span-1 bg-neutral-300">Client</li>
-			<li class="w-full aspect-square flex items-center justify-center col-span-1 bg-neutral-300">Client</li>
-			<li class="w-full aspect-square flex items-center justify-center col-span-1 bg-neutral-300">Client</li>
-			<li class="w-full aspect-square flex items-center justify-center col-span-1 bg-neutral-300">Client</li>
-			<li class="w-full aspect-square flex items-center justify-center col-span-1 bg-neutral-300">Client</li>
-			<li class="w-full aspect-square flex items-center justify-center col-span-1 bg-neutral-300">Client</li>
-			<li class="w-full aspect-square flex items-center justify-center col-span-1 bg-neutral-300">Client</li>
+			{clients.map ( client => (
+				<li class="w-full flex items-center justify-center col-span-1">
+					<Image src={client.data.logo} alt={`Logo ${client.data.client}`} class="" />
+				</li>
+			))}
 		</ul>
 	</section>
 

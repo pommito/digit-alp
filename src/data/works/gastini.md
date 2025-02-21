@@ -2,6 +2,7 @@
 title: Création d'un site web wordpress
 description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
 featuredImage: ./featuredImages/gastini.webp
+logo: ./logos/gastini.png
 client: Gastini
 category: Creation site web
 date: 2024-10-01
