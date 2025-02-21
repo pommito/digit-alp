@@ -1,7 +1,5 @@
 ---
-import { Image } from "astro:assets"
-
-import logo from '@/assets/logo.svg';
+import Link from "../ui/Link.astro";
 
 const navLinks = [
   { label: "Accueil", slug: "/" },
@@ -38,9 +36,7 @@ const subNavLinks = [
     <ul class="flex justify-between items-center mt-auto">
       {subNavLinks.map((link, i) => (
         <li class="opacity-100 transition-opacity duration-750 delay-750 ease-[cubic-bezier(0.76,0,0.24,1)] group-aria-hidden/menu:opacity-0 group-aria-hidden/menu:delay-0 group-aria-hidden/menu:duration-500">
-          <a href={link.slug} class="relative after:content-[''] after:absolute after:w-0 after:h-0.25 after:bg-da-white after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-500 after:ease-[cubic-bezier(.215,.61,.355,1)] ">
-            {link.label}
-          </a>
+          <Link label={link.label} url={link.slug} />
         </li>
       ))}
     </ul>

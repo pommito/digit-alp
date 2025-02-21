@@ -1,8 +1,39 @@
 ---
 import { Image } from "astro:assets";
 import logo from '@/assets/logo.svg';
+import Link from "./ui/Link.astro";
 
 const currentYear = new Date().getFullYear();
+
+const navMenus = [
+  {
+    name : 'Liens utiles',
+    links : [
+      { label: 'Projets', href: '/projets' },
+      { label: 'Expertises', href: '/expertises' },
+      { label: 'A propos', href: '/a-propos' },
+      { label: 'Contact', href: '/contact' },
+    ]
+  },
+  {
+    name : 'Expertises',
+    links : [
+      { label: 'Création de site web', href: '#' },
+      { label: 'Développement personnalisé', href: '#' },
+      { label: 'Référencement naturel', href: '#' },
+      { label: 'Maintenance & Infogérance', href: '#' },
+    ]
+  },
+  {
+    name : 'Wordpress',
+    links : [
+      { label: 'Site wordpress à Chambéry', href: '#' },
+      { label: 'Site wordpress à Grenoble', href: '#' },
+      { label: 'Site wordpress à Annecy', href: '#' },
+      { label: 'Site wordpress à Genève', href: '#' },
+    ]
+  }
+]
 
 
 ---
@@ -15,41 +46,27 @@ const currentYear = new Date().getFullYear();
       </a>
     </div>
     <div class="mt-16 grid grid-cols-2 md:grid-cols-3 xl:col-span-3 xl:mt-0 xl:justify-items-end">
-      <div>
-        <h4 class="text-xl text-da-light">Liens utiles</h4>
-        <ul class="font-normal text-da-primaryLight mt-8 space-y-4">
-          <li><a href="/realisations" class="hover:text-da-white">Nos réalisations</a></li>
-          <li><a href="/a-propos" class="hover:text-da-white">A propos</a></li>
-          <li><a href="#" class="hover:text-da-white">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-xl text-da-light">Expertises</h4>
-        <ul class="font-normal text-da-primaryLight mt-8 space-y-4">
-          <li><a href="#" class="hover:text-da-white">Création de site web</a></li>
-          <li><a href="#" class="hover:text-da-white">Développement personnalisé</a></li>
-          <li><a href="#" class="hover:text-da-white">Référencement naturel</a></li>
-          <li><a href="#" class="hover:text-da-white">Maintenance & Infogérance</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-xl text-da-light">Wordpress</h4>
-        <ul class="font-normal text-da-primaryLight mt-8 space-y-4">
-          <li><a href="#" class="hover:text-da-white">Site wordpress à Chambéry</a></li>
-          <li><a href="#" class="hover:text-da-white">Site wordpress à Grenoble</a></li>
-          <li><a href="#" class="hover:text-da-white">Site wordpress à Annecy</a></li>
-          <li><a href="#" class="hover:text-da-white">Site wordpress à Genève</a></li>
-        </ul>
-      </div>
+      {navMenus.map(({ name, links }) => (
+        <div>
+          <h4 class="text-xl text-da-light">{name}</h4>
+          <ul class="font-normal text-da-primaryLight mt-6 space-y-4">
+            {links.map(({ label, href }) => (
+              <li>
+                <Link label={label} url={href} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
   </div>
   <div class="container flex flex-col-reverse gap-4 items-center mt-16 py-8 text-xs text-da-light border-t mx-auto sm:flex-row sm:justify-between sm:items-start">
     <p class=" leading-5">{currentYear} &copy; Digit'Alp. Tous droits réservés.</p>
     <nav>
       <ul class="flex gap-4">
-        <li class="hover:text-da-white"><a href="#">Mentions légales</a></li>
-        <li class="hover:text-da-white"><a href="#">Politique de confidentialité</a></li>
-        <li class="hover:text-da-white"><a href="#">Plan du site</a></li>
+        <li class="hover:text-da-white transition-colors ease-in-out duration-500"><a href="#">Mentions légales</a></li>
+        <li class="hover:text-da-white transition-colors ease-in-out duration-500"><a href="#">Politique de confidentialité</a></li>
+        <li class="hover:text-da-white transition-colors ease-in-out duration-500"><a href="#">Plan du site</a></li>
       </ul>
     </nav>
   </div>
