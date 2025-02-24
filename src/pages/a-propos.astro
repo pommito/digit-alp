@@ -1,0 +1,62 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from "@/layouts/Layout.astro";
+import PageTitle from "@/components/PageTitle.astro";
+import Button from "@/components/ui/Button.astro";
+import Faq from "@/components/ui/Faq.astro";
+import FeaturedWorks from "@/components/FeaturedWorks.astro";
+
+const featuredWorks = await getCollection('works', entry => entry.data.isFeatured);
+---
+
+<Layout title="Projets">
+	<main>
+		<PageTitle title="Une agence à taille vraiment humaine" description="Découvrez une selection des différents projets que nous avons pu réaliser pour des clients de différentes tailles et issus de divers secteurs. Chaque projet est unique et nos réalisations sont le fruit d'une collaboration étroite avec nos clients pour produire un résultat totalement aligné à leurs attentes." /> 
+		<section class="container mx-auto space-y-20 py-20">
+			<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div class="w-full aspect-4/3 bg-neutral-200 rounded-2xl col-span-1"></div>
+        <div class="space-y-4">
+          <h2 class="text-4xl md:text-5xl">Expert wordpress & <br/> développeur créatif</h2>
+          <p class="text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum. Exercitation elit sit consequat consequat eiusmod elit excepteur officia ad et ipsum ad elit commodo qui.</p>
+          <p class="text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum. Exercitation elit sit consequat consequat eiusmod elit excepteur officia ad et ipsum ad elit commodo qui.</p>
+        </div>
+        
+
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="text-4xl text-center md:text-5xl">Ma méthodologie</h2>
+          <ul class="grid grid-cols-1 md:grid-cols-3">
+            <li class="flex flex-col justify-center items-center gap-4 rounded-lg p-6">
+              <div class="size-32 bg-da-light rounded-full"></div>
+              <h3 class="text-xl md:text-2xl md:mb-2">Expertise</h3>
+              <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </li>
+            <li class="flex flex-col justify-center items-center gap-4 rounded-lg p-6">
+              <div class="size-32 bg-da-light rounded-full"></div>
+              <h3 class="text-xl md:text-2xl md:mb-2">Expertise</h3>
+              <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </li>
+            <li class="flex flex-col justify-center items-center gap-4 rounded-lg p-6">
+              <div class="size-32 bg-da-light rounded-full"></div>
+              <h3 class="text-xl md:text-2xl md:mb-2">Expertise</h3>
+              <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </li>
+          </ul>
+      </div>
+      
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div class="col-span-1 space-y-4">
+          <h2 class="text-4xl md:text-5xl">Vous avez une question ?</h2>
+          <p class="text-balance">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <Button label="Contactez nous" link="/contact" style="primary" />
+        </div>
+        <Faq />
+      </div>
+      
+		</section>
+
+    <FeaturedWorks featuredWorks={featuredWorks} title="Nos projets" subTitle="Nos clients, des projets uniques" client:visible />
+		</main>
+	</Layout>

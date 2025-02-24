@@ -1,0 +1,29 @@
+---
+
+---
+
+
+<ul>
+  <li class="w-full divide-y divide-neutral-200 box-border"  >
+    <button id="faqButton" class="group peer flex justify-between  py-4 w-full cursor-pointer" aria-expanded="false" aria-controls="faq">
+      <span>Question fréquente à ajouter</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-rotate duration-200 ease-in-out group-aria-expanded:rotate-90"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+    <div id="faq" class="box-border h-auto max-h-0 invisible transition-all duration-500 ease-in-out overflow-hidden peer-aria-expanded:max-h-96 peer-aria-expanded:visible">
+      <p class="py-4">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </li>
+</ul>
+
+<script>
+const buttonElem = document.getElementById('faqButton');
+
+if (buttonElem) {
+buttonElem.addEventListener('click', () => {
+  const isExpanded = buttonElem.getAttribute('aria-expanded') === 'true';
+  console.log(isExpanded);
+  
+  buttonElem.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+})};
+
+</script>
