@@ -1,29 +1,57 @@
 ---
 
+type Props = {
+  questions: Array<{
+    label: string;
+    answer: string;
+  }>;
+}
+
+const { questions } = Astro.props;
 ---
 
 
-<ul>
-  <li class="w-full divide-y divide-neutral-200 box-border"  >
+<ul id="faqList">
+  {questions.map((question, index) => (
+    <li class="w-full divide-y divide-neutral-200 box-border">
+      <button id={`faqButton-${index}`} class="group peer flex justify-between py-4 w-full cursor-pointer" aria-expanded="false" aria-controls={`faq-${index}`}>
+        <span>{question.label}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-rotate duration-300 ease-in-out group-aria-expanded:rotate-90"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+      <div id={`faq-${index}`} class="box-border h-auto max-h-0 invisible transition-all duration-750 ease-in-out overflow-hidden peer-aria-expanded:max-h-32 peer-aria-expanded:visible">
+        <p class="py-4">{question.answer}</p>
+      </div>
+    </li>
+  ))}
+  <!-- <li class="w-full divide-y divide-neutral-200 box-border"  >
     <button id="faqButton" class="group peer flex justify-between  py-4 w-full cursor-pointer" aria-expanded="false" aria-controls="faq">
       <span>Question fréquente à ajouter</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-rotate duration-200 ease-in-out group-aria-expanded:rotate-90"><path d="m9 18 6-6-6-6"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-rotate duration-300 ease-in-out group-aria-expanded:rotate-90"><path d="m9 18 6-6-6-6"/></svg>
     </button>
-    <div id="faq" class="box-border h-auto max-h-0 invisible transition-all duration-500 ease-in-out overflow-hidden peer-aria-expanded:max-h-96 peer-aria-expanded:visible">
+    <div id="faq" class="box-border h-auto max-h-0 invisible transition-all duration-750 ease-in-out overflow-hidden peer-aria-expanded:max-h-32 peer-aria-expanded:visible">
       <p class="py-4">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
-  </li>
+  </li> -->
 </ul>
 
 <script>
-const buttonElem = document.getElementById('faqButton');
-
-if (buttonElem) {
-buttonElem.addEventListener('click', () => {
-  const isExpanded = buttonElem.getAttribute('aria-expanded') === 'true';
-  console.log(isExpanded);
+  const listElem = document.getElementById('faqList');
+  const buttonElems = document.querySelectorAll('button[id^="faqButton-"]');
   
-  buttonElem.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
-})};
-
-</script>
+  if (listElem) {
+    listElem.addEventListener('click', (e) => {
+      const buttonTargeted = e.target.closest('button[id^="faqButton-"]');
+  
+      if (buttonTargeted) {
+        const isExpanded = buttonTargeted.getAttribute('aria-expanded') === 'true';
+        buttonTargeted.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+  
+        buttonElems.forEach(button => {
+          if (button !== buttonTargeted) {
+            button.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    });
+  }
+  </script>

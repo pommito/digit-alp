@@ -8,6 +8,21 @@ import Faq from "@/components/ui/Faq.astro";
 import FeaturedWorks from "@/components/FeaturedWorks.astro";
 
 const featuredWorks = await getCollection('works', entry => entry.data.isFeatured);
+
+const questions = [
+  {
+    label: "Quelle est la taille de votre équipe ?",
+    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+  {
+    label: "Quelle est la taille de votre équipe ?",
+    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+  {
+    label: "Comment fonctionne votre équipe ?",
+    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+];
 ---
 
 <Layout title="Projets">
@@ -52,7 +67,7 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
           <p class="text-balance">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <Button label="Contactez nous" link="/contact" style="primary" />
         </div>
-        <Faq />
+        <Faq questions={questions} />
       </div>
       
 		</section>
