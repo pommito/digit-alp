@@ -13,6 +13,4 @@ isFeatured: true
 relatedWorks: ['gojura', 'gastini']
 ---
 
-## Lorem ipsum dolor anim eu euismod
-
-Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur. Dolore incididunt ex sit.
+# TODO AJOUTER CONTENU

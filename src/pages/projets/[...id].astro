@@ -1,0 +1,78 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+import Layout from "@/layouts/Layout.astro";
+import Button from "@/components/ui/Button.astro";
+import Breadcrumb from "@/components/ui/Breadcrumb.astro";
+import FeaturedWorks from "@/components/FeaturedWorks.astro";
+import { getEntries } from "astro:content";
+import { render } from "astro:content";
+import PageTitle from "@/components/PageTitle.astro";
+
+export async function getStaticPaths() {
+  const works = await getCollection("works");
+  
+  return works.map((work) => ({
+    params: { id: work.id },
+    props: { work },
+  }));
+}
+
+const { work } = Astro.props;
+const { Content } = await render(work)
+
+const { title, description, featuredImage, client, date, clientSector, category, technologies, siteurl, relatedWorks } = work.data;
+  
+const relatedWorksData = await getEntries(relatedWorks)
+console.log(relatedWorksData)
+
+
+---
+
+
+<Layout title="Réalisations">
+  <main class="px-4 md:px-0 bg-da-black text-da-white">
+    <PageTitle title={title} description={description} />
+
+    <section class="container grid grid-cols-1 gap-8 pb-10 mx-auto md:grid-cols-2 md:gap-0">
+      {featuredImage && (
+        <Image src={featuredImage} alt="featured image" width={900} height={600} format="avif" class="h-full w-full object-cover object-center rounded-lg md:row-start-1 md:col-start-2" />
+      )}
+      <div class="space-y-8">
+        <ul class="flex flex-col gap-4 h-fit md:grid md:row-start-1">
+          <li>
+            <h3 class="text-da-light text-sm md:mb-2 md:text-base ">Client</h3>
+            <span class="text-base md:text-xl">{client}</span>
+          </li>
+          <li>
+            <h3 class="text-da-light text-sm md:mb-2 md:text-base">Secteur</h3>
+            <span class="text-base md:text-xl">{clientSector}</span>
+          </li>
+          <li>
+            <h3 class="text-da-light text-sm md:mb-2 md:text-base">Année du projet</h3>
+            <span class="text-base md:text-xl">{date.getFullYear()}</span>
+          </li>
+          <li>
+            <h3 class="text-da-light text-sm md:mb-2 md:text-base">Expertises</h3>
+            <span class="text-base md:text-xl">{category}</span>
+          </li>
+          <li>
+            <h3 class="text-da-light text-sm md:mb-2 md:text-base">Technologies</h3>
+            <span class="text-base md:text-xl">{technologies.join(', ')}</span>
+          </li>
+          <li class="mt-4">
+            <Button link={siteurl} label="Consulter le site" style="primary" />
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="workContent" class=" container mx-auto space-y-4">
+      <Content />
+    </section>
+    <section>
+      <FeaturedWorks featuredWorks={relatedWorksData} title="Nos projets" subTitle="Ces projets pourraient vous intéresser" background="dark" client:visible />
+    </section>
+  </main>
+</Layout>

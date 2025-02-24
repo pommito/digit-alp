@@ -16,12 +16,12 @@ const { title, featuredImage, client } = work.data;
     <picture class="absolute inset-0">
       <Image src={featuredImage} alt="TODO" width={720} height={720} format="avif" class="h-full w-full object-cover object-center transform transition-transform duration-300 group-hover:scale-105" />
     </picture>
-    <div class="relative flex justify-between bg-da-white rounded-md w-full py-6 p-4 z-10 gap-2">
+    <div class={`relative flex justify-between bg-da-white text-da-black rounded-md w-full py-6 p-4 z-10 gap-2`}>
       <header>
         <h3 class="mb-2 text-xl">{title}</h3>
         <h4 class="text-base font-sans opacity-80">{client}</h4>
       </header>
-      <div class="flex items-center justify-center bg-da-primary size-12 rounded-lg group-hover:bg-da-secondary group-hover:rotate-45 transition-all">
+      <div class="flex items-center justify-center bg-da text-da-white size-12 rounded-lg group-hover:rotate-45 transition-all">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="-rotate-45"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </div>
     </div>
