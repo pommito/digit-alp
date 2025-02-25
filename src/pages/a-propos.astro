@@ -23,8 +23,8 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
         <Image src={photoProfil} alt="Photo de Victor Lebecq développeur web" class="col-span-2 w-full aspect-4/3 rounded-2xl" />
         <div class="space-y-4 col-span-3">
           <h2 class="text-4xl md:text-5xl">Expert wordpress & <br/> développeur créatif</h2>
-          <p class="text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum. Exercitation elit sit consequat consequat eiusmod elit excepteur officia ad et ipsum ad elit commodo qui.</p>
-          <p class="text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum. Exercitation elit sit consequat consequat eiusmod elit excepteur officia ad et ipsum ad elit commodo qui.</p>
+          <p class="text-xl text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum. Exercitation elit sit consequat consequat eiusmod elit excepteur officia ad et ipsum ad elit commodo qui.</p>
+          <p class="text-xl text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum. Exercitation elit sit consequat consequat eiusmod elit excepteur officia ad et ipsum ad elit commodo qui.</p>
         </div>
         
 
@@ -54,17 +54,18 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
               ))}
           </ul>
       </div>
-      
+		</section>
+
+    <section class="container mx-auto">
       <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div class="col-span-1 space-y-4">
           <h2 class="text-4xl md:text-5xl">Vous avez une question ?</h2>
-          <p class="text-balance">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <Button label="Contactez nous" link="/contact" style="primary" />
+          <p class="text-xl text-balance">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <Button label="Envoyer un message" link="/contact" style="primary" />
         </div>
         <Faq questions={questions} />
       </div>
-      
-		</section>
+    </section>
 
     <FeaturedWorks featuredWorks={featuredWorks} title="Nos projets" subTitle="Nos clients, des projets uniques" />
 		</main>

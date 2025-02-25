@@ -38,9 +38,9 @@ const clients = await getCollection('works')
 
 	<section class="container mx-auto w-full  px-4 py-20 space-y-6">
 		<h2 class="hidden">Agence web savoyarde</h2>
-		<div class="grid grid-cols-1 items-end gap-4 mb-10 md:grid-cols-2 md:gap-0">
+		<div class="grid grid-cols-1 gap-4 mb-10 md:grid-cols-2 md:gap-0">
       <h3 class="text-4xl md:text-5xl">Une agence web aux multiples casquettes</h3>
-      <p class="text-balance">Digit'Alp propose des services complémentaires pour vous accompagner dans la création ou le développement de votre présence digitale. Nous proposons des solutions sur mesure et performantes avec un regard vers l'avenir et l'éco-conception.</p>
+      <p class="text-xl text-balance">Digit'Alp propose des services complémentaires pour vous accompagner dans la création ou le développement de votre présence digitale. Nous proposons des solutions sur mesure et performantes avec un regard vers l'avenir et l'éco-conception.</p>
   	</div>
 		<ul class="grid grid-cols-1 gap-4 container mx-auto md:grid-cols-2">
 			{expertises.map ( expertise => (
@@ -76,7 +76,7 @@ const clients = await getCollection('works')
 			<div class="flex gap-20 max-w-3xl">
 				<Image src={ctaBannerIcon} alt="Icone de prise de rendez-vous"/>
 				<div class="space-y-4">
-					<p class="text-balance">
+					<p class="text-lg">
 						Chaque projet est un nouveau défi pour notre équipe : repenser votre site Internet, améliorer votre visibilité sur les moteurs de recherche, développer une solutions pour votre activité... Discutons-en !
 					</p>
 					<Button label="Prendre rendez-vous" link='/contact' style="primary" />
