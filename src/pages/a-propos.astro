@@ -4,10 +4,33 @@ import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import PageTitle from "@/components/PageTitle.astro";
 import Button from "@/components/ui/Button.astro";
+import IconBox from "@/components/ui/IconBox.astro";
 import Faq from "@/components/ui/Faq.astro";
 import FeaturedWorks from "@/components/FeaturedWorks.astro";
 
+import flexibleIcon from "@/assets/flexible.svg";
+import securityIcon from "@/assets/security.svg";
+import durabilityIcon from "@/assets/durability.svg";
+
 const featuredWorks = await getCollection('works', entry => entry.data.isFeatured);
+
+const methodoly = [
+  {
+    title: "Conception flexible",
+    text: "Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.",
+    icon: flexibleIcon,
+  },
+  {
+    title: "Des sites web sécurisés",
+    text: "Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.",
+    icon: securityIcon,
+  },
+  {
+    title: "Construction durable",
+    text: "Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.",
+    icon: durabilityIcon,
+  },
+];
 
 const questions = [
   {
@@ -43,21 +66,9 @@ const questions = [
       <div class="space-y-4">
         <h2 class="text-4xl text-center md:text-5xl">Ma méthodologie</h2>
           <ul class="grid grid-cols-1 md:grid-cols-3">
-            <li class="flex flex-col justify-center items-center gap-4 rounded-lg p-6">
-              <div class="size-32 bg-da-light rounded-full"></div>
-              <h3 class="text-xl md:text-2xl md:mb-2">Expertise</h3>
-              <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </li>
-            <li class="flex flex-col justify-center items-center gap-4 rounded-lg p-6">
-              <div class="size-32 bg-da-light rounded-full"></div>
-              <h3 class="text-xl md:text-2xl md:mb-2">Expertise</h3>
-              <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </li>
-            <li class="flex flex-col justify-center items-center gap-4 rounded-lg p-6">
-              <div class="size-32 bg-da-light rounded-full"></div>
-              <h3 class="text-xl md:text-2xl md:mb-2">Expertise</h3>
-              <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </li>
+            {methodoly.map(methodoly => (
+              <IconBox title={methodoly.title} text={methodoly.text} icon={methodoly.icon} />
+            ))}
           </ul>
       </div>
       
