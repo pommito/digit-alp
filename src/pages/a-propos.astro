@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
 
 import Layout from "@/layouts/Layout.astro";
 import PageTitle from "@/components/PageTitle.astro";
@@ -8,13 +9,14 @@ import IconBox from "@/components/ui/IconBox.astro";
 import Faq from "@/components/ui/Faq.astro";
 import FeaturedWorks from "@/components/FeaturedWorks.astro";
 
+import photoProfil from "@/assets/moi.webp"
 import flexibleIcon from "@/assets/flexible.svg";
 import securityIcon from "@/assets/security.svg";
 import durabilityIcon from "@/assets/durability.svg";
 
 const featuredWorks = await getCollection('works', entry => entry.data.isFeatured);
 
-const methodoly = [
+const methodology = [
   {
     title: "Conception flexible",
     text: "Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.",
@@ -52,9 +54,9 @@ const questions = [
 	<main>
 		<PageTitle title="Une agence à taille vraiment humaine" description="Découvrez une selection des différents projets que nous avons pu réaliser pour des clients de différentes tailles et issus de divers secteurs. Chaque projet est unique et nos réalisations sont le fruit d'une collaboration étroite avec nos clients pour produire un résultat totalement aligné à leurs attentes." /> 
 		<section class="container mx-auto space-y-20 py-20">
-			<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-        <div class="w-full aspect-4/3 bg-neutral-200 rounded-2xl col-span-1"></div>
-        <div class="space-y-4">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-5">
+        <Image src={photoProfil} alt="Photo de Victor Lebecq développeur web" class="col-span-2 w-full aspect-4/3 rounded-2xl" />
+        <div class="space-y-4 col-span-3">
           <h2 class="text-4xl md:text-5xl">Expert wordpress & <br/> développeur créatif</h2>
           <p class="text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum. Exercitation elit sit consequat consequat eiusmod elit excepteur officia ad et ipsum ad elit commodo qui.</p>
           <p class="text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum. Exercitation elit sit consequat consequat eiusmod elit excepteur officia ad et ipsum ad elit commodo qui.</p>
@@ -64,10 +66,10 @@ const questions = [
       </div>
 
       <div class="space-y-4">
-        <h2 class="text-4xl text-center md:text-5xl">Ma méthodologie</h2>
+        <h2 class="text-4xl md:text-5xl">Ma méthodologie</h2>
           <ul class="grid grid-cols-1 md:grid-cols-3">
-            {methodoly.map(methodoly => (
-              <IconBox title={methodoly.title} text={methodoly.text} icon={methodoly.icon} />
+            {methodology.map(methodology => (
+              <IconBox title={methodology.title} text={methodology.text} icon={methodology.icon} />
             ))}
           </ul>
       </div>

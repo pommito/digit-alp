@@ -14,7 +14,7 @@ const { questions } = Astro.props;
 <ul id="faqList">
   {questions.map((question, index) => (
     <li class="w-full divide-y divide-neutral-200 box-border">
-      <button id={`faqButton-${index}`} class="group peer flex justify-between py-4 w-full cursor-pointer" aria-expanded="false" aria-controls={`faq-${index}`}>
+      <button id={`faqButton-${index}`} class="group peer text-xl flex justify-between py-4 w-full cursor-pointer" aria-expanded="false" aria-controls={`faq-${index}`}>
         <span>{question.label}</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-rotate duration-300 ease-in-out group-aria-expanded:rotate-90"><path d="m9 18 6-6-6-6"/></svg>
       </button>
