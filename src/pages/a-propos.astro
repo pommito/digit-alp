@@ -17,14 +17,14 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
 
 <Layout title="Projets">
 	<main>
-		<PageTitle title="Une agence à taille vraiment humaine" description="Découvrez une selection des différents projets que nous avons pu réaliser pour des clients de différentes tailles et issus de divers secteurs. Chaque projet est unique et nos réalisations sont le fruit d'une collaboration étroite avec nos clients pour produire un résultat totalement aligné à leurs attentes." /> 
+		<PageTitle title="Une agence à taille vraiment humaine" description="Elit quis labore ex officia sunt officia velit. Labore irure proident officia non proident laborum. In quis amet Lorem labore laboris amet id reprehenderit laboris commodo. Ex ex amet culpa reprehenderit." /> 
 		<section class="container mx-auto space-y-20 py-20">
       <div class="grid grid-cols-1 gap-8 md:grid-cols-5">
         <Image src={photoProfil} alt="Photo de Victor Lebecq développeur web" class="col-span-2 w-full aspect-4/3 rounded-2xl" />
         <div class="space-y-4 col-span-3">
           <h2 class="text-4xl md:text-5xl">Expert wordpress & <br/> développeur créatif</h2>
-          <p class="text-xl text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum. Exercitation elit sit consequat consequat eiusmod elit excepteur officia ad et ipsum ad elit commodo qui.</p>
-          <p class="text-xl text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum. Exercitation elit sit consequat consequat eiusmod elit excepteur officia ad et ipsum ad elit commodo qui.</p>
+          <p class="text-lg text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum.</p>
+          <p class="text-lg text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum.</p>
         </div>
         
 
@@ -60,7 +60,7 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
       <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div class="col-span-1 space-y-4">
           <h2 class="text-4xl md:text-5xl">Vous avez une question ?</h2>
-          <p class="text-xl text-balance">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p class="text-lg text-balance">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <Button label="Envoyer un message" link="/contact" style="primary" />
         </div>
         <Faq questions={questions} />

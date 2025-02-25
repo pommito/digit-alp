@@ -19,7 +19,7 @@ const clients = await getCollection('works')
 ---
 
 <Layout title='Digit Alp'>
-	<div class="h-[75dvh] bg-da-black text-da-white"> 
+	<div class="h-[95dvh] bg-da-black text-da-white"> 
 		<div class="container w-full h-full flex flex-col justify-end items-center mx-auto py-20">
 			<div class="flex flex-col items-center">
 				<div class="flex items-center gap-2 py-2 px-4 border border-da-white rounded-full w-fit">
@@ -30,7 +30,7 @@ const clients = await getCollection('works')
 				<h2 class="text-3xl text-center md:w-6xl md:text-6xl xl:text-7xl">Ensemble construisons des sites performants et éco-concus</h2>
 			</div>
 			<div class="flex justify-between items-end w-full">
-				<p class="md:w-lg pt-80 xl:text-xl xl:w-2xl">Micro agence web à Chambéry, nous vous accompagnons dans tous vos projets. Création, optimisation, sécurisation : ensemble développons des solutions digitales impactantes pour votre activité.</p>
+				<p class="md:w-lg pt-32 xl:text-lg xl:w-2xl">Micro agence web à Chambéry, nous vous accompagnons dans tous vos projets. Création, optimisation, sécurisation : ensemble développons des solutions digitales impactantes pour votre activité.</p>
 				<Button label="J'ai un projet !" link='/contact' style="secondary" />
 			</div>
 		</div>
@@ -40,7 +40,7 @@ const clients = await getCollection('works')
 		<h2 class="hidden">Agence web savoyarde</h2>
 		<div class="grid grid-cols-1 gap-4 mb-10 md:grid-cols-2 md:gap-0">
       <h3 class="text-4xl md:text-5xl">Une agence web aux multiples casquettes</h3>
-      <p class="text-xl text-balance">Digit'Alp propose des services complémentaires pour vous accompagner dans la création ou le développement de votre présence digitale. Nous proposons des solutions sur mesure et performantes avec un regard vers l'avenir et l'éco-conception.</p>
+      <p class="text-lg text-balance">Digit'Alp propose des services complémentaires pour vous accompagner dans la création ou le développement de votre présence digitale. Nous proposons des solutions sur mesure et performantes avec un regard vers l'avenir et l'éco-conception.</p>
   	</div>
 		<ul class="grid grid-cols-1 gap-4 container mx-auto md:grid-cols-2">
 			{expertises.map ( expertise => (
@@ -61,9 +61,9 @@ const clients = await getCollection('works')
 
 	<section class="container mx-auto w-full px-4 py-20">
 		<h3 class="text-4xl md:text-5xl mb-10">Ils nous font confiance <br/> pour leur projet web</h3>
-		<ul class="grid grid-cols-2 gap-2 md:grid-cols-5 px-6">
+		<ul class="grid grid-cols-2 gap-0.25 md:grid-cols-5 px-6">
 			{clients.map ( client => (
-				<li class="w-full flex items-center justify-center col-span-1 bg-neutral-50">
+				<li class="w-full flex items-center justify-center col-span-1 bg-da-50 rounded-lg">
 					<Image src={client.data.logo} alt={`Logo ${client.data.client}`} class="" />
 				</li>
 			))}
