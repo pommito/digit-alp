@@ -63,7 +63,9 @@ p {
   --font-title: 'MiguerSans', 'sans-serif';
 
   --color-da: #0a2b8d;
-  --color-da-light: #3165cf;
+  --color-da-50: #ecf0ff;
+  --color-da-100: #dce1f4;
+  --color-da-300: #3165cf;
   --color-da-white: #f5f7ff;
   --color-da-black: #030c26;
 }

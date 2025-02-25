@@ -42,23 +42,23 @@ console.log(relatedWorksData)
       <div class="space-y-8">
         <ul class="flex flex-col gap-4 h-fit md:grid md:row-start-1">
           <li>
-            <h3 class="text-da-light text-sm md:mb-2 md:text-base ">Client</h3>
+            <h3 class="text-da-300 text-sm md:mb-2 md:text-base ">Client</h3>
             <span class="text-base md:text-xl">{client}</span>
           </li>
           <li>
-            <h3 class="text-da-light text-sm md:mb-2 md:text-base">Secteur</h3>
+            <h3 class="text-da-300 text-sm md:mb-2 md:text-base">Secteur</h3>
             <span class="text-base md:text-xl">{clientSector}</span>
           </li>
           <li>
-            <h3 class="text-da-light text-sm md:mb-2 md:text-base">Année du projet</h3>
+            <h3 class="text-da-300 text-sm md:mb-2 md:text-base">Année du projet</h3>
             <span class="text-base md:text-xl">{date.getFullYear()}</span>
           </li>
           <li>
-            <h3 class="text-da-light text-sm md:mb-2 md:text-base">Expertises</h3>
+            <h3 class="text-da-300 text-sm md:mb-2 md:text-base">Expertises</h3>
             <span class="text-base md:text-xl">{category}</span>
           </li>
           <li>
-            <h3 class="text-da-light text-sm md:mb-2 md:text-base">Technologies</h3>
+            <h3 class="text-da-300 text-sm md:mb-2 md:text-base">Technologies</h3>
             <span class="text-base md:text-xl">{technologies.join(', ')}</span>
           </li>
           <li class="mt-4">
@@ -72,7 +72,6 @@ console.log(relatedWorksData)
       <Content />
     </section>
     <section>
-      <FeaturedWorks featuredWorks={relatedWorksData} title="Nos projets" subTitle="Ces projets pourraient vous intéresser" background="dark" client:visible />
     </section>
   </main>
 </Layout>

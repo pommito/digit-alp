@@ -48,8 +48,8 @@ const navMenus = [
     <div class="mt-16 grid grid-cols-2 md:grid-cols-3 xl:col-span-3 xl:mt-0 xl:justify-items-end">
       {navMenus.map(({ name, links }) => (
         <div>
-          <h4 class="text-xl text-da-light">{name}</h4>
-          <ul class="font-normal text-da-primaryLight mt-6 space-y-4">
+          <h4 class="text-xl text-da-300">{name}</h4>
+          <ul class="font-normal mt-6 space-y-4">
             {links.map(({ label, href }) => (
               <li>
                 <Link label={label} url={href} />
@@ -60,7 +60,7 @@ const navMenus = [
       ))}
     </div>
   </div>
-  <div class="container flex flex-col-reverse gap-4 items-center mt-16 py-8 text-xs text-da-light border-t mx-auto sm:flex-row sm:justify-between sm:items-start">
+  <div class="container flex flex-col-reverse gap-4 items-center mt-16 py-8 text-xs text-da-300 border-t mx-auto sm:flex-row sm:justify-between sm:items-start">
     <p class=" leading-5">{currentYear} &copy; Digit'Alp. Tous droits réservés.</p>
     <nav>
       <ul class="flex gap-4">

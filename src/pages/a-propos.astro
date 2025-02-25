@@ -33,9 +33,13 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
 
       <div class="space-y-4">
         <h2 class="text-4xl md:text-5xl">Ma méthodologie</h2>
-          <ul class="grid grid-cols-1 md:grid-cols-3">
+          <ul class="grid grid-cols-1 gap-6 md:grid-cols-3">
             {methodology.map(methodology => (
-              <IconBox title={methodology.title} text={methodology.text} icon={methodology.icon} />
+              <li class="flex flex-col justify-center items-center gap-4 rounded-lg p-6">
+                <Image src={methodology.icon} alt={methodology.title} class="size-12 md:size-20" />
+                <h3 class="text-xl md:text-2xl md:mb-2">{methodology.title}</h3>
+                <p>{methodology.text}</p>
+              </li>
             ))}
           </ul>
       </div>
@@ -63,6 +67,6 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
       
 		</section>
 
-    <FeaturedWorks featuredWorks={featuredWorks} title="Nos projets" subTitle="Nos clients, des projets uniques" client:visible />
+    <FeaturedWorks featuredWorks={featuredWorks} title="Nos projets" subTitle="Nos clients, des projets uniques" />
 		</main>
 	</Layout>
