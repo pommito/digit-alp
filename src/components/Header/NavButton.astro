@@ -5,11 +5,11 @@ import PerspectiveText from "./PerspectiveText.astro";
 ---
 
 
-<div id="nav_btn" class="absolute top-0 right-0 group h-14 w-32 rounded-full cursor-pointer overflow-hidden" aria-expanded="false">
+<div id="nav_btn" class="relative group h-14 w-32 rounded-full cursor-pointer overflow-hidden" aria-expanded="false">
 
-  <div class="group/button relative h-full w-full transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-aria-expanded:-translate-y-full">
+  <div class="group/button relative h-full w-full transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-aria-expanded:-translate-y-full z-9999">
 
-    <div class=" w-full h-full text-lg text-da-white bg-da">
+    <div class="w-full h-full text-lg text-da-white bg-da">
       <PerspectiveText label="Menu" />
     </div>
     <div class="absolute w-full h-full top-full text-lg bg-da-white text-da">

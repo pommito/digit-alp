@@ -22,15 +22,15 @@ const clients = await getCollection('works')
 	<div class="relative  h-screen text-da-white">
 		<div class="absolute inset-2 rounded-xl bg-da-black/40 bg-blend-darken bg-cover bg-center" style="background-image : url(/assets/home-hero.webp)">
 
-			<div class="w-full h-full grid grid-cols-2 items-end mx-auto px-12 py-12">
+			<div class="w-full h-full grid grid-cols-5 items-end mx-auto p-12">
 
-				<div>
+				<div class="col-span-3 col-start-1">
 					<h1 class="opacity-0">Agence Web à Chambery</h1>
-					<h2 class="text-3xl text-balance xl:text-5xl">Constructeurs de sites web performants et durables</h2>
+					<h2 class="text-3xl xl:text-7xl">Constructeurs de sites web performants et durables</h2>
 					<p class="text-lg text-balance pt-4">Micro agence web à Chambéry, nous vous accompagnons dans tous vos projets. Création, optimisation, sécurisation : ensemble développons des solutions digitales impactantes pour votre activité.</p>
 				</div>
 				
-				<div class="flex justify-end w-full">
+				<div class="col-span-2 flex justify-end w-full">
 					<Button label="J'ai un projet !" link='/contact' style="secondary" />
 				</div>
 			</div>
