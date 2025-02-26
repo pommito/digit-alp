@@ -10,7 +10,7 @@ const { label, link, style } = Astro.props;
 const colors = style === 'primary' ? 'bg-da text-da-white' : 'bg-da-white text-da-black';
 ---
 
-<div class=`${colors} group/button w-fit h-fit text-lg font-medium py-4 px-6 rounded-full cursor-pointer`>
+<div class=`${colors} group/button w-fit h-fit text-lg font-medium py-3 px-6 rounded-full cursor-pointer`>
 
   <a href={link} class="w-full h-full flex items-center justify-center transition-transform transform-3d duration-750 ease-[cubic-bezier(0.76,0,0.24,1)]  group-hover/button:rotate-x-90">
     <span class="transition-all duration-750 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover/button:-translate-y-full group-hover/button:opacity-0">{label}</span>
