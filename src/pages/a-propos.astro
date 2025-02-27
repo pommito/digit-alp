@@ -18,13 +18,13 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
 <Layout title="Projets">
 	<main>
 		<PageTitle title="Une agence à taille vraiment humaine" description="Elit quis labore ex officia sunt officia velit. Labore irure proident officia non proident laborum. In quis amet Lorem labore laboris amet id reprehenderit laboris commodo. Ex ex amet culpa reprehenderit." /> 
-		<section class="container mx-auto space-y-20 py-20">
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-5">
+		<section class="container mx-auto space-y-10 px-4 py-10 md:space-y-20 md:px-0 md:py-20">
+      <div class="grid grid-cols-1 md:gap-8 md:grid-cols-5">
         <Image src={photoProfil} alt="Photo de Victor Lebecq développeur web" class="col-span-2 w-full aspect-4/3 rounded-2xl" />
         <div class="space-y-4 col-span-3">
           <h2 class="text-4xl md:text-5xl">Expert wordpress & <br/> développeur créatif</h2>
-          <p class="text-lg text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum.</p>
-          <p class="text-lg text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum.</p>
+          <p class="text-lg md:text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum.</p>
+          <p class="text-lg md:text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum.</p>
         </div>
         
 
@@ -32,9 +32,9 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
 
       <div class="space-y-4">
         <h2 class="text-4xl md:text-5xl">Ma méthodologie</h2>
-          <ul class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <ul class="grid grid-cols-1 gap-2 md:gap-6 md:grid-cols-3">
             {methodology.map(methodology => (
-              <li class="flex flex-col justify-center items-center gap-4 rounded-lg p-6">
+              <li class="flex flex-col justify-center items-center gap-4 rounded-lg  p-2 md:p-6">
                 <Image src={methodology.icon} alt={methodology.title} class="size-12 md:size-20" />
                 <h3 class="text-xl md:text-2xl md:mb-2">{methodology.title}</h3>
                 <p>{methodology.text}</p>
@@ -45,7 +45,7 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
       
       <div class="space-y-4">
         <h2 class="text-4xl text-center md:text-5xl">Des outils adaptés à chaque projet</h2>
-          <ul class="grid grid-cols-1 md:grid-cols-4">
+          <ul class="grid grid-cols-2 md:grid-cols-4">
             {techs.map(tech => (
               <li class="group flex flex-col justify-center items-center gap-4 rounded-lg p-6">
                 <Image src={tech.icon} alt={`Logo ${tech.label}`} class="size-12 object-contain group-hover:-translate-y-2 transition-transform ease-in-out duration-300 md:size-16" />
@@ -56,14 +56,19 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
       </div>
 		</section>
 
-    <section class="container mx-auto">
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+    <section class="container mx-auto px-4 md:px-0">
+      <div class="grid grid-cols-1 items-center gap-4 md:grid-cols-2">
         <div class="col-span-1 space-y-4">
           <h2 class="text-4xl md:text-5xl">Vous avez une question ?</h2>
           <p class="text-lg text-balance">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <div class="hidden md:block">
           <Button label="Envoyer un message" link="/contact" style="primary" />
+          </div>
         </div>
         <Faq questions={questions} />
+        <div class="block md:hidden">
+          <Button label="Envoyer un message" link="/contact" style="primary" />
+        </div>
       </div>
     </section>
 
