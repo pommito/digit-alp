@@ -58,9 +58,9 @@ const clients = await getCollection('works')
 
 	<section class="container mx-auto w-full px-4 py-20">
 		<h3 class="text-4xl md:text-5xl mb-10">Ils nous font confiance <br/> pour leur projet web</h3>
-		<ul class="grid grid-cols-2 gap-0.25 md:grid-cols-5 md:px-6">
+		<ul class="grid grid-cols-2 gap-0.25 bg-da-100 md:grid-cols-5 md:w-4/5 md:mx-auto ">
 			{clients.map ( client => (
-				<li class="w-full flex items-center justify-center col-span-1 bg-da-50 rounded-lg">
+				<li class="w-full flex items-center justify-center col-span-1 bg-da-white object-contain p-8">
 					<Image src={client.data.logo} alt={`Logo ${client.data.client}`} class="" />
 				</li>
 			))}
