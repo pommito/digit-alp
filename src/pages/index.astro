@@ -19,24 +19,18 @@ const clients = await getCollection('works')
 ---
 
 <Layout title='Digit Alp'>
-	<div class="relative  h-screen text-da-white">
-		<div class="absolute inset-2 rounded-xl bg-da-black/40 bg-blend-darken bg-cover bg-center" style="background-image : url(/assets/home-hero.webp)">
+	<div class="relative w-screen h-screen text-da-white flex flex-col justify-end items-end gap-6 px-4 py-6 bg-da-black/40 bg-blend-darken bg-cover bg-center mx-auto  md:flex-row md:gap-4 md:p-12" style="background-image : url(/assets/home-hero.webp)">
 
-			<div class="w-full h-full grid grid-cols-5 items-end mx-auto p-12">
-
-				<div class="col-span-3 col-start-1">
+				<div class="md:w-3/5">
 					<h1 class="opacity-0">Agence Web à Chambery</h1>
-					<h2 class="text-3xl xl:text-7xl">Constructeurs de sites web performants et durables</h2>
-					<p class="text-lg text-balance pt-4">Micro agence web à Chambéry, nous vous accompagnons dans tous vos projets. Création, optimisation, sécurisation : ensemble développons des solutions digitales impactantes pour votre activité.</p>
+					<h2 class="text-4xl xl:text-7xl">Constructeurs de sites web performants et durables</h2>
+					<p class=" text-balance pt-4 text-lg">Micro agence web à Chambéry, nous vous accompagnons dans tous vos projets. Création, optimisation, sécurisation : ensemble développons des solutions digitales impactantes pour votre activité.</p>
 				</div>
 				
-				<div class="col-span-2 flex justify-end w-full">
+				<div class=" w-full md:w-2/5 md:flex md:justify-end">
 					<Button label="J'ai un projet !" link='/contact' style="secondary" />
 				</div>
-			</div>
 
-
-		</div>
 	</div> 
 
 	<section class="container mx-auto w-full  px-4 py-20 space-y-6">
