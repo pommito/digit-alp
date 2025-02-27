@@ -33,13 +33,13 @@ const clients = await getCollection('works')
 
 	</div> 
 
-	<section class="container mx-auto w-full  px-4 py-20 space-y-6">
+	<section class="container mx-auto w-full  px-4 py-10 space-y-6 md:py-20">
 		<h2 class="hidden">Agence web savoyarde</h2>
 		<div class="grid grid-cols-1 gap-4 mb-10 md:grid-cols-2 md:gap-0">
       <h3 class="text-4xl md:text-5xl">Une agence web aux multiples casquettes</h3>
       <p class="text-lg text-balance">Digit'Alp propose des services complémentaires pour vous accompagner dans la création ou le développement de votre présence digitale. Nous proposons des solutions sur mesure et performantes avec un regard vers l'avenir et l'éco-conception.</p>
   	</div>
-		<ul class="grid grid-cols-1 gap-4 container mx-auto md:grid-cols-2">
+		<ul class="grid grid-cols-1 gap-8  container mx-auto  md:gap-4 md:grid-cols-2">
 			{expertises.map ( expertise => (
 				<ServiceItem expertise={expertise} />
 			))}
@@ -58,7 +58,7 @@ const clients = await getCollection('works')
 
 	<section class="container mx-auto w-full px-4 py-20">
 		<h3 class="text-4xl md:text-5xl mb-10">Ils nous font confiance <br/> pour leur projet web</h3>
-		<ul class="grid grid-cols-2 gap-0.25 md:grid-cols-5 px-6">
+		<ul class="grid grid-cols-2 gap-0.25 md:grid-cols-5 md:px-6">
 			{clients.map ( client => (
 				<li class="w-full flex items-center justify-center col-span-1 bg-da-50 rounded-lg">
 					<Image src={client.data.logo} alt={`Logo ${client.data.client}`} class="" />
@@ -70,7 +70,7 @@ const clients = await getCollection('works')
 	<section class="bg-da-black text-da-white">
 		<div class="container flex flex-col items-center justify-center mx-auto w-full  px-4 py-20">
 			<h3 class="text-4xl md:text-6xl mb-10">Alors pourquoi pas vous ?</h3>
-			<div class="flex gap-20 max-w-3xl">
+			<div class="flex flex-col gap-6 max-w-3xl md:flex-row md:gap-20">
 				<Image src={ctaBannerIcon} alt="Icone de prise de rendez-vous"/>
 				<div class="space-y-4">
 					<p class="text-lg">
