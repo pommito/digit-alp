@@ -1,0 +1,22 @@
+---
+import { getCollection, render } from 'astro:content';
+
+
+
+export async function getStaticPaths() {
+  const expertises = await getCollection("expertises");
+  
+  return expertises.map((expertise) => ({
+    params: { id: expertise.id },
+    props: { expertise },
+  }));
+}
+
+const { expertise } = Astro.props;
+const { Content } = await render(expertise)
+
+const { title, description, icon } = expertise.data;
+
+
+---
+
