@@ -1,9 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 
-import PageTitle from "@/components/PageTitle.astro";
+import PageLayout from "@/layouts/PageLayout.astro";
 import ServiceItem from "@/components/ServiceItem.astro";
-import Layout from "@/layouts/Layout.astro";
 import FeaturedWorks from "@/components/FeaturedWorks.astro";
 import CtaBanner from "@/components/CtaBanner.astro";
 
@@ -12,26 +11,21 @@ const expertises = await getCollection('expertises');
 const featuredWorks = await getCollection('works', entry => entry.data.isFeatured);
 ---
 
+<PageLayout title="Expertises" description="Découvrez une selection des différents projets que nous avons pu réaliser pour des clients de différentes tailles et issus de divers secteurs. Chaque projet est unique et nos réalisations sont le fruit d'une collaboration étroite avec nos clients pour produire un résultat totalement aligné à leurs attentes." theme="light">
+  <section class="container mx-auto w-full  px-4 py-10 space-y-6 md:py-20">
+    <div class="grid grid-cols-1 gap-4 mb-10 md:grid-cols-2 md:gap-0">
+      <h3 class="text-4xl md:text-5xl">A chaque projet, sa solution technique</h3>
+      <p class="text-lg text-balance">Votre projet est unique, tout comme vos besoins. Notre expertise dans les domaines du web nous permet de vous accompagner dans la réalisation de vos projets en ligne et de proposer des solutions vraiment adaptées à vos besoins.</p>
+    </div>
+    <ul class="grid grid-cols-1 gap-8  container mx-auto  md:gap-4 md:grid-cols-2">
+      {expertises.map ( expertise => (
+        <ServiceItem expertise={expertise} />
+      ))}
+    </ul>
+  </section>
 
-<Layout title="Projets">
-	<main>
-		<PageTitle title="Expertises" description="Découvrez une selection des différents projets que nous avons pu réaliser pour des clients de différentes tailles et issus de divers secteurs. Chaque projet est unique et nos réalisations sont le fruit d'une collaboration étroite avec nos clients pour produire un résultat totalement aligné à leurs attentes." /> 
+  <FeaturedWorks featuredWorks={featuredWorks} title="Nos projets" subTitle="Découvrez nos dernières réalisations" />
 
-		<section class="container mx-auto w-full  px-4 py-10 space-y-6 md:py-20">
-      <div class="grid grid-cols-1 gap-4 mb-10 md:grid-cols-2 md:gap-0">
-        <h3 class="text-4xl md:text-5xl">A chaque projet, sa solution technique</h3>
-        <p class="text-lg text-balance">Votre projet est unique, tout comme vos besoins. Notre expertise dans les domaines du web nous permet de vous accompagner dans la réalisation de vos projets en ligne et de proposer des solutions vraiment adaptées à vos besoins.</p>
-      </div>
-      <ul class="grid grid-cols-1 gap-8  container mx-auto  md:gap-4 md:grid-cols-2">
-        {expertises.map ( expertise => (
-          <ServiceItem expertise={expertise} />
-        ))}
-      </ul>
-    </section>
+  <CtaBanner />
 
-    <FeaturedWorks featuredWorks={featuredWorks} title="Nos projets" subTitle="Découvrez nos dernières réalisations" />
-
-    <CtaBanner />
-
-	</main>
-</Layout>
+</PageLayout>

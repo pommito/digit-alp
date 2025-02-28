@@ -1,9 +1,7 @@
 ---
-import PageTitle from '@/components/PageTitle.astro';
-import Layout from '@/layouts/Layout.astro';
 import { getCollection, render } from 'astro:content';
 
-
+import PageLayout from '@/layouts/PageLayout.astro';
 
 export async function getStaticPaths() {
   const expertises = await getCollection("expertises");
@@ -22,10 +20,6 @@ const { title, description, icon } = expertise.data;
 
 ---
 
-<Layout title={title}>
-  <main class="px-4 md:px-0 bg-da-black text-da-white">
-    <PageTitle title={title} description={description} />
-
-    
-  </main>
-</Layout>
+<PageLayout title={title} description={description} theme='light'>
+  <Content />
+</PageLayout>
