@@ -5,6 +5,7 @@ const expertises = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/data/expertises' }),
   schema: ({ image }) =>
     z.object({
+      order: z.number(),
       title: z.string(),
       description: z.string(),
       icon: image(),
