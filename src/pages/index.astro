@@ -6,7 +6,8 @@ import Layout from '../layouts/Layout.astro';
 import Button from '@/components/ui/Button.astro';
 import ServiceItem from '@/components/ServiceItem.astro';
 import FeaturedWorks from '@/components/FeaturedWorks.astro';
-import ctaBannerIcon from '@/assets/cta_banner_icon.svg';
+import CtaBanner from '@/components/CtaBanner.astro';
+
 
 const expertises = await getCollection('expertises');
 const featuredWorks = await getCollection('works', entry => entry.data.isFeatured);
@@ -66,19 +67,6 @@ const clients = await getCollection('works')
 		</ul>
 	</section>
 
-	<section class="bg-da-black text-da-white">
-		<div class="container flex flex-col items-center justify-center mx-auto w-full  px-4 py-20">
-			<h3 class="text-4xl md:text-6xl mb-10">Alors pourquoi pas vous ?</h3>
-			<div class="flex flex-col gap-6 max-w-3xl md:flex-row md:gap-20">
-				<Image src={ctaBannerIcon} alt="Icone de prise de rendez-vous"/>
-				<div class="space-y-4">
-					<p class="text-lg">
-						Chaque projet est un nouveau défi pour notre équipe : repenser votre site Internet, améliorer votre visibilité sur les moteurs de recherche, développer une solutions pour votre activité... Discutons-en !
-					</p>
-					<Button label="Prendre rendez-vous" link='/contact' style="primary" />
-				</div>
-			</div>
-		</div>
-	</section>
+	<CtaBanner />
 
 </Layout>
