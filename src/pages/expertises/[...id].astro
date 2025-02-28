@@ -1,4 +1,6 @@
 ---
+import PageTitle from '@/components/PageTitle.astro';
+import Layout from '@/layouts/Layout.astro';
 import { getCollection, render } from 'astro:content';
 
 
@@ -20,3 +22,10 @@ const { title, description, icon } = expertise.data;
 
 ---
 
+<Layout title={title}>
+  <main class="px-4 md:px-0 bg-da-black text-da-white">
+    <PageTitle title={title} description={description} />
+
+    
+  </main>
+</Layout>

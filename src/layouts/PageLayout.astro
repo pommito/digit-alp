@@ -1,0 +1,18 @@
+---
+import PageTitle from "@/components/PageTitle.astro";
+import Layout from "./Layout.astro";
+
+type Props = {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props as Props;
+---
+
+<Layout title={title}>
+  <main class="px-4 md:px-0 bg-da-black text-da-white">
+    <PageTitle title={title} description={description} />
+    <slot />
+  </main>
+</Layout>
