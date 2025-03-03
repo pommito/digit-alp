@@ -1,7 +1,11 @@
 ---
 import PerspectiveText from "./PerspectiveText.astro";
 
+type Props = {
+  theme: 'light' | 'dark';
+}
 
+const { theme = 'light' } = Astro.props as Props;
 ---
 
 
@@ -9,10 +13,10 @@ import PerspectiveText from "./PerspectiveText.astro";
 
   <div class="group/button relative h-full w-full transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-aria-expanded:-translate-y-full z-9999">
 
-    <div class="w-full h-full text-lg text-da-white bg-da">
+    <div class={`w-full h-full text-lg ${theme === 'light' ? 'bg-da text-da-white' : 'bg-da-white text-da-black'}`}>
       <PerspectiveText label="Menu" />
     </div>
-    <div class="absolute w-full h-full top-full text-lg bg-da-white text-da">
+    <div class={`absolute w-full h-full top-full text-lg ${theme === 'light' ? 'bg-da-white text-da-black' : 'bg-da text-da-white'}`}>
       <PerspectiveText label="Fermer" />
     </div>
 

@@ -11,9 +11,10 @@ import ctaBannerIcon from '@/assets/cta_banner_icon.svg';
 
 <section class="bg-da-black text-da-white">
   <div class="container  flex flex-col items-center justify-center mx-auto w-full  px-4 py-20">
-    <h3 class="text-4xl md:text-6xl mb-10">Alors pourquoi pas vous ?</h3>
+    <Image src={ctaBannerIcon} alt="Icone de prise de rendez-vous" class="md:hidden" format='svg'/>
+    <h3 class="text-4xl md:text-6xl mb-4 mt-4 md:mb-10 md:mt-0">Alors pourquoi pas vous ?</h3>
     <div class="flex flex-col gap-6 max-w-3xl md:flex-row md:gap-20">
-      <!-- <Image src={ctaBannerIcon} alt="Icone de prise de rendez-vous"/> -->
+      <Image src={ctaBannerIcon} alt="Icone de prise de rendez-vous" class="hidden md:block" format='svg'/>
       <div class="space-y-4">
         <p class="text-lg">
           Chaque projet est un nouveau défi : repenser votre site Internet, améliorer votre visibilité sur les moteurs de recherche, développer une solutions pour votre activité... Discutons-en !

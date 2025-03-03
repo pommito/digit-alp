@@ -1,6 +1,12 @@
 ---
 import Link from "../ui/Link.astro";
 
+type Props = {
+  theme: 'light' | 'dark';
+}
+
+const { theme = 'light' } = Astro.props as Props;
+
 const navLinks = [
   { label: "Accueil", slug: "/" },
   { label: "Projets", slug: "/projets" },
@@ -18,13 +24,13 @@ const subNavLinks = [
 // TODO : add a no-follow on the external links
 ---
 
-<div id="nav_menu" class="group/menu w-[90vw] h-[575px] absolute -top-4 -right-2  bg-da  text-da-white overflow-auto rounded-3xl transition-all duration-750 ease-[cubic-bezier(0.76,0,0.24,1)] aria-hidden:w-30 aria-hidden:h-12 aria-hidden:top-0 aria-hidden:right-0 aria-hidden:overflow-hidden aria-hidden:delay-350 sm:w-[480px] md:-top-6 md:-right-6" aria-hidden="true">
+<div id="nav_menu" class={`group/menu w-[90vw] h-[575px] absolute -top-4 -right-2 bg-da-black text-da-white overflow-auto rounded-3xl transition-all duration-750 ease-[cubic-bezier(0.76,0,0.24,1)] aria-hidden:w-30 aria-hidden:h-12 aria-hidden:top-0 aria-hidden:right-0 aria-hidden:overflow-hidden aria-hidden:delay-350 sm:w-[480px] md:-top-6 md:-right-6`} aria-hidden="true">
   <div class="flex flex-col h-full box-border  pt-24 pb-6 px-9">
 
     <ul id="nav_links" class="group/links space-y-4">
       {navLinks.map((link, i) => (
         <div class="block overflow-hidden p-1 ">
-          <li  class="font-title opacity-100 translate-y-0 transition-all duration-750 delay-400 ease-[cubic-bezier(0.76,0,0.24,1)] group-aria-hidden/menu:opacity-0 group-aria-hidden/menu:translate-y-full group-aria-hidden/menu:delay-0 group-aria-hidden/menu:duration-500">
+          <li  class="font-title w-fit opacity-100 translate-y-0 transition-all duration-750 delay-400 ease-[cubic-bezier(0.76,0,0.24,1)] group-aria-hidden/menu:opacity-0 group-aria-hidden/menu:translate-y-full group-aria-hidden/menu:delay-0 group-aria-hidden/menu:duration-500">
             <a href={link.slug} class={`group/link flex items-center text-5xl leading-none font-light`}>
               <figure class={`w-0 h-0 transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] rounded-full bg-da-white group-hover/link:w-2 group-hover/link:h-2 group-hover/link:mr-4`}></figure>
               <span>{link.label}</span>

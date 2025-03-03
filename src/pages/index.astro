@@ -21,10 +21,10 @@ const clients = await getCollection('works')
 <Layout title='Digit Alp'>
 	<Hero />
 
-	<section class="container mx-auto w-full  px-4 py-10 space-y-6 md:py-20">
+	<section class="container mx-auto w-full   px-4 py-10 space-y-6 md:py-20">
 		<h2 class="hidden">Agence web savoyarde</h2>
 		<div class="grid grid-cols-1 gap-4 mb-10 md:grid-cols-2 md:gap-0">
-      <h3 class="text-4xl md:text-5xl">Une agence web aux multiples casquettes</h3>
+      <h3 class="text-4xl text-da md:text-5xl">Une agence web aux multiples casquettes</h3>
       <p class="text-lg text-balance">Digit'Alp propose des services complémentaires pour vous accompagner dans la création ou le développement de votre présence digitale. Nous proposons des solutions sur mesure et performantes avec un regard vers l'avenir et l'éco-conception.</p>
   	</div>
 		<ul class="grid grid-cols-1 gap-8  container mx-auto  md:gap-4 md:grid-cols-2">
@@ -45,7 +45,7 @@ const clients = await getCollection('works')
 	</section>
 
 	<section class="container mx-auto w-full px-4 py-20">
-		<h3 class="text-4xl md:text-5xl mb-10">Ils nous font confiance <br/> pour leur projet web</h3>
+		<h3 class="text-4xl text-da md:text-5xl mb-10">Ils nous font confiance <br/> pour leur projet web</h3>
 		<ul class="grid grid-cols-2 gap-0.25 bg-da-100 md:grid-cols-5 md:w-4/5 md:mx-auto ">
 			{clients.map ( client => (
 				<li class="group w-full flex items-center justify-center col-span-1 bg-da-white object-contain p-8">
