@@ -62,10 +62,12 @@ p {
   --font-sans: 'Inter', 'sans-serif';
   --font-title: 'MiguerSans', 'sans-serif';
 
-  --color-da: #0a2b8d;
+  --color-da: #0a2fa0;
   --color-da-50: #ecf0ff;
   --color-da-100: #dce1f4;
   --color-da-300: #3165cf;
   --color-da-white: #f5f7ff;
   --color-da-black: #030c26;
+
+  --shadow-hero-card: 0 40px 40px -10px #28224233;
 }
