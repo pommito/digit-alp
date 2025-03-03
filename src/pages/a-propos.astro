@@ -10,6 +10,7 @@ import FeaturedWorks from "@/components/FeaturedWorks.astro";
 
 import { methodology, techs, questions } from "@/data/a-propos";
 import photoProfil from "@/assets/moi.webp"
+import CtaBanner from "@/components/CtaBanner.astro";
 
 const featuredWorks = await getCollection('works', entry => entry.data.isFeatured);
 ---
@@ -20,7 +21,7 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
     <div class="grid grid-cols-1 md:gap-8 md:grid-cols-5">
       <Image src={photoProfil} alt="Photo de Victor Lebecq développeur web" class="col-span-2 w-full aspect-4/3 rounded-2xl" />
       <div class="space-y-4 col-span-3">
-        <h2 class="text-4xl md:text-5xl">Expert wordpress & <br/> développeur créatif</h2>
+        <h2 class="text-4xl text-da md:text-5xl">Expert wordpress & <br/> développeur créatif</h2>
         <p class="text-lg md:text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum.</p>
         <p class="text-lg md:text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum.</p>
       </div>
@@ -29,7 +30,7 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
     </div>
 
     <div class="space-y-4">
-      <h2 class="text-4xl md:text-5xl">Ma méthodologie</h2>
+      <h2 class="text-4xl text-da md:text-5xl">Ma méthodologie</h2>
         <ul class="grid grid-cols-1 gap-2 md:gap-6 md:grid-cols-3">
           {methodology.map(methodology => (
             <li class="flex flex-col justify-center items-center gap-4 rounded-lg  p-2 md:p-6">
@@ -42,7 +43,7 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
     </div>
     
     <div class="space-y-4">
-      <h2 class="text-4xl text-center md:text-5xl">Des outils adaptés à chaque projet</h2>
+      <h2 class="text-4xl text-da text-center md:text-5xl">Des outils adaptés à chaque projet</h2>
         <ul class="grid grid-cols-2 md:grid-cols-4">
           {techs.map(tech => (
             <li class="group flex flex-col justify-center items-center gap-4 rounded-lg p-6">
@@ -57,7 +58,7 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
   <section class="container mx-auto px-4 md:px-0">
     <div class="grid grid-cols-1 items-center gap-4 md:grid-cols-2 md:items-start">
       <div class="col-span-1 space-y-4">
-        <h2 class="text-4xl md:text-5xl">Vous avez une question ?</h2>
+        <h2 class="text-4xl text-da md:text-5xl">Vous avez une question ?</h2>
         <p class="text-lg text-balance">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <div class="hidden md:block">
         <Button label="Envoyer un message" link="/contact" style="primary" />
