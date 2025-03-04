@@ -4,7 +4,7 @@ import Breadcrumb from './ui/Breadcrumb.astro';
 
 type Props = {
   title: string;
-  description: string;
+  description?: string;
 }
 
 const { title, description} = Astro.props as Props;
@@ -16,7 +16,7 @@ const { title, description} = Astro.props as Props;
   <div class="container flex items-center mx-auto">
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-0 xl:gap-8">
         <h1 class="text-4xl  md:text-6xl">{title}</h1>
-        <p class="text-lg text-balance">{description}</p>
+        {description && <p class="text-lg text-balance">{description}</p>}
     </div>
   </div>
 </section>
