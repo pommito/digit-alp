@@ -6,12 +6,14 @@ type Props = {
   title: string;
   description?: string;
   theme: 'light' | 'dark';
+  metaTitle?: string;
+  metaDescription: string;
 }
 
-const { title, description, theme = 'light' } = Astro.props as Props;
+const { title, description, theme = 'light', metaTitle, metaDescription } = Astro.props as Props;
 ---
 
-<Layout title={title}>
+<Layout title={title} metaTitle={metaTitle} metaDescription={metaDescription}>
   <main class={`px-4 md:px-0 ${theme === 'light' ? 'bg-da-white' : 'bg-da text-da-white'}`}>
     <PageTitle title={title} description={description} />
     <slot />

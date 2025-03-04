@@ -1,0 +1,34 @@
+---
+
+type Props = {
+  title: string;
+  metaTitle?: string;
+  metaDescription: string;
+}
+
+const SITE_URL = import.meta.env.SITE_URL;
+
+// This is inspired by Patrick Faramaz and his website https://goodmotion.fr
+const pathname = new URL(Astro.request.url).pathname.replace(".html", "");
+
+const { title, metaTitle, metaDescription } = Astro.props
+
+
+---
+
+<title>{title || metaTitle}</title>
+<meta name="robots" content="index, follow" />
+<meta name="description" content={metaDescription} />
+<meta content={metaTitle || title} name="twitter:title" />
+<meta content={metaDescription} name="twitter:description" />
+<meta content={metaTitle || title} name="og:title" />
+<meta content={metaDescription} name="og:description" />
+<meta content="website" name="og:type" />
+<meta property="og:image" content={`TODO : add image`} />
+<meta content="Digit Alp" name="og:site_name" />
+<meta content={SITE_URL} name="og:url" />
+<meta content="fr" name="og:locale" />
+<link rel="canonical" href={`${SITE_URL}${pathname}`} />
+<link rel="home" href={`${SITE_URL}`} />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="sitemap" href="/sitemap-index.xml" />

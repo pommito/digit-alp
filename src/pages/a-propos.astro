@@ -16,7 +16,13 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
 ---
 
 
-<PageLayout title="Projets" description="Découvrez une selection des différents projets que nous avons pu réaliser pour des clients de différentes tailles et issus de divers secteurs. Chaque projet est unique et nos réalisations sont le fruit d'une collaboration étroite avec nos clients pour produire un résultat totalement aligné à leurs attentes." theme="light">
+<PageLayout 
+  title="Projets" 
+  description="Découvrez une selection des différents projets que nous avons pu réaliser pour des clients de différentes tailles et issus de divers secteurs. Chaque projet est unique et nos réalisations sont le fruit d'une collaboration étroite avec nos clients pour produire un résultat totalement aligné à leurs attentes." 
+  theme="light"
+  metaTitle="Agence Digit Alp"
+  metaDescription="Digit Alp est une agence web basée à Chambéry en Savoie proposant un accompagnement digital aux acteurs locaux et nationaux."
+>
   <section class="container mx-auto space-y-10 px-4 py-10 md:space-y-20 md:px-0 md:py-20">
     <div class="grid grid-cols-1 md:gap-8 md:grid-cols-5">
       <Image src={photoProfil} alt="Photo de Victor Lebecq développeur web" class="col-span-2 w-full aspect-4/3 rounded-2xl" />

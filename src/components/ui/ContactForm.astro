@@ -89,7 +89,6 @@
 
   document.addEventListener("DOMContentLoaded", () => {
 
-    console.log('loaded');
     
   
       const form = document.getElementById("form");
@@ -122,13 +121,11 @@
               result.classList.add("text-green-500");
               result.innerHTML = "Votre formulaire a été envoyé avec succès !";
             } else {
-              console.log(response);
               result.classList.add("text-red-500");
               result.innerHTML = "Une erreur est survenue, merci de réessayer plus tard.";
             }
           })
           .catch((error) => {
-            console.log(error);
             result.innerHTML = "Un problème est survenu, merci de réessayer plus tard.";
           })
           .then(function () {
