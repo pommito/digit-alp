@@ -17,21 +17,132 @@
   <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
   <input type="hidden" name="subject" value="Nouvelle demande de contact via Digit'Alp">
   <div class="mb-5">
-    <h3 class="text-lg text-center">Dîtes-nous en plus sur votre projet</h3>
+    <h3 class="text-xl text-center">Dîtes-nous en plus sur votre projet</h3>
   </div>
   <div class="grid grid-cols-2 gap-6 w-full">
-    <input type="text" name="firstname" id="firstname" class="border border-da-white placeholder-da-white/75 placeholder:text-base rounded-lg px-6 py-4 w-full" placeholder="Prénom" required />
-    <input type="text" name="lastname" id="lastname" class="border border-da-white placeholder-da-white/75 placeholder:text-base rounded-lg px-6 py-4 w-full" placeholder="Nom" required />
+    <div>
+      <input type="text" name="firstname" id="firstname" class="border border-da-white placeholder-da-white/75 placeholder:text-base rounded-lg px-6 py-4 w-full" placeholder="Prénom" required />
+      <div class="empty-feedback text-red-400 text-sm mt-1">
+        Merci de remplir ce champ.
+      </div>
+    </div>
+    <div>
+      <input type="text" name="lastname" id="lastname" class="border border-da-white placeholder-da-white/75 placeholder:text-base rounded-lg px-6 py-4 w-full" placeholder="Nom" required />
+      <div class="empty-feedback text-red-400 text-sm mt-1">
+        Merci de remplir ce champ.
+      </div>
+    </div>
   </div>
   <div class="grid grid-cols-2 gap-6 w-full">
-    <input type="email" name="email" id="email" class="border border-da-white placeholder-da-white/75 placeholder:text-base rounded-lg px-6 py-4 w-full" placeholder="Email" required />
-    <input type="tel" name="phone" id="phone" class="border border-da-white placeholder-da-white/75 placeholder:text-base rounded-lg px-6 py-4 w-full" placeholder="Téléphone" required />
+    <div>
+      <input type="email" name="email" id="email" class="border border-da-white placeholder-da-white/75 placeholder:text-base rounded-lg px-6 py-4 w-full" placeholder="Email" required />
+      <div class="empty-feedback text-red-400 text-sm mt-1">
+        Merci de renseigner votre adresse email.
+      </div>
+      <div class="invalid-feedback text-red-400 text-sm mt-1">
+        Votre adresse email n'est pas valide.
+      </div>
+    </div>
+    <div>
+      <input type="tel" name="phone" id="phone" class="border border-da-white placeholder-da-white/75 placeholder:text-base rounded-lg px-6 py-4 w-full" placeholder="Téléphone" required />
+      <div class="empty-feedback text-red-400 text-sm mt-1">
+        Merci de renseigner votre numéro de téléphone.
+      </div>
+      <div class="invalid-feedback text-red-400 text-sm mt-1">
+        Votre numéro de téléphone n'est pas valide.
+      </div>
+    </div>
   </div>
-  <textarea name="message" id="message" class="border border-da-white placeholder-da-white/75 placeholder:text-base rounded-lg px-6 py-4 w-full" placeholder="Décrivez-nous votre projet" rows="5" required></textarea>
-    <button type="submit" class="group flex items-center font-medium  bg-da-white text-da-black px-6 py-4 gap-2 rounded-full cursor-pointer">
-      <span>Envoyer ma demande</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" class="w-0 h-auto transition-all duration-300 ease-in-out group-hover:w-5"><path d="M21 12v3a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h7"/><path d="M16 3h5v5"/><path d="m16 8 5-5"/></svg>
-    </button>
-
+  <div class="w-full">
+    <textarea name="message" id="message" class="border border-da-white placeholder-da-white/75 placeholder:text-base rounded-lg px-6 py-4 w-full" placeholder="Décrivez-nous votre projet" rows="5" required></textarea>
+    <div class="empty-feedback text-red-400 text-sm mt-1">
+      Merci de nous laisser un message sur votre projet.
+    </div>
+  </div>
+  <div id="result" class="mt-3 text-center"></div>
+  <button type="submit" class="group flex items-center font-medium  bg-da-white text-da-black px-6 py-4 gap-2 rounded-full cursor-pointer">
+    <span>Envoyer ma demande</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" class="w-0 h-auto transition-all duration-300 ease-in-out group-hover:w-5"><path d="M21 12v3a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h7"/><path d="M16 3h5v5"/><path d="m16 8 5-5"/></svg>
+  </button>
 
 </form>
+
+
+<style>
+  .invalid-feedback,
+  .empty-feedback {
+    display: none;
+  }
+
+  .was-validated :placeholder-shown:invalid ~ .empty-feedback {
+    display: block;
+  }
+
+  .was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+    display: block;
+  }
+
+  .is-invalid,
+  .was-validated :invalid {
+    border-color: #dc3545;
+  }
+</style>
+
+<script is:inline>
+
+  document.addEventListener("DOMContentLoaded", () => {
+
+    console.log('loaded');
+    
+  
+      const form = document.getElementById("form");
+      const result = document.getElementById("result");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        form.classList.add("was-validated");
+        if (!form.checkValidity()) {
+          form.querySelectorAll(":invalid")[0].focus();
+          return;
+        }
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        result.innerHTML = "Envoi en cours...";
+
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: json,
+        })
+          .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+              result.classList.add("text-green-500");
+              result.innerHTML = "Votre formulaire a été envoyé avec succès !";
+            } else {
+              console.log(response);
+              result.classList.add("text-red-500");
+              result.innerHTML = "Une erreur est survenue, merci de réessayer plus tard.";
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+            result.innerHTML = "Un problème est survenu, merci de réessayer plus tard.";
+          })
+          .then(function () {
+            form.reset();
+            form.classList.remove("was-validated");
+            setTimeout(() => {
+              result.style.display = "none";
+            }, 5000);
+          });
+      });
+    },
+    { once: true },
+  );
+</script>
