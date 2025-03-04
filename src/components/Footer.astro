@@ -18,19 +18,21 @@ const navMenus = [
   {
     name : 'Expertises',
     links : [
-      { label: 'Création de site web', href: '#' },
-      { label: 'Développement personnalisé', href: '#' },
-      { label: 'Référencement naturel', href: '#' },
-      { label: 'Maintenance & Infogérance', href: '#' },
+      { label: 'Création de site web', href: '/expertises/creation-site-web' },
+      { label: 'Développement wordpress', href: '/expertises/developpement-wordpress' },
+      { label: 'E-commerce', href: '/expertises/e-commerce' },
+      { label: 'Développement personnalisé', href: '/expertises/developpement-personnalise' },
+      { label: 'Référencement naturel', href: '/expertises/referencement-naturel' },
+      { label: 'Maintenance & Infogérance', href: '/expertises/maintenance-et-infogerance' },
     ]
   },
   {
     name : 'Wordpress',
     links : [
-      { label: 'Site wordpress à Chambéry', href: '#' },
-      { label: 'Site wordpress à Grenoble', href: '#' },
-      { label: 'Site wordpress à Annecy', href: '#' },
-      { label: 'Site wordpress à Genève', href: '#' },
+      { label: 'Agence wordpress à Chambéry', href: '#' },
+      { label: 'Agence wordpress à Grenoble', href: '#' },
+      { label: 'Agence wordpress à Annecy', href: '#' },
+      { label: 'Agence wordpress à Genève', href: '#' },
     ]
   }
 ]
@@ -42,8 +44,19 @@ const navMenus = [
   <div class="container mx-auto px-4 md:px-0 xl:grid xl:grid-cols-4 xl:gap-8">
     <div class="space-y-8 flex flex-col justify-center xl:justify-start items-center xl:items-start">
       <a href="/" aria-label="Bouton de retour à l'accueil">
-        <Image src={logo} alt="Logo" class="w-28 md:w-32" />
+        <Image src={logo} alt="Logo" class="w-28 md:w-32" format="svg" />
       </a>
+      <ul class="flex gap-4">
+        <li>
+          <Link label="Email" url="mailto:bonjour@digit-alp.fr" />
+        </li>
+        <li>
+          <Link label="Linkedin" url="https://www.linkedin.com/in/victor-lebecq" />
+        </li>
+        <li>
+          <Link label="Github" url="https://github.com/pommito" />
+        </li>
+      </ul>
     </div>
     <div class="mt-16 grid grid-cols-2 md:grid-cols-3 xl:col-span-3 xl:mt-0 xl:justify-items-end">
       {navMenus.map(({ name, links }) => (
