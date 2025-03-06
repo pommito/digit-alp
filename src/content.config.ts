@@ -9,6 +9,12 @@ const expertises = defineCollection({
       title: z.string(),
       description: z.string(),
       icon: image(),
+      questions: z.array(
+        z.object({
+          question: z.string(),
+          answer: z.string(),
+        })
+      ),
     }),
 });
 

@@ -10,7 +10,7 @@ import CtaBanner from '@/components/CtaBanner.astro';
 import Hero from '@/components/Home/Hero.astro';
 
 
-const expertises = await getCollection('expertises');
+const expertises = await getCollection('expertises').then(expertises => expertises.toSorted((a, b) => a.data.order - b.data.order));
 const featuredWorks = await getCollection('works', entry => entry.data.isFeatured);
 const clients = await getCollection('works')
 
