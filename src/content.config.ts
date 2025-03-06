@@ -9,12 +9,22 @@ const expertises = defineCollection({
       title: z.string(),
       description: z.string(),
       icon: image(),
+      subTitle: z.string(),
+      subText: z.string(),
+      specList: z.array(
+        z.object({
+          label: z.string(),
+          illustration: image(),
+          description: z.string(),
+        })
+      ),
       questions: z.array(
         z.object({
-          question: z.string(),
+          label: z.string(),
           answer: z.string(),
         })
       ),
+      relatedWorks: z.array(reference('works')),
     }),
 });
 
