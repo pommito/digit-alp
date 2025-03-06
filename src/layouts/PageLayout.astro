@@ -14,7 +14,7 @@ const { title, description, theme = 'light', metaTitle, metaDescription } = Astr
 ---
 
 <Layout title={title} metaTitle={metaTitle} metaDescription={metaDescription}>
-  <main class={`px-4 md:px-0 ${theme === 'light' ? 'bg-da-white' : 'bg-da text-da-white'}`}>
+  <main class={`${theme === 'light' ? 'bg-da-white' : 'bg-da text-da-white'}`}>
     <PageTitle title={title} description={description} />
     <slot />
   </main>

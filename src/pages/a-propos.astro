@@ -7,30 +7,28 @@ import Button from "@/components/ui/Button.astro";
 import Faq from "@/components/ui/Faq.astro";
 import FeaturedWorks from "@/components/FeaturedWorks.astro";
 
-
+import photoProfil from "@/assets/photo_profil.jpg"
 import { methodology, techs, questions } from "@/data/a-propos";
-import photoProfil from "@/assets/moi.webp"
-import CtaBanner from "@/components/CtaBanner.astro";
 
 const featuredWorks = await getCollection('works', entry => entry.data.isFeatured);
 ---
 
 
 <PageLayout 
-  title="Projets" 
+  title="A propos" 
   description="Découvrez une selection des différents projets que nous avons pu réaliser pour des clients de différentes tailles et issus de divers secteurs. Chaque projet est unique et nos réalisations sont le fruit d'une collaboration étroite avec nos clients pour produire un résultat totalement aligné à leurs attentes." 
   theme="light"
   metaTitle="Agence Digit Alp"
   metaDescription="Digit Alp est une agence web basée à Chambéry en Savoie proposant un accompagnement digital aux acteurs locaux et nationaux."
 >
   <section class="container mx-auto space-y-10 px-4 py-10 md:space-y-20 md:px-0 md:py-20">
-    <div class="grid grid-cols-1 md:gap-8 md:grid-cols-5">
-      <Image src={photoProfil} alt="Photo de Victor Lebecq développeur web" class="col-span-2 w-full aspect-4/3 rounded-2xl" />
+    <div class="grid grid-cols-1 items-center md:gap-8 md:grid-cols-5">
       <div class="space-y-4 col-span-3">
         <h2 class="text-4xl text-da md:text-5xl">Expert wordpress & <br/> développeur créatif</h2>
         <p class="text-lg md:text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum.</p>
         <p class="text-lg md:text-balance">Voluptate dolor ea velit proident. Tempor esse eu duis proident aute deserunt minim dolor ea esse sit magna cupidatat et. Ad cupidatat exercitation aliqua aute fugiat cillum.</p>
       </div>
+      <Image src={photoProfil} alt="Photo de Victor Lebecq développeur web" class="col-span-2 w-2/3 aspect-square rounded-2xl object-cover object-center" />
       
 
     </div>
