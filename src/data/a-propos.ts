@@ -14,17 +14,17 @@ import threejsIcon from '@/assets/techs/threejs.svg';
 export const methodology = [
   {
     title: 'Conception flexible',
-    text: 'Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.',
+    text: 'En étudiant votre cahier des charges, nous pourront définir ensemble les choix techniques pertinents pour votre projet.',
     icon: flexibleIcon,
   },
   {
     title: 'Des sites web sécurisés',
-    text: 'Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.',
+    text: 'Nous appliquons sur chacun de nos projets une approche visant à protéger votre site web et ses données.',
     icon: securityIcon,
   },
   {
     title: 'Construction durable',
-    text: 'Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.',
+    text: 'Nous cherchons perpetuellement à reduire notre impact sans pour autant faire de compromis sur la qualité de notre travail.',
     icon: durabilityIcon,
   },
 ];
@@ -66,18 +66,18 @@ export const techs = [
 
 export const questions = [
   {
-    label: 'Quelle est la taille de votre équipe ?',
+    label: "Pourquoi faire appel à Digit'Alp ?",
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      "Depuis plus de 3 ans nous accompagnons nos clients dans la réalisation de leurs projets digitaux. Nous n'avons qu'un seul objectif final, vous permettre d'atteindre les vôtres en construisant des outils digitaux réellement efficaces pour votre activité.",
   },
   {
-    label: 'Quelle est la taille de votre équipe ?',
+    label: 'Avez-vous besoin de maquettes pour réaliser mon site web ?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      "Nous proposons en interne lors de la conception du site internet la réalisation de maquettes personnalisées afin d'obtenir un rendu final vraiment unique. Néanmoins, si vous avez déjà réalisé des maquettes, nous pouvons les intégrer et créer votre site. Pour les budgets plus restreints, nous utilisons des templates de sites internet adaptés au domaine d'activité.",
   },
   {
-    label: 'Comment fonctionne votre équipe ?',
+    label: "Pratiquez-vous l'éco-conception ?",
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      "Lors de l'étude d'un projet, nos choix techniques sont réfléchis en prennant en compte la pertinence d'une technologie et son impact. Nous proposons à chacun de nos clients pour réduire l'impact de leur site internet, notamment en migrant vers des serveurs  français utilisant des énergies renouvellables.",
   },
 ];
