@@ -9,6 +9,19 @@ const breadcrumbs = paths.map((segment, index) => {
         path: breadcrumbPath
     };
 });
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map((breadcrumb, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "item": {
+      "@id": breadcrumb.path,
+      "name": breadcrumb.name
+    }
+  }))
+};
 ---
 
 <ul class="container flex gap-1 uppercase text-xs mb-2 mx-auto">
@@ -24,3 +37,5 @@ const breadcrumbs = paths.map((segment, index) => {
     </li>
   ))}
 </ul>
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
