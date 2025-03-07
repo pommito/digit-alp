@@ -44,7 +44,7 @@ const faqSchema = {
 
   if (listElem) {
     listElem.addEventListener('click', (e) => {
-      const buttonTargeted = e.target.closest('button[id^="faqButton-"]');
+      const buttonTargeted = (e.target as Element)?.closest('button[id^="faqButton-"]');
 
       if (buttonTargeted) {
         const isExpanded = buttonTargeted.getAttribute('aria-expanded') === 'true';

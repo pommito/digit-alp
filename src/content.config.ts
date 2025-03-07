@@ -34,6 +34,7 @@ const works = defineCollection({
     z.object({
       title: z.string(),
       description: z.string(),
+      thumbnail: image().optional(),
       featuredImage: image().optional(),
       logo: image(),
       client: z.string(),
@@ -41,7 +42,7 @@ const works = defineCollection({
       date: z.date(),
       clientSector: z.string(),
       technologies: z.array(z.string()),
-      siteurl: z.string(),
+      siteurl: z.string().optional(),
       isFeatured: z.boolean().default(false),
       relatedWorks: z.array(reference('works')),
     }),

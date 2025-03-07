@@ -1,6 +1,7 @@
 ---
 title: Création d'un vitrine wordpress
 description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
+# thumbnail: ./assets/immolyon7/thumbnail.webp
 # featuredImage: ./assets/immolyon7/featuredImage.webp
 logo: ./assets/immolyon7/logo.png
 client: Immo Lyon7

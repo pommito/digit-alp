@@ -1,7 +1,8 @@
 ---
 title: Refonte d'un site web multilingue
 description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
-featuredImage: ./assets/montyon-capital/featuredImage.jpg
+thumbnail: ./assets/montyon-capital/thumbnail.jpg
+featuredImage: ./assets/montyon-capital/featuredImage.png
 logo: ./assets/montyon-capital/logo.png
 client: Montyon Capital
 category: Creation site web

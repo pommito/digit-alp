@@ -1,7 +1,8 @@
 ---
 title: Création d'un site web wordpress
 description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
-featuredImage: ./assets/gastini/featuredImage.webp
+thumbnail: ./assets/gastini/thumbnail.webp
+featuredImage: ./assets/gastini/featuredImage.png
 logo: ./assets/gastini/logo.png
 client: Gastini
 category: Creation site web
@@ -12,3 +13,13 @@ siteurl: https://gastini.fr/
 isFeatured: true
 relatedWorks: ['chambery-savoie-football', 'gojura']
 ---
+
+## Problématique du projet
+
+### Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+### Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.

@@ -3,11 +3,9 @@ import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 import PageLayout from "@/layouts/PageLayout.astro";
-import Button from "@/components/ui/Button.astro";
-import Breadcrumb from "@/components/ui/Breadcrumb.astro";
-import FeaturedWorks from "@/components/FeaturedWorks.astro";
 import { getEntries } from "astro:content";
 import { render } from "astro:content";
+import CtaBanner from "@/components/CtaBanner.astro";
 
 export async function getStaticPaths() {
   const works = await getCollection("works");
@@ -28,43 +26,44 @@ const relatedWorksData = await getEntries(relatedWorks)
 
 ---
 
-<PageLayout title={title} description={description} theme="light">
-  <section class="container grid grid-cols-1 gap-8 py-10 mx-auto md:grid-cols-2 md:gap-0">
+<PageLayout title={title} description={description} theme="dark">
+  <section class="container px-4 space-y-10 mx-auto md:px-0 md:space-y-20">
+    <ul class="grid grid-cols-1 gap-4 h-fit md:grid-cols-3 md:gap-8">
+      <li>
+        <h3 class="text-da-300 text-base md:mb-2 md:text-lg ">Client</h3>
+        <span class="text-lg md:text-xl">{client}</span>
+      </li>
+      <li>
+        <h3 class="text-da-300 text-base md:mb-2 md:text-lg">Secteur</h3>
+        <span class="text-lg md:text-xl">{clientSector}</span>
+      </li>
+      <li>
+        <h3 class="text-da-300 text-base md:mb-2 md:text-lg">Année du projet</h3>
+        <span class="text-lg md:text-xl">{date.getFullYear()}</span>
+      </li>
+      <li>
+        <h3 class="text-da-300 text-base md:mb-2 md:text-lg">Expertises</h3>
+        <span class="text-lg md:text-xl">{category}</span>
+      </li>
+      <li>
+        <h3 class="text-da-300 text-base md:mb-2 md:text-lg">Technologies</h3>
+        <span class="text-lg md:text-xl">{technologies.join(', ')}</span>
+      </li>
+      {siteurl && (
+        <li>
+          <h3 class="text-da-300 text-sm md:mb-2 md:text-base">Résultats</h3>
+          <a href={siteurl} class="relative text-lg after:content-[''] after:absolute after:w-full after:h-0.25 after:bg-da-white after:bottom-0 after:right-0 hover:after:w-0 after:transition-all after:origin-left after:duration-500 after:ease-[cubic-bezier(.215,.61,.355,1)] md:text-xl">Découvrir le site</a>
+        </li>
+      )}
+    </ul>
     {featuredImage && (
-      <Image src={featuredImage} alt="featured image" width={900} height={600} format="avif" class="h-full w-full object-cover object-center rounded-lg md:row-start-1 md:col-start-2" />
+      <Image src={featuredImage} alt={title} class="w-full object-cover object-center rounded-2xl" />
     )}
-    <div class="space-y-8">
-      <ul class="flex flex-col gap-4 h-fit md:grid md:row-start-1">
-        <li>
-          <h3 class="text-da text-sm md:mb-2 md:text-base ">Client</h3>
-          <span class="text-base md:text-xl">{client}</span>
-        </li>
-        <li>
-          <h3 class="text-da text-sm md:mb-2 md:text-base">Secteur</h3>
-          <span class="text-base md:text-xl">{clientSector}</span>
-        </li>
-        <li>
-          <h3 class="text-da text-sm md:mb-2 md:text-base">Année du projet</h3>
-          <span class="text-base md:text-xl">{date.getFullYear()}</span>
-        </li>
-        <li>
-          <h3 class="text-da text-sm md:mb-2 md:text-base">Expertises</h3>
-          <span class="text-base md:text-xl">{category}</span>
-        </li>
-        <li>
-          <h3 class="text-da text-sm md:mb-2 md:text-base">Technologies</h3>
-          <span class="text-base md:text-xl">{technologies.join(', ')}</span>
-        </li>
-        <li class="mt-4">
-          <Button link={siteurl} label="Consulter le site" style="primary" />
-        </li>
-      </ul>
-    </div>
   </section>
 
-  <section id="workContent" class=" container mx-auto space-y-4">
+  <section id="mdContent" class="container mx-auto py-10 px-4 space-y-4 md:px-20 md:py-20 xl:px-80">
     <Content />
   </section>
-  <section>
-  </section>
+
 </PageLayout>
+

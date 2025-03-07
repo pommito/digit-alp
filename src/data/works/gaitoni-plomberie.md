@@ -1,7 +1,8 @@
 ---
 title: Création d'un site web wordpress
 description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
-featuredImage: ./assets/gaitoni-plomberie/featuredImage.webp
+thumbnail: ./assets/gaitoni-plomberie/thumbnail.webp
+# featuredImage: ./assets/gaitoni-plomberie/featuredImage.webp
 logo: ./assets/gaitoni-plomberie/logo.png
 client: Gaïtoni Plomberie
 category: Creation site web

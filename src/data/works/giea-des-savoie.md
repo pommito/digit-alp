@@ -1,6 +1,7 @@
 ---
 title: Création d'un identité visuelle et d'un site wordpress
 description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
+# thumbnail: ./assets/giea-des-savoie/thumbnail.webp
 # featuredImage: ./assets/giea-des-savoie/featuredImage.webp
 logo: ./assets/giea-des-savoie/logo.png
 client: Giea Des Savoie

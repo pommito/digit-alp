@@ -1,6 +1,7 @@
 ---
 title: Interventions technique sur sites clients
 description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
+# thumbnail: ./assets/titan-informatique/thumbnail.webp
 # featuredImage: ./assets/titan-informatique/featuredImage.jpg
 logo: ./assets/titan-informatique/logo.png
 client: Titan Informatique

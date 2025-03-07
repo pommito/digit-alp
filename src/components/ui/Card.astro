@@ -7,14 +7,14 @@ type Props = {
 }
 
 const { work } = Astro.props;
-const { title, featuredImage, client } = work.data;
+const { title, thumbnail, client } = work.data;
 
 ---
 <article class="relative flex items-end group rounded-xl p-4 overflow-hidden w-full aspect-3/4 col-span-1">
   <a href={`/projets/${work.id}`} aria-label="Voir la réalisation" class="flex w-full">
     <picture class="absolute inset-0">
-      {featuredImage && (
-        <Image src={featuredImage} alt="TODO" width={720} height={720} format="avif" class="h-full w-full object-cover object-center transform transition-transform duration-300 group-hover:scale-105" />
+      {thumbnail && (
+        <Image src={thumbnail} alt={`${title} pour ${client}`} format="avif" class="h-full w-full object-cover object-center transform transition-transform duration-300 group-hover:scale-105" />
       )}
     </picture>
     <div class={`relative flex justify-between bg-da-white text-da-black rounded-md w-full py-6 p-4 z-10 gap-2`}>
