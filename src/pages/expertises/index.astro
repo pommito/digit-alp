@@ -6,8 +6,7 @@ import ServiceItem from "@/components/ServiceItem.astro";
 import FeaturedWorks from "@/components/FeaturedWorks.astro";
 import CtaBanner from "@/components/CtaBanner.astro";
 
-
-const expertises = await getCollection('expertises');
+const expertises = await getCollection('expertises').then(expertises => expertises.toSorted((a, b) => a.data.order - b.data.order));
 const featuredWorks = await getCollection('works', entry => entry.data.isFeatured);
 ---
 
