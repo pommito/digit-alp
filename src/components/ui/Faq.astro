@@ -1,5 +1,4 @@
 ---
-
 type Props = {
   questions: Array<{
     label: string;
@@ -8,8 +7,22 @@ type Props = {
 }
 
 const { questions } = Astro.props;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": questions.map((question) => ({
+    "@type": "Question",
+    "name": question.label,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": question.answer
+    }
+  }))
+};
 ---
 
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
 <ul id="faqList">
   {questions.map((question, index) => (
@@ -25,18 +38,18 @@ const { questions } = Astro.props;
   ))}
 </ul>
 
-<script >
+<script>
   const listElem = document.getElementById('faqList');
   const buttonElems = document.querySelectorAll('button[id^="faqButton-"]');
-  
+
   if (listElem) {
     listElem.addEventListener('click', (e) => {
       const buttonTargeted = e.target.closest('button[id^="faqButton-"]');
-  
+
       if (buttonTargeted) {
         const isExpanded = buttonTargeted.getAttribute('aria-expanded') === 'true';
         buttonTargeted.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
-  
+
         buttonElems.forEach(button => {
           if (button !== buttonTargeted) {
             button.setAttribute('aria-expanded', 'false');
@@ -45,4 +58,4 @@ const { questions } = Astro.props;
       }
     });
   }
-  </script>
+</script>
