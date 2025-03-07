@@ -1,8 +1,8 @@
 ---
 title: Création de landing pages et refonte graphique de site wordpress
 description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
-# featuredImage: ./featuredImages/azkan-group.webp
-logo: ./logos/azkan.png
+# featuredImage: ./assets/azkan-group/featuredImage.webp
+logo: ./assets/azkan-group/logo.png
 client: Azkan Group
 category: Creation site web
 date: 2023-10-01

@@ -1,8 +1,8 @@
 ---
 title: Interventions technique sur sites clients
 description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
-# featuredImage: ./featuredImages/miicom.jpg
-logo: ./logos/miicom.png
+# featuredImage: ./assets/miicom/featuredImage.jpg
+logo: ./assets/miicom/logo.png
 client: Montyon Capital
 category: Creation site web
 date: 2024-10-01
