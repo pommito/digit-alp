@@ -1,27 +1,27 @@
 ---
 order: 5
-title: Référencement naturel
-description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur. Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
+title: Référencement Naturel (SEO)
+description: Optimisez votre visibilité en ligne grâce à des stratégies de référencement naturel efficaces. Audit SEO, optimisation technique, et création de contenu pour améliorer votre positionnement sur les moteurs de recherche.
 icon: ./assets/referencement-naturel/icon.svg
 
-subTitle: Un site web performant pour votre entreprise
-subText: Votre site internet est votre fer de lance digital, sa création demande de la rigueur et une attention aux moindre détails. Véritables artisans du web, nous réalisons depuis plus de 3 ans pour nos clients des sites web performants et impactants.
+subTitle: Boostez votre visibilité en ligne
+subText: Le référencement naturel est essentiel pour attirer du trafic qualifié sur votre site web. Nous mettons en place des stratégies sur-mesure pour améliorer votre positionnement sur les moteurs de recherche et augmenter votre notoriété en ligne.
 specList:
-  - label: Conception flexible et évolutive
-    illustration: ./assets/referencement-naturel/spec-flexible.svg
-    description: En étudiant votre cahier des charges, nous pourront définir ensemble les choix techniques pertinents pour votre projet.
-  - label: Des sites web sécurisés
-    illustration: ./assets/referencement-naturel/spec-security.svg
-    description: Nous appliquons sur chacun de nos projets une approche visant à protéger votre site web et ses données.
-  - label: Construction durable
-    illustration: ./assets/referencement-naturel/spec-durability.svg
-    description: Nous cherchons perpetuellement à reduire notre impact sans pour autant faire de compromis sur la qualité de notre travail.
+  - label: Audit SEO de votre site
+    illustration: ./assets/referencement-naturel/spec-audit.svg
+    description: Nous réalisons un audit approfondi de votre site pour identifier les points forts et les axes d'amélioration en matière de SEO.
+  - label: Optimisation technique
+    illustration: ./assets/referencement-naturel/spec-optimisation.svg
+    description: Nous optimisons les aspects techniques de votre site, tels que la vitesse de chargement, la structure des URL, et le balisage sémantique pour améliorer votre référencement.
+  - label: Mise en place d'une stratégie de contenu
+    illustration: ./assets/referencement-naturel/spec-contenu.svg
+    description: Nous créons du contenu pertinent et optimisé pour les moteurs de recherche, en intégrant des mots-clés stratégiques et en respectant les meilleures pratiques SEO.
 questions:
-  - label: Combien de temps faut-il pour créer un site web ?
-    answer: La durée de création d'un site web varie en fonction de sa complexité et de vos besoins spécifiques. En général, un site web simple peut être créé en quelques semaines, tandis qu'un site plus complexe avec des fonctionnalités personnalisées peut prendre plusieurs mois. la fréquence des échanges sont également un paramùtre important à prendre en compte.
-  - label: Puis-je apporter des modifications à mon site web après sa mise en ligne ?
-    answer: Oui, vous pouvez apporter des modifications à votre site web après sa mise en ligne. Nous vous fournissons des instructions détaillées et, si nécessaire, une formation pour vous permettre de gérer facilement le contenu de votre site. Pour des modifications plus complexes, nous offrons également des services de maintenance et infogérance.
-  - label: Mon site web sera-t-il bien référencé par les moteurs de recherche ?
-    answer: Lors de la création de votre site web, nous mettons en place une structure technique optimisée pour le référencement naturel (sémentique HTML, accessibilité, design responsive, temps de chargement optimisé, ...). Pour aller plus loin en SEO, une stratégie de contenu ainsi qu'une stratégie de popularité (backlinks) peuvent être mises en place en complément pour accroître plus rapidement la notoriété de votre site web et son référencement.
+  - label: Pourquoi le référencement naturel est-il important ?
+    answer: Le référencement naturel permet d'améliorer la visibilité de votre site web sur les moteurs de recherche, attirant ainsi un trafic qualifié et potentiellement convertible en clients. Une bonne stratégie SEO renforce également la crédibilité et l'autorité de votre site.
+  - label: Combien de temps faut-il pour voir des résultats en SEO ?
+    answer: Les résultats en référencement naturel peuvent varier en fonction de plusieurs facteurs, tels que la concurrence dans votre secteur et l'état initial de votre site. En général, il faut compter plusieurs mois pour observer des améliorations significatives.
+  - label: Puis-je suivre les performances de mon site en SEO ?
+    answer: Oui, nous mettons en place des outils de suivi et de reporting pour vous permettre de suivre l'évolution de votre référencement. Vous recevrez des rapports réguliers détaillant les actions menées et les résultats obtenus.
 relatedWorks: ['titan-informatique', 'gojura', 'gastini']
 ---
