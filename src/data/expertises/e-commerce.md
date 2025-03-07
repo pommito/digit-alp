@@ -1,27 +1,27 @@
 ---
 order: 3
 title: E-commerce
-description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur. Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
+description: Création et refonte de sites e-commerce performants avec WooCommerce et Shopify. Optimisation pour les conversions, gestion simplifiée, et solutions sur-mesure pour booster vos ventes en ligne.
 icon: ./assets/e-commerce/icon.svg
 
-subTitle: Un site web performant pour votre entreprise
-subText: Votre site internet est votre fer de lance digital, sa création demande de la rigueur et une attention aux moindre détails. Véritables artisans du web, nous réalisons depuis plus de 3 ans pour nos clients des sites web performants et impactants.
+subTitle: Créons et develeppons votre boutique digitale
+subText: Votre site e-commerce est la pierre angulaire de votre activité en ligne. Nous vous accompagnons dans la création ou la refonte de votre boutique en ligne, en utilisant des solutions robustes comme WooCommerce et Shopify, pour offrir une expérience utilisateur optimale et augmenter vos ventes.
 specList:
-  - label: Conception flexible et évolutive
-    illustration: ./assets/e-commerce/spec-flexible.svg
-    description: En étudiant votre cahier des charges, nous pourront définir ensemble les choix techniques pertinents pour votre projet.
-  - label: Des sites web sécurisés
-    illustration: ./assets/e-commerce/spec-security.svg
-    description: Nous appliquons sur chacun de nos projets une approche visant à protéger votre site web et ses données.
-  - label: Construction durable
-    illustration: ./assets/e-commerce/spec-durability.svg
-    description: Nous cherchons perpetuellement à reduire notre impact sans pour autant faire de compromis sur la qualité de notre travail.
+  - label: Création de boutiques WooCommerce
+    illustration: ./assets/e-commerce/spec-woocommerce.svg
+    description: Nous développons des site woocommerce sur-mesure, parfaitement intégrées à votre site WordPress, pour une gestion simplifiée et une flexibilité maximale.
+  - label: Développement de sites Shopify
+    illustration: ./assets/e-commerce/spec-shopify.svg
+    description: Profitez de la puissance de Shopify pour créer une boutique en ligne performante et évolutive, avec des fonctionnalités avancées pour booster vos ventes.
+  - label: Optimisation de workflows
+    illustration: ./assets/e-commerce/spec-workflow.svg
+    description: Nous optimisons votre site e-commerce pour maximiser les conversions et simplifier votre quotidien, avec des solutions sur-mesure et de l'automatisation.
 questions:
-  - label: Combien de temps faut-il pour créer un site web ?
-    answer: La durée de création d'un site web varie en fonction de sa complexité et de vos besoins spécifiques. En général, un site web simple peut être créé en quelques semaines, tandis qu'un site plus complexe avec des fonctionnalités personnalisées peut prendre plusieurs mois. la fréquence des échanges sont également un paramùtre important à prendre en compte.
-  - label: Puis-je apporter des modifications à mon site web après sa mise en ligne ?
-    answer: Oui, vous pouvez apporter des modifications à votre site web après sa mise en ligne. Nous vous fournissons des instructions détaillées et, si nécessaire, une formation pour vous permettre de gérer facilement le contenu de votre site. Pour des modifications plus complexes, nous offrons également des services de maintenance et infogérance.
-  - label: Mon site web sera-t-il bien référencé par les moteurs de recherche ?
-    answer: Lors de la création de votre site web, nous mettons en place une structure technique optimisée pour le référencement naturel (sémentique HTML, accessibilité, design responsive, temps de chargement optimisé, ...). Pour aller plus loin en SEO, une stratégie de contenu ainsi qu'une stratégie de popularité (backlinks) peuvent être mises en place en complément pour accroître plus rapidement la notoriété de votre site web et son référencement.
+  - label: Pourquoi choisir WooCommerce ou Shopify pour mon site e-commerce ?
+    answer: WooCommerce et Shopify sont des solutions reconnues pour leur flexibilité et leur facilité d'utilisation. Elles permettent de créer des boutiques en ligne performantes et évolutives, adaptées à tous types de besoins.
+  - label: Puis-je migrer mon site e-commerce existant vers WooCommerce ou Shopify ?
+    answer: Oui, nous proposons des services de migration pour transférer votre boutique en ligne actuelle vers WooCommerce ou Shopify, en préservant vos données et en optimisant les performances de votre nouveau site.
+  - label: Comment puis-je augmenter les ventes sur mon site e-commerce ?
+    answer: Nous mettons en place des stratégies d'optimisation des conversions, telles que l'amélioration de l'expérience utilisateur, l'optimisation SEO, et des campagnes marketing ciblées pour augmenter vos ventes en ligne.
 relatedWorks: ['titan-informatique', 'gojura', 'gastini']
 ---
