@@ -1,27 +1,27 @@
 ---
 order: 4
 title: Développement personnalisé
-description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur. Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
+description: Création d'applications web sur-mesure avec des frameworks JavaScript modernes comme React et Astro. Solutions performantes pour répondre à vos besoins les plus simples comme les plus complexes.
 icon: ./assets/developpement-personnalise/icon.svg
 
-subTitle: Un site web performant pour votre entreprise
-subText: Votre site internet est votre fer de lance digital, sa création demande de la rigueur et une attention aux moindre détails. Véritables artisans du web, nous réalisons depuis plus de 3 ans pour nos clients des sites web performants et impactants.
+subTitle: Des solutions web sur-mesure pour votre entreprise
+subText: Chaque projet est unique et mérite une approche personnalisée. Nous développons des applications web sur-mesure en utilisant des technologies modernes comme React et Astro, pour offrir des solutions performantes et adaptées à vos besoins spécifiques.
 specList:
-  - label: Conception flexible et évolutive
-    illustration: ./assets/developpement-personnalise/spec-flexible.svg
-    description: En étudiant votre cahier des charges, nous pourront définir ensemble les choix techniques pertinents pour votre projet.
-  - label: Des sites web sécurisés
-    illustration: ./assets/developpement-personnalise/spec-security.svg
-    description: Nous appliquons sur chacun de nos projets une approche visant à protéger votre site web et ses données.
-  - label: Construction durable
-    illustration: ./assets/developpement-personnalise/spec-durability.svg
-    description: Nous cherchons perpetuellement à reduire notre impact sans pour autant faire de compromis sur la qualité de notre travail.
+  - label: Développement sur-mesure
+    illustration: ./assets/developpement-personnalise/spec-dev.svg
+    description: Nous créons des interfaces utilisateur dynamiques et réactives avec React, pour une expérience utilisateur fluide, interactive et des possibilités infinies.
+  - label: Sites web statiques
+    illustration: ./assets/developpement-personnalise/spec-static.svg
+    description: Profitez de la rapidité et de l'efficacité d'Astro pour des sites web statiques et dynamiques, avec un rendu ultra-rapide et des performances optimales.
+  - label: Accompagnement de vos équipes
+    illustration: ./assets/developpement-personnalise/spec-team.svg
+    description: Nous intégrons vos équipes et apportont notre expérience et notre savoir-faire pour aider votre entreprise dans le développement des solutions web.
 questions:
-  - label: Combien de temps faut-il pour créer un site web ?
-    answer: La durée de création d'un site web varie en fonction de sa complexité et de vos besoins spécifiques. En général, un site web simple peut être créé en quelques semaines, tandis qu'un site plus complexe avec des fonctionnalités personnalisées peut prendre plusieurs mois. la fréquence des échanges sont également un paramùtre important à prendre en compte.
-  - label: Puis-je apporter des modifications à mon site web après sa mise en ligne ?
-    answer: Oui, vous pouvez apporter des modifications à votre site web après sa mise en ligne. Nous vous fournissons des instructions détaillées et, si nécessaire, une formation pour vous permettre de gérer facilement le contenu de votre site. Pour des modifications plus complexes, nous offrons également des services de maintenance et infogérance.
-  - label: Mon site web sera-t-il bien référencé par les moteurs de recherche ?
-    answer: Lors de la création de votre site web, nous mettons en place une structure technique optimisée pour le référencement naturel (sémentique HTML, accessibilité, design responsive, temps de chargement optimisé, ...). Pour aller plus loin en SEO, une stratégie de contenu ainsi qu'une stratégie de popularité (backlinks) peuvent être mises en place en complément pour accroître plus rapidement la notoriété de votre site web et son référencement.
+  - label: Pourquoi choisir un développement personnalisé plutôt que Wordpress ?
+    answer: Wordpress est une très bonne solution pour beaucoup de projets, mais comme chaque solution technique, il n'est pas adapté à tous les besoins. Le développement personnalisé permet de créer des solutions parfaitement adaptées à vos besoins spécifiques, offrant ainsi une meilleure performance et une expérience utilisateur optimale.
+  - label: Quels sont les avantages des frameworks JavaScript modernes ?
+    answer: Les frameworks comme React et Astro offrent une grande flexibilité et des performances élevées, permettant de créer des applications web modernes et réactives, avec une maintenance facilitée.
+  - label: Puis-je intégrer des fonctionnalités spécifiques à mon application ?
+    answer: Oui, nous pouvons intégrer des fonctionnalités spécifiques à votre application, qu'il s'agisse d'API externes, de systèmes de paiement, ou de tout autre besoin particulier.
 relatedWorks: ['titan-informatique', 'gojura', 'gastini']
 ---
