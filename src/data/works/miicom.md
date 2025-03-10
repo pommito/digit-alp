@@ -4,7 +4,7 @@ description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisi
 # thumbnail: ./assets/miicom/thumbnail.webp
 # featuredImage: ./assets/miicom/featuredImage.jpg
 logo: ./assets/miicom/logo.png
-client: Montyon Capital
+client: Miicom
 category: Creation site web
 date: 2024-10-01
 clientSector: Agence web
@@ -12,4 +12,5 @@ technologies: [Wordpress, Php, Javascript]
 siteurl: https://www.miicom.fr/
 isFeatured: false
 relatedWorks: ['chambery-savoie-football', 'gojura', 'gastini']
+isPublished: false
 ---

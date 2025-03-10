@@ -1,8 +1,8 @@
 ---
 title: Création d'un vitrine wordpress
 description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
-# thumbnail: ./assets/immolyon7/thumbnail.webp
-# featuredImage: ./assets/immolyon7/featuredImage.webp
+thumbnail: ./assets/immolyon7/thumbnail.png
+featuredImage: ./assets/immolyon7/featuredImage.png
 logo: ./assets/immolyon7/logo.png
 client: Immo Lyon7
 category: Creation site web
@@ -12,4 +12,5 @@ technologies: [Wordpress, Elementor]
 siteurl: https://immo-lyon7.fr
 isFeatured: false
 relatedWorks: ['chambery-savoie-football', 'gastini', 'gaitoni-plomberie']
+isPublished: true
 ---

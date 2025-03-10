@@ -12,4 +12,5 @@ technologies: [Wordpress, Php, Javascript]
 siteurl: https://titan-informatique.fr/
 isFeatured: false
 relatedWorks: ['miicom', 'gojura', 'gastini']
+isPublished: false
 ---

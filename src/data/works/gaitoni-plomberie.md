@@ -2,7 +2,7 @@
 title: Création d'un site web wordpress
 description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
 thumbnail: ./assets/gaitoni-plomberie/thumbnail.webp
-# featuredImage: ./assets/gaitoni-plomberie/featuredImage.webp
+featuredImage: ./assets/gaitoni-plomberie/featuredImage.png
 logo: ./assets/gaitoni-plomberie/logo.png
 client: Gaïtoni Plomberie
 category: Creation site web
@@ -12,6 +12,7 @@ technologies: [Wordpress, Elementor]
 siteurl: https://gaitoni-plomberie.com/
 isFeatured: false
 relatedWorks: ['gojura', 'gastini', 'chambery-savoie-football']
+isPublished: true
 ---
 
 ## Ceci est un titre de niveau 2

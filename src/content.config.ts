@@ -45,6 +45,7 @@ const works = defineCollection({
       siteurl: z.string().optional(),
       isFeatured: z.boolean().default(false),
       relatedWorks: z.array(reference('works')),
+      isPublished: z.boolean().default(false),
     }),
 });
 

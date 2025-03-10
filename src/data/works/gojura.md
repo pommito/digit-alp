@@ -12,6 +12,7 @@ technologies: [Wordpress, Woocommerce, Elementor]
 siteurl: https://gojura.fr/
 isFeatured: true
 relatedWorks: ['chambery-savoie-football', 'gastini', 'gaitoni-plomberie']
+isPublished: true
 ---
 
 ## Ceci est un titre de niveau 2
