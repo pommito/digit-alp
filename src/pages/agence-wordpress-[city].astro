@@ -1,0 +1,15 @@
+---
+// The goal of this file is to generate programatic seo
+
+export function getStaticPaths() {
+  return [
+    { params: { city: 'chambery' } },
+    { params: { city: 'grenoble' } },
+    { params: { city: 'lyon' } },
+  ];
+}
+
+const { city } = Astro.params;
+---
+
+<h1>Agence wordpress {city}</h1>
