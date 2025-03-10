@@ -1,9 +1,8 @@
 ---
-title: Création d'un site web wordpress
-description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
+title: Création d'un site web wordpress pour une entreprise de plomberie
 seo:
-  metaTitle: Création de landing pages et refonte graphique d'un site wordpress | Digit Alp
-  metaDescription: Depuis 2023, nous accompagnons Azkan Group dans la création de webdesign pour différentes pages clés du site ainsi que pour plusieurs landings pages utilisées dans leurs campagnes d'acquisition.
+  metaTitle: Création d'un site web wordpress pour une entreprise de plomberie | Digit Alp
+  metaDescription: Gaïtoni Plomberie est une jeune entreprise de plomberie et dépannage situé à Blyes, dans l'Ain. Lancée en 2024, elle cherche à se faire connaitre davantage localement grâce a un presence en ligne.
 thumbnail: ./assets/gaitoni-plomberie/thumbnail.webp
 featuredImage: ./assets/gaitoni-plomberie/featuredImage.png
 logo: ./assets/gaitoni-plomberie/logo.png
@@ -18,8 +17,14 @@ relatedProjects: ['gojura', 'gastini', 'chambery-savoie-football']
 isPublished: true
 ---
 
-## Ceci est un titre de niveau 2
+Gaïtoni Plomberie est une jeune entreprise de plomberie et dépannage situé à Blyes, dans l'Ain. Lancée en 2024, elle cherche à se faire connaitre davantage localement grâce a un presence en ligne.
 
-### Ceci est un titre de niveau 3
+Notre mission lors de cette collaboration est de mettre en place un site vitrine simple pour aider au lancement de l'activité, mais avec une possibilité de faire évoluer facilement le site dans le futur pour suivre le développement de l'entreprise.
 
-Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur. Dolore incididunt ex sit.
+Pour cela, nous avons mis en place un site wordpress, qui est un outil parfait pour un site web evolutif et scalable.
+
+## Objectifs du projet
+
+- Créer un site vitrine simple et sobre
+- Optimisation de l'accès aux informations de contact
+- Mise en avant des réalisations de l'entreprise

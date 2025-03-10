@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 
 import Card from '@/components/ui/Card.astro';
 import PageLayout from '@/layouts/PageLayout.astro';
+import CtaBanner from '@/components/CtaBanner.astro';
 
 const projects = await getCollection('projects');
 
@@ -25,4 +26,5 @@ const publishedProjects = projects.filter((project) => project.data.isPublished)
 		</ul>
 	</section>
 
+	<CtaBanner />
 </PageLayout>
