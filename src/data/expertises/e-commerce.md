@@ -2,6 +2,9 @@
 order: 3
 title: E-commerce
 description: Création et refonte de sites e-commerce performants avec WooCommerce et Shopify. Optimisation pour les conversions, gestion simplifiée, et solutions sur-mesure pour booster vos ventes en ligne.
+seo:
+  metaTitle: Agence web spécialiste e-commerce | Digit'Alp
+  metaDescription: Notre agence web spécialiste e-commerce à Chambéry vous accompagne dans la création ou la refonte de votre boutique en ligne et vous accompagne dans le développement de votre activité en ligne.
 icon: ./assets/e-commerce/icon.svg
 
 subTitle: Créons et develeppons votre boutique digitale

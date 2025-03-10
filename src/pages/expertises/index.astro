@@ -10,7 +10,13 @@ const expertises = await getCollection('expertises').then(expertises => expertis
 const featuredWorks = await getCollection('works', entry => entry.data.isFeatured);
 ---
 
-<PageLayout title="Expertises" description="Découvrez une selection des différents projets que nous avons pu réaliser pour des clients de différentes tailles et issus de divers secteurs. Chaque projet est unique et nos réalisations sont le fruit d'une collaboration étroite avec nos clients pour produire un résultat totalement aligné à leurs attentes." theme="light">
+<PageLayout 
+  title="Expertises" 
+  description="Découvrez une selection des différents projets que nous avons pu réaliser pour des clients de différentes tailles et issus de divers secteurs. Chaque projet est unique et nos réalisations sont le fruit d'une collaboration étroite avec nos clients pour produire un résultat totalement aligné à leurs attentes." 
+  theme="light"
+  metaTitle="Expertises techniques en développement web | Digit'Alp"
+  metaDescription="Profitez de la gamme complète des services d'une agence experte du Web pour assurer la performance de votre entreprise sur le Web et être aligner à vos objectifs de croissance."
+>
   <section class="container mx-auto w-full  px-4 py-10 space-y-6 md:py-20">
     <div class="grid grid-cols-1 gap-4 mb-10 md:grid-cols-2 md:gap-0">
       <h3 class="text-4xl text-da md:text-5xl">A chaque projet, sa solution technique</h3>

@@ -2,6 +2,9 @@
 order: 6
 title: Maintenance & Infogérance
 description: Services de maintenance et d'infogérance pour garantir la performance et la sécurité de votre site web. Surveillance proactive, mises à jour régulières, et support technique réactif.
+seo:
+  metaTitle: Solutions de maintenance & infogérance eco-conçus | Digit'Alp
+  metaDescription: Engagé dans l'écoconception, notre agence web propose des solutions de maintenance et infogérance eco-conçus à Chambéry. Envie de réduire vôtre impact sans perdre en performance ?
 icon: ./assets/maintenance-et-infogerance/icon.svg
 
 subTitle: Assurez la pérennité de votre site web

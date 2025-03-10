@@ -11,6 +11,7 @@ import Hero from '@/components/Home/Hero.astro';
 
 
 const expertises = await getCollection('expertises').then(expertises => expertises.toSorted((a, b) => a.data.order - b.data.order));
+
 const featuredWorks = await getCollection('works', entry => entry.data.isFeatured);
 const clients = await getCollection('works')
 
@@ -18,7 +19,12 @@ const clients = await getCollection('works')
 
 ---
 
-<Layout title='Digit Alp'>
+<Layout 
+title="Digit'Alp | Agence web à Chambéry & Grenoble"
+metaTitle="Digit'alp | Agence web à Chambéry & Grenoble"
+metaDescription="Agence web expertise en création de sites web, développement web, solutions e-commerce, référencement naturel, maintenance et infogérance."
+
+>
 
 	<Hero />
 

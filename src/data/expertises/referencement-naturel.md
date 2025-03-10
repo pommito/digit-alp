@@ -2,6 +2,9 @@
 order: 5
 title: Référencement Naturel (SEO)
 description: Optimisez votre visibilité en ligne grâce à des stratégies de référencement naturel efficaces. Audit SEO, optimisation technique, et création de contenu pour améliorer votre positionnement sur les moteurs de recherche.
+seo:
+  metaTitle: Agence web en référencement naturel (SEO) | Digit'Alp
+  metaDescription: Faites ressortir votre site web dans les résultats de recherche grâce au référencement naturel (SEO) et notre accompagnement technique pour vous aider à toucher plus de clients en ligne.
 icon: ./assets/referencement-naturel/icon.svg
 
 subTitle: Boostez votre visibilité en ligne

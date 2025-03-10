@@ -8,6 +8,10 @@ const expertises = defineCollection({
       order: z.number(),
       title: z.string(),
       description: z.string(),
+      seo: z.object({
+        metaTitle: z.string(),
+        metaDescription: z.string(),
+      }),
       icon: image(),
       subTitle: z.string(),
       subText: z.string(),

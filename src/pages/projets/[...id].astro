@@ -26,7 +26,13 @@ const relatedWorksData = await getEntries(relatedWorks)
 
 ---
 
-<PageLayout title={title} description={description} theme="dark">
+<PageLayout 
+  title={title} 
+  description={description} 
+  theme="dark"
+  metaTitle={title + ' | Digit\'Alp'}
+  metaDescription={description}
+>
   <section class="container px-4 space-y-10 mx-auto md:px-0 md:space-y-20">
     <ul class="grid grid-cols-1 gap-4 h-fit md:grid-cols-3 md:gap-8">
       <li>
