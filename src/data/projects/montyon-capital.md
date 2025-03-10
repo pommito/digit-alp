@@ -11,6 +11,6 @@ clientSector: Fond d'investissement
 technologies: [Wordpress, Javascript, Elementor]
 siteurl: https://montyon-capital.com/
 isFeatured: false
-relatedWorks: ['chambery-savoie-football', 'gojura', 'gastini']
+relatedProjects: ['chambery-savoie-football', 'gojura', 'gastini']
 isPublished: true
 ---

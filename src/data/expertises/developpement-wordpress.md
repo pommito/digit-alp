@@ -26,5 +26,5 @@ questions:
     answer: Oui, WordPress est conçu pour être facile à utiliser, même pour les non-initiés. Nous vous fournissons une formation et des guides pour vous permettre de gérer votre site en toute autonomie. Pour des modifications plus complexes, nous restons à votre disposition.
   - label: Comment garantissez-vous la sécurité de mon site WordPress ?
     answer: Nous mettons en place des mesures de sécurité robustes, incluant des mises à jour régulières, des sauvegardes automatiques, et des plugins de sécurité pour protéger votre site contre les menaces. Nous proposons également une offre de maintenance pour vous assurer la disponibilité et la résilience de votre site.
-relatedWorks: ['titan-informatique', 'gojura', 'gastini']
+relatedProjects: ['titan-informatique', 'gojura', 'gastini']
 ---

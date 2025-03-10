@@ -28,12 +28,12 @@ const expertises = defineCollection({
           answer: z.string(),
         })
       ),
-      relatedWorks: z.array(reference('works')),
+      relatedProjects: z.array(reference('projects')),
     }),
 });
 
-const works = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/data/works' }),
+const projects = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/data/projects' }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
@@ -48,12 +48,12 @@ const works = defineCollection({
       technologies: z.array(z.string()),
       siteurl: z.string().optional(),
       isFeatured: z.boolean().default(false),
-      relatedWorks: z.array(reference('works')),
+      relatedProjects: z.array(reference('projects')),
       isPublished: z.boolean().default(false),
     }),
 });
 
 export const collections = {
   expertises,
-  works,
+  projects,
 };

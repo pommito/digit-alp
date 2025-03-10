@@ -8,20 +8,20 @@ import { render } from "astro:content";
 import CtaBanner from "@/components/CtaBanner.astro";
 
 export async function getStaticPaths() {
-  const works = await getCollection("works");
+  const projects = await getCollection("projects");
   
-  return works.map((work) => ({
-    params: { id: work.id },
-    props: { work },
+  return projects.map((project) => ({
+    params: { id: project.id },
+    props: { project },
   }));
 }
 
-const { work } = Astro.props;
-const { Content } = await render(work)
+const { project } = Astro.props;
+const { Content } = await render(project)
 
-const { title, description, featuredImage, client, date, clientSector, category, technologies, siteurl, relatedWorks } = work.data;
+const { title, description, featuredImage, client, date, clientSector, category, technologies, siteurl, relatedProjects } = project.data;
   
-const relatedWorksData = await getEntries(relatedWorks)
+const relatedWorksData = await getEntries(relatedProjects)
 
 
 ---

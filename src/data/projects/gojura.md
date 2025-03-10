@@ -11,7 +11,7 @@ clientSector: Association sportive
 technologies: [Wordpress, Woocommerce, Elementor]
 siteurl: https://gojura.fr/
 isFeatured: true
-relatedWorks: ['chambery-savoie-football', 'gastini', 'gaitoni-plomberie']
+relatedProjects: ['chambery-savoie-football', 'gastini', 'gaitoni-plomberie']
 isPublished: true
 ---
 

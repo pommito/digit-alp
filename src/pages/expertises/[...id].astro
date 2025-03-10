@@ -18,9 +18,9 @@ export async function getStaticPaths() {
 
 const { expertise } = Astro.props;
 const { Content } = await render(expertise)
-const { title, description, seo, subTitle, subText, specList, questions, relatedWorks } = expertise.data;
+const { title, description, seo, subTitle, subText, specList, questions, relatedProjects } = expertise.data;
 
-const featuredWorks = await getEntries(relatedWorks);
+const linkedProjects = await getEntries(relatedProjects);
 
 ---
 
@@ -61,7 +61,7 @@ const featuredWorks = await getEntries(relatedWorks);
   </section>
 
 
-  <FeaturedWorks featuredWorks={featuredWorks} title="Nos projets" subTitle={`Nos projets en ${title}`} />
+  <FeaturedWorks projects={linkedProjects} title="Nos projets" subTitle={`Nos projets en ${title}`} />
 
   <Content />
 </PageLayout>

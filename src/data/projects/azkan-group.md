@@ -11,6 +11,6 @@ clientSector: Courtier en immobilier
 technologies: [Wordpress, Elementor]
 siteurl: https://azkan-group.fr
 isFeatured: false
-relatedWorks: ['chambery-savoie-football', 'gastini', 'gaitoni-plomberie']
+relatedProjects: ['chambery-savoie-football', 'gastini', 'gaitoni-plomberie']
 isPublished: true
 ---

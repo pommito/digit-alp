@@ -7,7 +7,7 @@ import FeaturedWorks from "@/components/FeaturedWorks.astro";
 import CtaBanner from "@/components/CtaBanner.astro";
 
 const expertises = await getCollection('expertises').then(expertises => expertises.toSorted((a, b) => a.data.order - b.data.order));
-const featuredWorks = await getCollection('works', entry => entry.data.isFeatured);
+const featuredProjects = await getCollection('projects', project => project.data.isFeatured);
 ---
 
 <PageLayout 
@@ -29,7 +29,7 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
     </ul>
   </section>
 
-  <FeaturedWorks featuredWorks={featuredWorks} title="Nos projets" subTitle="Découvrez nos dernières réalisations" />
+  <FeaturedWorks projects={featuredProjects} title="Nos projets" subTitle="Découvrez nos dernières réalisations" />
 
   <CtaBanner />
 

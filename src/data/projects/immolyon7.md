@@ -11,6 +11,6 @@ clientSector: Courtier en immobilier
 technologies: [Wordpress, Elementor]
 siteurl: https://immo-lyon7.fr
 isFeatured: false
-relatedWorks: ['chambery-savoie-football', 'gastini', 'gaitoni-plomberie']
+relatedProjects: ['chambery-savoie-football', 'gastini', 'gaitoni-plomberie']
 isPublished: true
 ---

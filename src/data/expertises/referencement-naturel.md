@@ -26,5 +26,5 @@ questions:
     answer: Les résultats en référencement naturel peuvent varier en fonction de plusieurs facteurs, tels que la concurrence dans votre secteur et l'état initial de votre site. En général, il faut compter plusieurs mois pour observer des améliorations significatives.
   - label: Puis-je suivre les performances de mon site en SEO ?
     answer: Oui, nous mettons en place des outils de suivi et de reporting pour vous permettre de suivre l'évolution de votre référencement. Vous recevrez des rapports réguliers détaillant les actions menées et les résultats obtenus.
-relatedWorks: ['titan-informatique', 'gojura', 'gastini']
+relatedProjects: ['titan-informatique', 'gojura', 'gastini']
 ---

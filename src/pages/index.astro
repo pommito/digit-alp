@@ -12,8 +12,8 @@ import Hero from '@/components/Home/Hero.astro';
 
 const expertises = await getCollection('expertises').then(expertises => expertises.toSorted((a, b) => a.data.order - b.data.order));
 
-const featuredWorks = await getCollection('works', entry => entry.data.isFeatured);
-const clients = await getCollection('works')
+const featuredProjects = await getCollection('projects', entry => entry.data.isFeatured);
+const clients = await getCollection('projects')
 
 
 
@@ -41,7 +41,7 @@ metaDescription="Agence web expertise en création de sites web, développement 
 		</ul>
 	</section>
 
-	<FeaturedWorks featuredWorks={featuredWorks} title="Nos projets" subTitle="Nos clients, des projets uniques" />
+	<FeaturedWorks projects={featuredProjects} title="Nos projets" subTitle="Nos clients, des projets uniques" />
 
 	<section class="bg-da text-da-white">
 		<div class="container flex flex-col items-center justify-center mx-auto w-full py-20 px-4">

@@ -11,7 +11,7 @@ clientSector: Plomberie & Dépannage
 technologies: [Wordpress, Elementor]
 siteurl: https://gaitoni-plomberie.com/
 isFeatured: false
-relatedWorks: ['gojura', 'gastini', 'chambery-savoie-football']
+relatedProjects: ['gojura', 'gastini', 'chambery-savoie-football']
 isPublished: true
 ---
 

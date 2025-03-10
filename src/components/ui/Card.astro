@@ -3,15 +3,15 @@ import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 
 type Props = {
-  work: CollectionEntry<"works">;
+  project: CollectionEntry<"projects">;
 }
 
-const { work } = Astro.props;
-const { title, thumbnail, client } = work.data;
+const { project } = Astro.props;
+const { title, thumbnail, client } = project.data;
 
 ---
 <article class="relative flex items-end group rounded-xl p-4 overflow-hidden w-full aspect-3/4 col-span-1">
-  <a href={`/projets/${work.id}`} aria-label="Voir la réalisation" class="flex w-full">
+  <a href={`/projets/${project.id}`} aria-label="Voir la réalisation" class="flex w-full">
     <picture class="absolute inset-0">
       {thumbnail && (
         <Image src={thumbnail} alt={`${title} pour ${client}`} format="avif" class="h-full w-full object-cover object-center transform transition-transform duration-300 group-hover:scale-105" />

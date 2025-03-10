@@ -11,7 +11,7 @@ clientSector: Association sportive
 technologies: [Wordpress, Elementor]
 siteurl: https://chamberysavoiefootball.fr/
 isFeatured: true
-relatedWorks: ['gojura', 'gastini']
+relatedProjects: ['gojura', 'gastini']
 isPublished: true
 ---
 

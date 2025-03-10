@@ -5,12 +5,12 @@ import Button from "@/components/ui/Button.astro";
 import Card from "@/components/ui/Card.astro";
 
 type Props = {
-  featuredWorks: CollectionEntry<"works">[];
+  projects: CollectionEntry<"projects">[];
   title : string,
   subTitle : string,
 }
 
-const { featuredWorks, title, subTitle } = Astro.props;
+const { projects, title, subTitle } = Astro.props;
 
 ---
 
@@ -19,8 +19,8 @@ const { featuredWorks, title, subTitle } = Astro.props;
     <h2 class="text-base self-start leading-none uppercase mb-2">{title}</h2>
     <h2 class="text-4xl self-start text-da  mb-8 md:mb-16 md:text-5xl">{subTitle}</h2>
     <div class="grid grid-cols-1 w-full md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 md:mb-16">
-      {featuredWorks.map(work => (
-        <Card work={work}/>
+      {projects.map(project => (
+        <Card project={project}/>
       ))}
     </div>
     <Button label="Voir tous nos projets" link="/projets" style="primary"/>

@@ -4,9 +4,9 @@ import { getCollection } from 'astro:content';
 import Card from '@/components/ui/Card.astro';
 import PageLayout from '@/layouts/PageLayout.astro';
 
-const works = await getCollection('works');
+const projects = await getCollection('projects');
 
-const publishedWorks = works.filter((work) => work.data.isPublished);
+const publishedProjects = projects.filter((project) => project.data.isPublished);
 ---
 
 
@@ -19,8 +19,8 @@ const publishedWorks = works.filter((work) => work.data.isPublished);
 >
 	<section class="container mx-auto px-4 py-10 md:px-0 md:py-20">
 		<ul class="grid grid-cols-1 gap-4 text-da-black md:grid-cols-2 lg:grid-cols-3 ">
-			{publishedWorks.map((work) => (
-				<Card work={work} />
+			{publishedProjects.map((project) => (
+				<Card project={project} />
 			))}
 		</ul>
 	</section>

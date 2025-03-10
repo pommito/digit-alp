@@ -1,12 +1,11 @@
 ---
 // The goal of this file is to generate programatic seo
+import { cities } from '@/data/agence-wordpress';
 
-export function getStaticPaths() {
-  return [
-    { params: { city: 'chambery' } },
-    { params: { city: 'grenoble' } },
-    { params: { city: 'lyon' } },
-  ];
+export async function getStaticPaths() {
+  return cities.map((city) => ({
+    params: { city },
+  }));
 }
 
 const { city } = Astro.params;
