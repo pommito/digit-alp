@@ -19,11 +19,11 @@ isPublished: true
 
 Azkan Group est une entreprise spécialisée dans l'accompagnement international des entreprises en Turquie. Depuis 2005, elle a accompagné plus de 500 entreprises dans leur développement sur le marché turc.
 
-Depuis 2023, nous accompagnons Azkan Group dans la création de webdesign pour différentes pages clés du site ainsi que pour plusieurs landings pages utilisées dans leurs campagnes d'acquisition.
+Depuis 2023, nous accompagnons Azkan Group dans la création de webdesign pour différentes pages clés du site ainsi que pour plusieurs landing pages utilisées dans leurs campagnes d'acquisition.
 
 ## Objectifs du projet
 
-- Améliorer le design de pages du site sans modifier la structure
-- Créer des pages de contenu pour les campagnes d'acuqisition de l'entreprise
-- Optimiser l'experience utilisateur et l'accès à l'information pour les visiteurs
+- Améliorer le design des pages du site sans modifier la structure
+- Créer des pages de contenu pour les campagnes d'acquisition de l'entreprise
+- Optimiser l'expérience utilisateur et l'accès à l'information pour les visiteurs
 - Augmenter le taux de conversion des pages

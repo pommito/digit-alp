@@ -1,6 +1,5 @@
 ---
-title: Création d'un site web wordpress
-description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
+title: Création d'un site web pour une entreprise dans le domaine du luxe
 seo:
   metaTitle: Création de landing pages et refonte graphique d'un site wordpress | Digit Alp
   metaDescription: Depuis 2023, nous accompagnons Azkan Group dans la création de webdesign pour différentes pages clés du site ainsi que pour plusieurs landings pages utilisées dans leurs campagnes d'acquisition.
@@ -18,12 +17,18 @@ relatedProjects: ['chambery-savoie-football', 'gojura']
 isPublished: true
 ---
 
-## Problématique du projet
+Depuis 1946, Gastini, une entreprise savoyarde, se montre résiliente face aux mutations successives des stations de ski et s'adapte pour toujours être un acteur majeur des chantiers et gros œuvres en montagne.
 
-### Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+L'entreprise réalise des chantiers pour des entreprises luxueuses et apporte son expertise pour des chantiers de résidences, hôtels, chalets, d'infrastructures en haute montagne, mais également pour de l'éco-conception.
 
-lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+Entreprise de renom, Gastini nous contacte pour développer un site vitrine mettant en avant ses expertises et les différentes réalisations effectuées au cours des années. Leur volonté : un site vitrine simple et sobre, qui reflète les codes du luxe.
 
-### Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+## Objectifs du projet
 
-lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+- Création de maquettes entièrement personnalisées
+- Intégration des maquettes sur un site WordPress administrable par le client
+- Ajout d'animations JavaScript subtiles pour renforcer l'image luxe du site web
+- Sécurisation du site web
+- Optimisation de la vitesse de chargement du site WordPress
+
+![version mobile du site WordPress de Gastini](./assets/gastini/mockup_mobile.webp)

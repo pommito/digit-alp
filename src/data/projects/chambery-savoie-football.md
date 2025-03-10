@@ -17,19 +17,19 @@ relatedProjects: ['gojura', 'gastini', 'gaitoni-plomberie']
 isPublished: true
 ---
 
-Le Chambéry Savoie Football est un club chambérien dont l'équipe fanion évolue en National 3. Club partenaire OL, le CSF a réussi lors de ces dernières années un très beau parcours en coupe de France.
+Le Chambéry Savoie Football est un club chambérien dont l'équipe fanion évolue en National 3. Club partenaire de l'OL, le CSF a réussi lors de ces dernières années un très beau parcours en Coupe de France.
 
-Afin de proposer à ces fans une plateforme digitale complète, le CSF nous a contactés pour un projet de refonte de leur site internet. A l'origine, leur site était développer via un CMS propriétaire.
+Afin de proposer à ses fans une plateforme digitale complète, le CSF nous a contactés pour un projet de refonte de leur site internet. À l'origine, leur site était développé via un CMS propriétaire.
 
-Nous avons donc choisi de migrer vers wordpress, une solution open source qui permet une très grande liberté et minimise les coûts de maintenance et de transfert pour le club.
+Nous avons donc choisi de migrer vers WordPress, une solution open source qui permet une très grande liberté et minimise les coûts de maintenance et de transfert pour le club.
 
 ## Objectifs du projet
 
-- Création de nouveau webdesign
-- Simplification de l'arboresecence du site
+- Création d'un nouveau webdesign
+- Simplification de l'arborescence du site
 - Intégration d'un suivi du classement des équipes en temps réel
 - Connexion à l'interface e-commerce partenaire
 - Renforcement de la sécurité du site
 - Optimisation de la vitesse de chargement du site
 
-![version mobile du site wordpress du Chambéry Savoie Football](./assets/chambery-savoie-football/mockup-mobile.webp)
+![version mobile du site wordpress du Chambéry Savoie Football](./assets/chambery-savoie-football/mockup_mobile.webp)
