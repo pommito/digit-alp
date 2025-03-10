@@ -37,7 +37,11 @@ const projects = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
-      description: z.string(),
+      description: z.string().optional(),
+      seo: z.object({
+        metaTitle: z.string(),
+        metaDescription: z.string(),
+      }),
       thumbnail: image().optional(),
       featuredImage: image().optional(),
       logo: image(),

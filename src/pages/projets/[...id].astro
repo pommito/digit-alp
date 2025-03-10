@@ -5,7 +5,7 @@ import { getCollection } from "astro:content";
 import PageLayout from "@/layouts/PageLayout.astro";
 import { getEntries } from "astro:content";
 import { render } from "astro:content";
-import CtaBanner from "@/components/CtaBanner.astro";
+import FeaturedWorks from "@/components/FeaturedWorks.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 const { project } = Astro.props;
 const { Content } = await render(project)
 
-const { title, description, featuredImage, client, date, clientSector, category, technologies, siteurl, relatedProjects } = project.data;
+const { title, description, seo, featuredImage, client, date, clientSector, category, technologies, siteurl, relatedProjects } = project.data;
   
 const relatedWorksData = await getEntries(relatedProjects)
 
@@ -30,8 +30,8 @@ const relatedWorksData = await getEntries(relatedProjects)
   title={title} 
   description={description} 
   theme="dark"
-  metaTitle={title + ' | Digit\'Alp'}
-  metaDescription={description}
+  metaTitle={seo.metaTitle}
+  metaDescription={seo.metaDescription}
 >
   <section class="container px-4 space-y-10 mx-auto md:px-0 md:space-y-20">
     <ul class="grid grid-cols-1 gap-4 h-fit md:grid-cols-3 md:gap-8">
@@ -58,7 +58,7 @@ const relatedWorksData = await getEntries(relatedProjects)
       {siteurl && (
         <li>
           <h3 class="text-da-300 text-sm md:mb-2 md:text-base">Résultats</h3>
-          <a href={siteurl} class="relative text-lg after:content-[''] after:absolute after:w-full after:h-0.25 after:bg-da-white after:bottom-0 after:right-0 hover:after:w-0 after:transition-all after:origin-left after:duration-500 after:ease-[cubic-bezier(.215,.61,.355,1)] md:text-xl">Découvrir le site</a>
+          <a href={siteurl} target="_blank" class="relative text-lg after:content-[''] after:absolute after:w-full after:h-0.25 after:bg-da-white after:bottom-0 after:right-0 hover:after:w-0 after:transition-all after:origin-left after:duration-500 after:ease-[cubic-bezier(.215,.61,.355,1)] md:text-xl">Découvrir le site</a>
         </li>
       )}
     </ul>
@@ -67,9 +67,11 @@ const relatedWorksData = await getEntries(relatedProjects)
     )}
   </section>
 
-  <section id="mdContent" class="container mx-auto py-10 px-4 space-y-4 md:px-20 md:py-20 xl:px-80">
+  <section id="mdContent" class="container mx-auto py-10 px-4 space-y-4 md:px-20 md:py-20 xl:px-40">
     <Content />
   </section>
+
+  <FeaturedWorks projects={relatedWorksData} title="nos projets" subTitle="Découvrir d'autres projets" theme="dark"  />
 
 </PageLayout>
 
