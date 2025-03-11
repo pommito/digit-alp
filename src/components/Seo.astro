@@ -1,4 +1,5 @@
 ---
+import ogImage from '../../public/assets/images/agence-web-chambery-digit-alp.webp'
 
 type Props = {
   title: string;
@@ -26,12 +27,13 @@ console.log(SITE_URL, pathname);
 <meta content={metaDescription} name="og:description" />
 <meta content={metaTitle || title} name="twitter:title" />
 <meta content={metaDescription} name="twitter:description" />
-<meta content="website" name="og:type" />
-<meta property="og:image" content={`TODO : add image`} />
+<meta name="twitter:image" content={`${SITE_URL}${ogImage.src}`} />
+<meta property="og:image" content={`${SITE_URL}${ogImage.src}`} />
 <meta content="Digit Alp" name="og:site_name" />
 <meta content={SITE_URL} name="og:url" />
-<meta content="fr" name="og:locale" />
+<meta content="website" name="og:type" />
 <link rel="canonical" href={`${SITE_URL}${pathname}`} />
 <link rel="home" href={`${SITE_URL}`} />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta content="fr" name="og:locale" />
 <link rel="sitemap" href="/sitemap-index.xml" />
