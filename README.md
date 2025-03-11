@@ -1,3 +1,3 @@
-# Digit Alp
+# Digit Alp website
 
-Cooming soon...
+Build with Astro and Tailwind CSS
