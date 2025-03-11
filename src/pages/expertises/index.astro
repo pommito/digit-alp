@@ -25,7 +25,7 @@ const sortedExpertises = expertises.toSorted((a, b) => a.data.order - b.data.ord
       <p class="text-lg text-balance">Votre projet est unique, tout comme vos besoins. Notre expertise dans les domaines du web nous permet de vous accompagner dans la réalisation de vos projets en ligne et de proposer des solutions vraiment adaptées à vos besoins.</p>
     </div>
     <ul class="grid grid-cols-1 gap-8 container mx-auto md:gap-4 md:grid-cols-2">
-      {sortedExpertises.map(expertise => (
+      {expertises.map(expertise => (
         <ServiceItem expertise={expertise} />
       ))}
     </ul>
