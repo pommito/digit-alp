@@ -1,9 +1,8 @@
 ---
-title: Création d'un site e-commerce wordpress
-description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
+title: Création d'un site e-commerce wordpress évolutif
 seo:
-  metaTitle: Création de landing pages et refonte graphique d'un site wordpress | Digit Alp
-  metaDescription: Depuis 2023, nous accompagnons Azkan Group dans la création de webdesign pour différentes pages clés du site ainsi que pour plusieurs landings pages utilisées dans leurs campagnes d'acquisition.
+  metaTitle: Création d'un site e-commerce wordpress évolutif | Digit Alp
+  metaDescription: Fondé par Christian Goetz à Chambéry, Gojura innove et crée des accessoires de vélos répondant à des besoins de tous les jours. Pour accompagner leur croissance, l'entreprise souhaite développer un site web évolutif.
 thumbnail: ./assets/gojura/thumbnail.webp
 featuredImage: ./assets/gojura/featuredImage.png
 logo: ./assets/gojura/logo.png
@@ -18,8 +17,21 @@ relatedProjects: ['chambery-savoie-football', 'gastini', 'gaitoni-plomberie']
 isPublished: true
 ---
 
-## Ceci est un titre de niveau 2
+Le monde la mobilité douce est en constante évolution, et ce grâce à des entreprises innovantes, et Gojura est l'une d'entre elles.
 
-### Ceci est un titre de niveau 3
+Fondé par Christian Goetz à Chambéry, Gojura innove et crée des accessoires de vélos répondant à des besoins de tous les jours. Après une longue phase de conception et de recherche & développement, l'entreprise lance deux premiers produits via une campagne de crowd-funding.
 
-Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur. Dolore incididunt ex sit.
+Pour accompagner cette campagne, l'entreprise nous contacte en Octobre 2023 pour créer dans un premier temps un site vitrine permettant de présenter la marque, sa mission et la campagne de crowd-funding. Mais une fois cette campagne passé, le site doit évoluer en site e-commerce.
+
+Pour répondre à cette demande, nous avons choisi de créer un site Wordpress, qui permettra facilement de répondre à ce besoin d'évolution.
+
+En octobre 2024, le site évolue vers un site e-commerce, grâce a l'intégration de la plateforme Woocommerce.
+
+## Objectifs du projet
+
+- Création de maquette pour les pages du site
+- Structuration du site pour faciliter la transition vers un site e-commerce
+- Intégration des visuels réalisés par la graphiste du projet
+- Sécurisation du site
+- Optimisation des performances
+- Staging et migration du site vers une version e-commerce
