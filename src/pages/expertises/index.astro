@@ -9,7 +9,7 @@ import CtaBanner from "@/components/CtaBanner.astro";
 const expertises = await getCollection('expertises');
 const featuredProjects = await getCollection('projects', project => project.data.isFeatured);
 
-// const sortedExpertises = expertises.toSorted((a, b) => a.data.order - b.data.order);
+const sortedExpertises = expertises.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <PageLayout
@@ -25,7 +25,7 @@ const featuredProjects = await getCollection('projects', project => project.data
       <p class="text-lg text-balance">Votre projet est unique, tout comme vos besoins. Notre expertise dans les domaines du web nous permet de vous accompagner dans la réalisation de vos projets en ligne et de proposer des solutions vraiment adaptées à vos besoins.</p>
     </div>
     <ul class="grid grid-cols-1 gap-8 container mx-auto md:gap-4 md:grid-cols-2">
-      {expertises.map(expertise => (
+      {sortedExpertises.map(expertise => (
         <ServiceItem expertise={expertise} />
       ))}
     </ul>
