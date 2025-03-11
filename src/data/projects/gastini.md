@@ -13,7 +13,7 @@ clientSector: Chantiers et gros oeuvre en montagne
 technologies: [Wordpress, Javascript, Lenis]
 siteurl: https://gastini.fr/
 isFeatured: true
-relatedProjects: ['chambery-savoie-football', 'gojura']
+relatedProjects: ['montyon-capital', 'gojura', 'giea-des-savoie']
 isPublished: true
 ---
 
