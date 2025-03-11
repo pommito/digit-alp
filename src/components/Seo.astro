@@ -16,13 +16,13 @@ const { title, metaTitle, metaDescription } = Astro.props
 
 ---
 
-<title>{title || metaTitle}</title>
+<title>{metaTitle || title}</title>
 <meta name="robots" content="index, follow" />
 <meta name="description" content={metaDescription} />
-<meta content={metaTitle || title} name="twitter:title" />
-<meta content={metaDescription} name="twitter:description" />
 <meta content={metaTitle || title} name="og:title" />
 <meta content={metaDescription} name="og:description" />
+<meta content={metaTitle || title} name="twitter:title" />
+<meta content={metaDescription} name="twitter:description" />
 <meta content="website" name="og:type" />
 <meta property="og:image" content={`TODO : add image`} />
 <meta content="Digit Alp" name="og:site_name" />
