@@ -1,9 +1,8 @@
 ---
-title: Refonte d'un site web multilingue
-description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
+title: Refonte d'un site web multilingue pour un fond d'investissement
 seo:
-  metaTitle: Création de landing pages et refonte graphique d'un site wordpress | Digit Alp
-  metaDescription: Depuis 2023, nous accompagnons Azkan Group dans la création de webdesign pour différentes pages clés du site ainsi que pour plusieurs landings pages utilisées dans leurs campagnes d'acquisition.
+  metaTitle: Refonte d'un site web multilingue pour un fond d'investissement | Digit Alp
+  metaDescription: Montyon Capital est un fond d'investissement agile dédié aux opportunités non-conventionnelles. Pour soutenir sa croissance, l'entreprise veut développer un site mulitlingue.
 thumbnail: ./assets/montyon-capital/thumbnail.jpg
 featuredImage: ./assets/montyon-capital/featuredImage.png
 logo: ./assets/montyon-capital/logo.png
@@ -14,6 +13,18 @@ clientSector: Fond d'investissement
 technologies: [Wordpress, Javascript, Elementor]
 siteurl: https://montyon-capital.com/
 isFeatured: false
-relatedProjects: ['chambery-savoie-football', 'gojura', 'gastini']
+relatedProjects: ['gastini', 'gojura', 'azkan-group']
 isPublished: true
 ---
+
+Montyon Capital est un fonds d'investissement agile dédié aux opportunités non conventionnelles et à fort potentiel de croissance. Soutenu par Otium Capital, un fonds avec 1,6 milliard d'euros d'actifs, l'objectif est d'investir sur des segments de marché délaissés par le marché.
+
+Pour renforcer son image et sa valeur aux yeux de ses clients, Montyon Capital nous contacte pour développer un site vitrine en one-page, qui permet de présenter l'entreprise, ses membres, ses valeurs et sa mission. Opérant partout dans le monde, ce site se doit d'être multilingue.
+
+## Objectifs du projet
+
+- Création d'une maquette pour la page du site
+- Intégration de la maquette sur un site WordPress
+- Ajout de la gestion multilingue sur le site
+- Sécurisation du site
+- Optimisation des performances

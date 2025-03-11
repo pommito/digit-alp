@@ -17,19 +17,19 @@ relatedProjects: ['gaitoni-plomberie', 'gastini', 'giea-des-savoie']
 isPublished: true
 ---
 
-Le monde la mobilité douce est en constante évolution, et ce grâce à des entreprises innovantes, et Gojura est l'une d'entre elles.
+Le monde de la mobilité douce est en constante évolution, et ce grâce à des entreprises innovantes, et Gojura est l'une d'entre elles.
 
-Fondé par Christian Goetz à Chambéry, Gojura innove et crée des accessoires de vélos répondant à des besoins de tous les jours. Après une longue phase de conception et de recherche & développement, l'entreprise lance deux premiers produits via une campagne de crowd-funding.
+Fondée par Christian Goetz à Chambéry, Gojura innove et crée des accessoires de vélos répondant à des besoins de tous les jours. Après une longue phase de conception et de recherche et développement, l'entreprise lance deux premiers produits via une campagne de crowdfunding.
 
-Pour accompagner cette campagne, l'entreprise nous contacte en Octobre 2023 pour créer dans un premier temps un site vitrine permettant de présenter la marque, sa mission et la campagne de crowd-funding. Mais une fois cette campagne passé, le site doit évoluer en site e-commerce.
+Pour accompagner cette campagne, l'entreprise nous contacte en octobre 2023 pour créer dans un premier temps un site vitrine permettant de présenter la marque, sa mission et la campagne de crowdfunding. Mais une fois cette campagne passée, le site doit évoluer en site e-commerce.
 
-Pour répondre à cette demande, nous avons choisi de créer un site Wordpress, qui permettra facilement de répondre à ce besoin d'évolution.
+Pour répondre à cette demande, nous avons choisi de créer un site WordPress, qui permettra facilement de répondre à ce besoin d'évolution.
 
-En octobre 2024, le site évolue vers un site e-commerce, grâce a l'intégration de la plateforme Woocommerce.
+En octobre 2024, le site évolue vers un site e-commerce, grâce à l'intégration de la plateforme WooCommerce.
 
 ## Objectifs du projet
 
-- Création de maquette pour les pages du site
+- Création de maquettes pour les pages du site
 - Structuration du site pour faciliter la transition vers un site e-commerce
 - Intégration des visuels réalisés par la graphiste du projet
 - Sécurisation du site
