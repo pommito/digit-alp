@@ -3,8 +3,8 @@ order: 6
 title: Maintenance & Infogérance
 description: Services de maintenance et d'infogérance pour garantir la performance et la sécurité de votre site web. Surveillance proactive, mises à jour régulières, et support technique réactif.
 seo:
-  metaTitle: Solutions de maintenance & infogérance eco-conçus | Digit'Alp
-  metaDescription: Engagé dans l'écoconception, notre agence web propose des solutions de maintenance et infogérance eco-conçus à Chambéry. Envie de réduire vôtre impact sans perdre en performance ?
+  metaTitle: Solutions de maintenance & infogérance éco-conçues | Digit'Alp
+  metaDescription: Engagée dans l'éco-conception, notre agence web propose des solutions de maintenance et d'infogérance éco-conçues à Chambéry. Envie de réduire votre impact sans perdre en performance ?
 icon: ./assets/maintenance-et-infogerance/icon.svg
 
 subTitle: Assurez la pérennité de votre site web
@@ -23,7 +23,7 @@ questions:
   - label: Pourquoi la maintenance est-elle importante pour mon site web ?
     answer: La maintenance régulière permet de garantir la sécurité, la performance et la disponibilité de votre site web. Elle protège également contre les failles de sécurité et les pannes imprévues.
   - label: Que comprend votre offre de maintenance et infogérance ?
-    answer: Notre offre de maintenance et infogérance comprend l'hébergement de votre site sur des serveurs français, les mises à jour régulières, les sauvegardes automatiques, et un forfait de support qui s'adapte a vos besoins mensuels.
+    answer: Notre offre de maintenance et infogérance comprend l'hébergement de votre site sur des serveurs français, les mises à jour régulières, les sauvegardes automatiques, et un forfait de support qui s'adapte à vos besoins mensuels.
   - label: Puis-je bénéficier d'un support technique en cas de problème ?
     answer: Oui, votre forfait de support technique comprend l'assistance en cas de problème technique. Nous offrons un support réactif pour résoudre rapidement les incidents et minimiser les interruptions de service.
 relatedProjects: ['titan-informatique', 'gojura', 'gastini']

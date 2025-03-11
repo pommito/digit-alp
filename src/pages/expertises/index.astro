@@ -10,26 +10,26 @@ const expertises = await getCollection('expertises').then(expertises => expertis
 const featuredProjects = await getCollection('projects', project => project.data.isFeatured);
 ---
 
-<PageLayout 
-  title="Expertises" 
-  description="Découvrez une selection des différents projets que nous avons pu réaliser pour des clients de différentes tailles et issus de divers secteurs. Chaque projet est unique et nos réalisations sont le fruit d'une collaboration étroite avec nos clients pour produire un résultat totalement aligné à leurs attentes." 
+<PageLayout
+  title="Expertises"
+  description="Découvrez une sélection des différents projets que nous avons pu réaliser pour des clients de différentes tailles et issus de divers secteurs. Chaque projet est unique et nos réalisations sont le fruit d'une collaboration étroite avec nos clients pour produire un résultat totalement aligné avec leurs attentes."
   theme="light"
   metaTitle="Expertises techniques en développement web | Digit'Alp"
-  metaDescription="Profitez de la gamme complète des services d'une agence experte du Web pour assurer la performance de votre entreprise sur le Web et être aligner à vos objectifs de croissance."
+  metaDescription="Profitez de la gamme complète des services d'une agence experte du Web pour assurer la performance de votre entreprise sur le Web et être alignée avec vos objectifs de croissance."
 >
-  <section class="container mx-auto w-full  px-4 py-10 space-y-6 md:py-20">
+  <section class="container mx-auto w-full px-4 py-10 space-y-6 md:py-20">
     <div class="grid grid-cols-1 gap-4 mb-10 md:grid-cols-2 md:gap-0">
-      <h3 class="text-4xl text-da md:text-5xl">A chaque projet, sa solution technique</h3>
+      <h3 class="text-4xl text-da md:text-5xl">À chaque projet, sa solution technique</h3>
       <p class="text-lg text-balance">Votre projet est unique, tout comme vos besoins. Notre expertise dans les domaines du web nous permet de vous accompagner dans la réalisation de vos projets en ligne et de proposer des solutions vraiment adaptées à vos besoins.</p>
     </div>
-    <ul class="grid grid-cols-1 gap-8  container mx-auto  md:gap-4 md:grid-cols-2">
-      {expertises.map ( expertise => (
+    <ul class="grid grid-cols-1 gap-8 container mx-auto md:gap-4 md:grid-cols-2">
+      {expertises.map(expertise => (
         <ServiceItem expertise={expertise} />
       ))}
     </ul>
   </section>
 
-  <FeaturedWorks projects={featuredProjects} title="Nos projets" subTitle="Découvrez nos dernières réalisations" />
+  <FeaturedWorks projects={featuredProjects} title="Nos projets" subTitle="Découvrez nos dernières réalisations" theme="light" />
 
   <CtaBanner />
 

@@ -10,7 +10,7 @@ const { project } = Astro.props;
 const { title, thumbnail, client } = project.data;
 
 ---
-<article class="relative flex items-end group rounded-xl p-4 overflow-hidden w-full aspect-3/4 col-span-1">
+<article id="card" class="relative flex items-end group rounded-xl p-4 overflow-hidden w-full aspect-3/4 col-span-1">
   <a href={`/projets/${project.id}`} aria-label="Voir la réalisation" class="flex w-full">
     <picture class="absolute inset-0">
       {thumbnail && (

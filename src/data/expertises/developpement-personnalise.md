@@ -18,10 +18,10 @@ specList:
     description: Profitez de la rapidité et de l'efficacité d'Astro pour des sites web statiques et dynamiques, avec un rendu ultra-rapide et des performances optimales.
   - label: Accompagnement de vos équipes
     illustration: ./assets/developpement-personnalise/spec-team.svg
-    description: Nous intégrons vos équipes et apportont notre expérience et notre savoir-faire pour aider votre entreprise dans le développement des solutions web.
+    description: Nous intégrons vos équipes et apportons notre expérience et notre savoir-faire pour aider votre entreprise dans le développement des solutions web.
 questions:
-  - label: Pourquoi choisir un développement personnalisé plutôt que Wordpress ?
-    answer: Wordpress est une très bonne solution pour beaucoup de projets, mais comme chaque solution technique, il n'est pas adapté à tous les besoins. Le développement personnalisé permet de créer des solutions parfaitement adaptées à vos besoins spécifiques, offrant ainsi une meilleure performance et une expérience utilisateur optimale.
+  - label: Pourquoi choisir un développement personnalisé plutôt que WordPress ?
+    answer: WordPress est une très bonne solution pour beaucoup de projets, mais comme chaque solution technique, il n'est pas adapté à tous les besoins. Le développement personnalisé permet de créer des solutions parfaitement adaptées à vos besoins spécifiques, offrant ainsi une meilleure performance et une expérience utilisateur optimale.
   - label: Quels sont les avantages des frameworks JavaScript modernes ?
     answer: Les frameworks comme React et Astro offrent une grande flexibilité et des performances élevées, permettant de créer des applications web modernes et réactives, avec une maintenance facilitée.
   - label: Puis-je intégrer des fonctionnalités spécifiques à mon application ?

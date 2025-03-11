@@ -13,12 +13,12 @@ specList:
   - label: Thèmes 100% personnalisés
     illustration: ./assets/developpement-wordpress/spec-theme.svg
     description: Nous concevons des thèmes uniques qui reflètent l'identité de votre marque et offrent une expérience utilisateur optimale.
-  - label: Création de plugins wordpress
+  - label: Création de plugins WordPress
     illustration: ./assets/developpement-wordpress/spec-plugins.svg
     description: Besoin de fonctionnalités spécifiques ? Nous développons des plugins sur-mesure pour répondre à vos exigences particulières.
-  - label: Conseil techniques et stratégie
+  - label: Conseil technique et stratégique
     illustration: ./assets/developpement-wordpress/spec-conseil.svg
-    description: Accompagnement technique et stratégique pour faire évoluer votre site wordpress à la même vitesse que votre entreprise.
+    description: Accompagnement technique et stratégique pour faire évoluer votre site WordPress à la même vitesse que votre entreprise.
 questions:
   - label: Pourquoi choisir WordPress pour mon site web ?
     answer: WordPress est une plateforme flexible et puissante qui permet de créer des sites web de toutes tailles et pour tous types de besoins. Sa large communauté et ses nombreuses extensions en font un choix idéal pour des projets évolutifs.

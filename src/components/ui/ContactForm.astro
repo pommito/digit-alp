@@ -1,7 +1,5 @@
 ---
 
-
-
 ---
 
 <form
@@ -11,9 +9,9 @@
   class="needs-validation flex flex-col items-center gap-6"
   data-astro-reload
   novalidate>
-  
+
   <input type="hidden" name="access_key" value="df7e691a-2ad5-4878-9273-f09f508a73df" />
-  
+
   <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
   <input type="hidden" name="subject" value="Nouvelle demande de contact via Digit'Alp">
   <div class="grid grid-cols-2 gap-6 w-full">
@@ -57,13 +55,12 @@
     </div>
   </div>
   <div id="result" class="mt-3 text-center"></div>
-  <button type="submit" class="group flex items-center font-medium  bg-da-white text-da-black px-6 py-4 gap-2 rounded-full cursor-pointer">
+  <button type="submit" class="group flex items-center font-medium bg-da-white text-da-black px-6 py-4 gap-2 rounded-full cursor-pointer">
     <span>Envoyer ma demande</span>
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" class="w-0 h-auto transition-all duration-300 ease-in-out group-hover:w-5"><path d="M21 12v3a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h7"/><path d="M16 3h5v5"/><path d="m16 8 5-5"/></svg>
   </button>
 
 </form>
-
 
 <style>
   .invalid-feedback,
@@ -85,59 +82,56 @@
   }
 </style>
 
-
 <script is:inline>
 
   document.addEventListener("DOMContentLoaded", () => {
 
-    
-  
-      const form = document.getElementById("form");
-      const result = document.getElementById("result");
+    const form = document.getElementById("form");
+    const result = document.getElementById("result");
 
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        form.classList.add("was-validated");
-        if (!form.checkValidity()) {
-          form.querySelectorAll(":invalid")[0].focus();
-          return;
-        }
-        const formData = new FormData(form);
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      form.classList.add("was-validated");
+      if (!form.checkValidity()) {
+        form.querySelectorAll(":invalid")[0].focus();
+        return;
+      }
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
 
-        result.innerHTML = "Envoi en cours...";
+      result.innerHTML = "Envoi en cours...";
 
-        fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: json,
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      })
+        .then(async (response) => {
+          let json = await response.json();
+          if (response.status == 200) {
+            result.classList.add("text-green-500");
+            result.innerHTML = "Votre formulaire a été envoyé avec succès !";
+          } else {
+            result.classList.add("text-red-500");
+            result.innerHTML = "Une erreur est survenue, merci de réessayer plus tard.";
+          }
         })
-          .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-              result.classList.add("text-green-500");
-              result.innerHTML = "Votre formulaire a été envoyé avec succès !";
-            } else {
-              result.classList.add("text-red-500");
-              result.innerHTML = "Une erreur est survenue, merci de réessayer plus tard.";
-            }
-          })
-          .catch((error) => {
-            result.innerHTML = "Un problème est survenu, merci de réessayer plus tard.";
-          })
-          .then(function () {
-            form.reset();
-            form.classList.remove("was-validated");
-            setTimeout(() => {
-              result.style.display = "none";
-            }, 5000);
-          });
-      });
-    },
-    { once: true },
-  );
+        .catch((error) => {
+          result.innerHTML = "Un problème est survenu, merci de réessayer plus tard.";
+        })
+        .then(function () {
+          form.reset();
+          form.classList.remove("was-validated");
+          setTimeout(() => {
+            result.style.display = "none";
+          }, 5000);
+        });
+    });
+  },
+  { once: true },
+);
 </script>

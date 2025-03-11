@@ -14,7 +14,7 @@ import threejsIcon from '@/assets/techs/threejs.svg';
 export const methodology = [
   {
     title: 'Conception flexible',
-    text: 'En étudiant votre cahier des charges, nous pourront définir ensemble les choix techniques pertinents pour votre projet.',
+    text: 'En étudiant votre cahier des charges, nous pourrons définir ensemble les choix techniques pertinents pour votre projet.',
     icon: flexibleIcon,
   },
   {
@@ -24,18 +24,18 @@ export const methodology = [
   },
   {
     title: 'Construction durable',
-    text: 'Nous cherchons perpetuellement à reduire notre impact sans pour autant faire de compromis sur la qualité de notre travail.',
+    text: 'Nous cherchons perpétuellement à réduire notre impact sans pour autant faire de compromis sur la qualité de notre travail.',
     icon: durabilityIcon,
   },
 ];
 
 export const techs = [
   {
-    label: 'Wordpress',
+    label: 'WordPress',
     icon: wordpressIcon,
   },
   {
-    label: 'Next JS',
+    label: 'Next.js',
     icon: nextjsIcon,
   },
   {
@@ -51,7 +51,7 @@ export const techs = [
     icon: shopifyIcon,
   },
   {
-    label: 'Woocommerce',
+    label: 'WooCommerce',
     icon: woocommerceIcon,
   },
   {
@@ -68,16 +68,16 @@ export const questions = [
   {
     label: "Pourquoi faire appel à Digit'Alp ?",
     answer:
-      "Depuis plus de 3 ans nous accompagnons nos clients dans la réalisation de leurs projets digitaux. Nous n'avons qu'un seul objectif final, vous permettre d'atteindre les vôtres en construisant des outils digitaux réellement efficaces pour votre activité.",
+      "Depuis plus de 3 ans, nous accompagnons nos clients dans la réalisation de leurs projets digitaux. Nous n'avons qu'un seul objectif : vous permettre d'atteindre les vôtres en construisant des outils digitaux réellement efficaces pour votre activité.",
   },
   {
     label: 'Avez-vous besoin de maquettes pour réaliser mon site web ?',
     answer:
-      "Nous proposons en interne lors de la conception du site internet la réalisation de maquettes personnalisées afin d'obtenir un rendu final vraiment unique. Néanmoins, si vous avez déjà réalisé des maquettes, nous pouvons les intégrer et créer votre site. Pour les budgets plus restreints, nous utilisons des templates de sites internet adaptés au domaine d'activité.",
+      "Nous proposons en interne, lors de la conception du site internet, la réalisation de maquettes personnalisées afin d'obtenir un rendu final vraiment unique. Néanmoins, si vous avez déjà réalisé des maquettes, nous pouvons les intégrer et créer votre site. Pour les budgets plus restreints, nous utilisons des templates de sites internet adaptés au domaine d'activité.",
   },
   {
     label: "Pratiquez-vous l'éco-conception ?",
     answer:
-      "Lors de l'étude d'un projet, nos choix techniques sont réfléchis en prennant en compte la pertinence d'une technologie et son impact. Nous proposons à chacun de nos clients pour réduire l'impact de leur site internet, notamment en migrant vers des serveurs  français utilisant des énergies renouvellables.",
+      "Lors de l'étude d'un projet, nos choix techniques sont réfléchis en prenant en compte la pertinence d'une technologie et son impact. Nous proposons à chacun de nos clients de réduire l'impact de leur site internet, notamment en migrant vers des serveurs français utilisant des énergies renouvelables.",
   },
 ];

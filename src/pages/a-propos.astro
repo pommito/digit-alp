@@ -10,26 +10,25 @@ import FeaturedWorks from "@/components/FeaturedWorks.astro";
 import photoProfil from "@/assets/photo_profil.jpg"
 import { methodology, techs, questions } from "@/data/a-propos";
 
-const featuredWorks = await getCollection('works', entry => entry.data.isFeatured);
+const featuredWorks = await getCollection('projects', entry => entry.data.isFeatured);
 ---
 
 
-<PageLayout 
-  title="A propos" 
-  description="Digit'Alp est une micro agence basée à Chambéry en Savoie. Accompagné de partenaire, nous vous accompagnons sur tous type de projet digital. Notre coeur de métier, le développement web et la mise en place de solutions digitales pour tout type d'entreprise. Vous avez un besoin, nous y répondons" 
+<PageLayout
+  title="À propos"
+  description="Digit'Alp est une micro-agence basée à Chambéry en Savoie. Accompagnés de partenaires, nous vous accompagnons sur tous types de projets digitaux. Notre cœur de métier : le développement web et la mise en place de solutions digitales pour tout type d'entreprise. Vous avez un besoin, nous y répondons."
   theme="light"
   metaTitle="Agence web Digit'Alp | Chambéry & Grenoble"
-  metaDescription="Digit Alp est une agence web basée à Chambéry en Savoie proposant un accompagnement digital aux acteurs locaux et nationaux. On vous explique notre méthode de travail et notre vision."
+  metaDescription="Digit'Alp est une agence web basée à Chambéry en Savoie proposant un accompagnement digital aux acteurs locaux et nationaux. Nous vous expliquons notre méthode de travail et notre vision."
 >
   <section class="container mx-auto space-y-10 px-4 py-10 md:space-y-20 md:px-0 md:py-20">
     <div class="grid grid-cols-1 items-center md:gap-8 md:grid-cols-5">
       <div class="space-y-4 col-span-3">
-        <h2 class="text-4xl text-da md:text-5xl">Expert wordpress & <br/> développeur web créatif</h2>
-        <p class="text-lg md:text-balance">Développeur web depuis maintenant 3 ans, j'ai commencé lors d'un master en <strong>marketing digital</strong> a utiliser wordpress et j'ai tout de suite voulu me spécialiser dans le <strong>développement web</strong>. Aujourd'hui mon expertise s'oriente principalement sur le front end, avec une attention particulière sur le design et les interaces utilisateurs.</p>
-        <p class="text-lg md:text-balance">Aujourd'hui, je me spécialise dans le développement web via <strong>Wordpress</strong> et l'écosystème <strong>Javascript</strong>. En maitrisant ces technologie je peux répondre à tout type de demande et apporter une expertise sur mesure aux besoins de mes clients.</p>
+        <h2 class="text-4xl text-da md:text-5xl">Expert WordPress & <br/> développeur web créatif</h2>
+        <p class="text-lg md:text-balance">Développeur web depuis maintenant 3 ans, j'ai commencé lors d'un master en <strong>marketing digital</strong> à utiliser WordPress et j'ai tout de suite voulu me spécialiser dans le <strong>développement web</strong>. Aujourd'hui, mon expertise s'oriente principalement sur le front-end, avec une attention particulière sur le design et les interfaces utilisateurs.</p>
+        <p class="text-lg md:text-balance">Aujourd'hui, je me spécialise dans le développement web via <strong>WordPress</strong> et l'écosystème <strong>JavaScript</strong>. En maîtrisant ces technologies, je peux répondre à tout type de demande et apporter une expertise sur mesure aux besoins de mes clients.</p>
       </div>
       <Image src={photoProfil} alt="Photo de Victor Lebecq développeur web à Chambéry" class="col-span-2 w-2/3 aspect-square rounded-2xl object-cover object-center" />
-      
 
     </div>
 
@@ -45,7 +44,7 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
           ))}
         </ul>
     </div>
-    
+
     <div class="space-y-4">
       <h2 class="text-4xl text-da text-center md:text-5xl">Des outils adaptés à chaque projet</h2>
         <ul class="grid grid-cols-2 md:grid-cols-4">
@@ -63,7 +62,7 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
     <div class="grid grid-cols-1 items-center gap-4 md:grid-cols-2 md:items-start">
       <div class="col-span-1 space-y-4">
         <h2 class="text-4xl text-da md:text-5xl">Vous avez une question ?</h2>
-        <p class="text-lg text-balance">Un projet dans les tuyaux ? Des questions sur notre méthode de travail ? Envie d'en savoir plus sur notre agence. Discutons de tout cela lors d'une rencontre !</p>
+        <p class="text-lg text-balance">Un projet en tête ? Des questions sur notre méthode de travail ? Envie d'en savoir plus sur notre agence ? Discutons de tout cela lors d'une rencontre !</p>
         <div class="hidden md:block">
         <Button label="Envoyer un message" link="/contact" style="primary" />
         </div>
@@ -75,5 +74,5 @@ const featuredWorks = await getCollection('works', entry => entry.data.isFeature
     </div>
   </section>
 
-  <FeaturedWorks featuredWorks={featuredWorks} title="Nos projets" subTitle="Nos clients, des projets uniques" />
+  <FeaturedWorks projects={featuredWorks} title="Nos projets" subTitle="Nos clients, des projets uniques" theme="light" />
 </PageLayout>

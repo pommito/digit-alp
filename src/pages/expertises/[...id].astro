@@ -9,7 +9,7 @@ import FeaturedWorks from '@/components/FeaturedWorks.astro';
 
 export async function getStaticPaths() {
   const expertises = await getCollection("expertises");
-  
+
   return expertises.map((expertise) => ({
     params: { id: expertise.id },
     props: { expertise },
@@ -17,16 +17,16 @@ export async function getStaticPaths() {
 }
 
 const { expertise } = Astro.props;
-const { Content } = await render(expertise)
+const { Content } = await render(expertise);
 const { title, description, seo, subTitle, subText, specList, questions, relatedProjects } = expertise.data;
 
 const linkedProjects = await getEntries(relatedProjects);
 
 ---
 
-<PageLayout 
-  title={title} 
-  description={description} 
+<PageLayout
+  title={title}
+  description={description}
   theme='light'
   metaTitle={seo.metaTitle}
   metaDescription={seo.metaDescription}
@@ -37,7 +37,7 @@ const linkedProjects = await getEntries(relatedProjects);
     <p class="text-lg text-balance lg:w-1/2">{subText}</p>
     <ul class="grid grid-cols-1 gap-2 mt-10 md:gap-6 md:grid-cols-3">
       {specList.map(spec => (
-        <li class="flex flex-col justify-center items-center gap-4 rounded-lg  p-2 md:p-6">
+        <li class="flex flex-col justify-center items-center gap-4 rounded-lg p-2 md:p-6">
           <Image src={spec.illustration} alt={spec.label} class="size-12 md:size-20" />
           <h3 class="text-xl md:text-2xl md:mb-2">{spec.label}</h3>
           <p>{spec.description}</p>
@@ -48,9 +48,9 @@ const linkedProjects = await getEntries(relatedProjects);
     <div class="grid grid-cols-1 items-center gap-4 mt-20 md:grid-cols-2 md:items-start">
       <div class="col-span-1 space-y-4">
         <h3 class="text-3xl text-da md:text-4xl">Questions fréquentes</h3>
-        <p class="text-lg text-balance md:mb-6">Un projet dans les tuyaux ? Des questions sur notre méthode de travail ? Envie d'en savoir plus sur notre agence. Discutons de tout cela lors d'une rencontre !</p>
+        <p class="text-lg text-balance md:mb-6">Un projet en tête ? Des questions sur notre méthode de travail ? Envie d'en savoir plus sur notre agence ? Discutons de tout cela lors d'une rencontre !</p>
         <div class="hidden md:block">
-        <Button label="Envoyer un message" link="/contact" style="primary" />
+          <Button label="Envoyer un message" link="/contact" style="primary" />
         </div>
       </div>
       <Faq questions={questions} />
@@ -59,7 +59,6 @@ const linkedProjects = await getEntries(relatedProjects);
       </div>
     </div>
   </section>
-
 
   <FeaturedWorks projects={linkedProjects} title="Nos projets" subTitle={`Nos projets en ${title}`} theme='light' />
 

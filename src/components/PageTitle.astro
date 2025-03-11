@@ -15,8 +15,8 @@ const { title, description} = Astro.props as Props;
   <Breadcrumb />
   <div class="container flex items-center mx-auto">
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-0 xl:gap-8">
-        <h1 class="text-4xl  md:text-6xl">{title}</h1>
-        {description && <p class="text-lg text-balance">{description}</p>}
+        <h1 class="text-4xl animate-fade-in transition-discrete  md:text-6xl">{title}</h1>
+        {description && <p class="text-lg text-balance animate-fade-in transition-discrete">{description}</p>}
     </div>
   </div>
 </section>

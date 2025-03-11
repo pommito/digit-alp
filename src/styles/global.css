@@ -70,6 +70,31 @@ p {
   --color-da-black: #000209;
 
   --shadow-hero-card: 0 40px 40px -10px #28224233;
+
+  --animate-fade-in: fade-in 0.75s ease-in-out;
+  --animate-header-in: header-in 0.75s ease-in-out;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes header-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 /* Define styling for markdown content */

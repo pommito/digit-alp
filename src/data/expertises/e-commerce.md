@@ -7,16 +7,16 @@ seo:
   metaDescription: Notre agence web spécialiste e-commerce à Chambéry vous accompagne dans la création ou la refonte de votre boutique en ligne et vous accompagne dans le développement de votre activité en ligne.
 icon: ./assets/e-commerce/icon.svg
 
-subTitle: Créons et develeppons votre boutique digitale
+subTitle: Créons et développons votre boutique digitale
 subText: Votre site e-commerce est la pierre angulaire de votre activité en ligne. Nous vous accompagnons dans la création ou la refonte de votre boutique en ligne, en utilisant des solutions robustes comme WooCommerce et Shopify, pour offrir une expérience utilisateur optimale et augmenter vos ventes.
 specList:
   - label: Création de boutiques WooCommerce
     illustration: ./assets/e-commerce/spec-woocommerce.svg
-    description: Nous développons des site woocommerce sur-mesure, parfaitement intégrées à votre site WordPress, pour une gestion simplifiée et une flexibilité maximale.
+    description: Nous développons des sites WooCommerce sur-mesure, parfaitement intégrés à votre site WordPress, pour une gestion simplifiée et une flexibilité maximale.
   - label: Développement de sites Shopify
     illustration: ./assets/e-commerce/spec-shopify.svg
     description: Profitez de la puissance de Shopify pour créer une boutique en ligne performante et évolutive, avec des fonctionnalités avancées pour booster vos ventes.
-  - label: Optimisation de workflows
+  - label: Optimisation des workflows
     illustration: ./assets/e-commerce/spec-workflow.svg
     description: Nous optimisons votre site e-commerce pour maximiser les conversions et simplifier votre quotidien, avec des solutions sur-mesure et de l'automatisation.
 questions:

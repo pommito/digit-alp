@@ -1,46 +1,16 @@
 ---
 import { Image } from "astro:assets";
+
 import logo from '@/assets/logo.svg';
 import Link from "./ui/Link.astro";
 
+import { navMenus } from '@/data/footer';
+
 const currentYear = new Date().getFullYear();
-
-const navMenus = [
-  {
-    name : 'Liens utiles',
-    links : [
-      { label: 'Projets', href: '/projets' },
-      { label: 'Expertises', href: '/expertises' },
-      { label: 'A propos', href: '/a-propos' },
-      { label: 'Contact', href: '/contact' },
-    ]
-  },
-  {
-    name : 'Expertises',
-    links : [
-      { label: 'Création de site web', href: '/expertises/creation-site-web' },
-      { label: 'Développement wordpress', href: '/expertises/developpement-wordpress' },
-      { label: 'E-commerce', href: '/expertises/e-commerce' },
-      { label: 'Développement personnalisé', href: '/expertises/developpement-personnalise' },
-      { label: 'Référencement naturel', href: '/expertises/referencement-naturel' },
-      { label: 'Maintenance & Infogérance', href: '/expertises/maintenance-et-infogerance' },
-    ]
-  },
-  {
-    name : 'Wordpress',
-    links : [
-      { label: 'Agence wordpress à Chambéry', href: '' },
-      { label: 'Agence wordpress à Grenoble', href: '' },
-      { label: 'Agence wordpress à Annecy', href: '' },
-      { label: 'Agence wordpress à Genève', href: '' },
-    ]
-  }
-]
-
 
 ---
 
-<footer class="bg-da text-da-white   pt-20">
+<footer class="bg-da text-da-white pt-20">
   <div class="container mx-auto px-4 md:px-0 xl:grid xl:grid-cols-4 xl:gap-8">
     <div class="space-y-8 flex flex-col justify-center xl:justify-start items-center xl:items-start">
       <a href="/" aria-label="Bouton de retour à l'accueil">
@@ -51,10 +21,10 @@ const navMenus = [
           <a href="mailto:bonjour@digit-alp.fr" aria-label="Email">Email</a>
         </li>
         <li class="hover:text-da-white transition-colors ease-in-out duration-500">
-          <a href="https://www.linkedin.com/in/victor-lebecq" aria-label="Linkedin">Linkedin</a>
+          <a href="https://www.linkedin.com/in/victor-lebecq" aria-label="LinkedIn">LinkedIn</a>
         </li>
         <li class="hover:text-da-white transition-colors ease-in-out duration-500">
-          <a href="https://github.com/pommito" aria-label="Github">Github</a>
+          <a href="https://github.com/pommito" aria-label="GitHub">GitHub</a>
         </li>
       </ul>
     </div>
@@ -74,7 +44,7 @@ const navMenus = [
     </div>
   </div>
   <div class="container flex flex-col-reverse gap-4 items-center mt-16 py-8 text-xs text-da-300 border-t mx-auto sm:flex-row sm:justify-between sm:items-start">
-    <p class=" leading-5">{currentYear} &copy; Digit'Alp. Tous droits réservés.</p>
+    <p class="leading-5">{currentYear} &copy; Digit'Alp. Tous droits réservés.</p>
     <nav>
       <ul class="flex gap-4">
         <li class="hover:text-da-white transition-colors ease-in-out duration-500"><a href="/mentions-legales">Mentions légales</a></li>

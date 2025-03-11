@@ -9,7 +9,7 @@ import FeaturedWorks from "@/components/FeaturedWorks.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
-  
+
   return projects.map((project) => ({
     params: { id: project.id },
     props: { project },
@@ -17,18 +17,17 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const { Content } = await render(project)
+const { Content } = await render(project);
 
 const { title, description, seo, featuredImage, client, date, clientSector, category, technologies, siteurl, relatedProjects } = project.data;
-  
-const relatedWorksData = await getEntries(relatedProjects)
 
+const relatedWorksData = await getEntries(relatedProjects);
 
 ---
 
-<PageLayout 
-  title={title} 
-  description={description} 
+<PageLayout
+  title={title}
+  description={description}
   theme="dark"
   metaTitle={seo.metaTitle}
   metaDescription={seo.metaDescription}
@@ -36,7 +35,7 @@ const relatedWorksData = await getEntries(relatedProjects)
   <section class="container px-4 space-y-10 mx-auto md:px-0 md:space-y-20">
     <ul class="grid grid-cols-1 gap-4 h-fit md:grid-cols-3 md:gap-8">
       <li>
-        <h3 class="text-da-300 text-base md:mb-2 md:text-lg ">Client</h3>
+        <h3 class="text-da-300 text-base md:mb-2 md:text-lg">Client</h3>
         <span class="text-lg md:text-xl">{client}</span>
       </li>
       <li>
@@ -71,7 +70,6 @@ const relatedWorksData = await getEntries(relatedProjects)
     <Content />
   </section>
 
-  <FeaturedWorks projects={relatedWorksData} title="nos projets" subTitle="Découvrir d'autres projets" theme="dark"  />
+  <FeaturedWorks projects={relatedWorksData} title="Nos projets" subTitle="Découvrir d'autres projets" theme="dark" />
 
 </PageLayout>
-
