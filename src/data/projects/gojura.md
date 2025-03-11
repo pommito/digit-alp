@@ -10,10 +10,10 @@ client: Gojura
 category: SEO
 date: 2024-10-01
 clientSector: Association sportive
-technologies: [Wordpress, Woocommerce, Elementor]
+technologies: [Wordpress, Woocommerce, Elementor, Lenis]
 siteurl: https://gojura.fr/
 isFeatured: true
-relatedProjects: ['chambery-savoie-football', 'gastini', 'gaitoni-plomberie']
+relatedProjects: ['gaitoni-plomberie', 'gastini', 'giea-des-savoie']
 isPublished: true
 ---
 

@@ -1,9 +1,8 @@
 ---
-title: Création d'un vitrine wordpress
-description: Anim eu eiusmod incididunt proident aliqua sit sit laborum. Adipisicing ullamco do fugiat duis reprehenderit deserunt eiusmod quis aliquip elit pariatur.
+title: Création d'un site vitrine pour un courtier en immobilier
 seo:
-  metaTitle: Création de landing pages et refonte graphique d'un site wordpress | Digit Alp
-  metaDescription: Depuis 2023, nous accompagnons Azkan Group dans la création de webdesign pour différentes pages clés du site ainsi que pour plusieurs landings pages utilisées dans leurs campagnes d'acquisition.
+  metaTitle: Création d'un site vitrine pour un courtier en immobilier | Digit Alp
+  metaDescription: Fondée par un expert en assurances de prêt, ImmoLyon7 est un courtier en immobilier. La combinaison de ces deux activités lui permet de proposer un service de qualité à ses clients.
 thumbnail: ./assets/immolyon7/thumbnail.png
 featuredImage: ./assets/immolyon7/featuredImage.png
 logo: ./assets/immolyon7/logo.png
@@ -17,3 +16,17 @@ isFeatured: false
 relatedProjects: ['chambery-savoie-football', 'gastini', 'gaitoni-plomberie']
 isPublished: true
 ---
+
+Fondée par un expert en assurances de prêt, ImmoLyon7 est un courtier en immobilier. La combinaison de ces deux activités lui permet de proposer un service de qualité à ses clients basé sur une expertise transverse.
+
+Afin de mettre en avant son activité et ses biens à la vente, Philippe, gérant d'ImmoLyon7 nous contacte pour créer une identité visuelle ainsi qu'un site vitrine pour son activité de courtier en immobilier.
+
+Ayant des bases technique sur Wordpress et voulant pouvoir manipuler et mettre à jours les informations sur son site de façon indépendante, l'utilisation de Wordpress a été un critère technique important pour ce projet.
+
+## Objectifs du projet
+
+- Création d'une identité visuelle pour l'entreprise
+- Réalisation de maquettes pour les différentes pages du site
+- Intégration des pages sur le site Wordpress
+- Sécurisation du site
+- Optimisation des performances
