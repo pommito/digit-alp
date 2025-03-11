@@ -14,7 +14,7 @@ const expertises = await getCollection('expertises');
 const clients = await getCollection('projects')
 
 const featuredProjects = clients.filter(entry => entry.data.isFeatured);
-const sortedExpertises = expertises.toSorted((a, b) => a.data.order - b.data.order);
+// const sortedExpertises = expertises.toSorted((a, b) => a.data.order - b.data.order);
 
 ---
 

@@ -9,7 +9,7 @@ import CtaBanner from "@/components/CtaBanner.astro";
 const expertises = await getCollection('expertises');
 const featuredProjects = await getCollection('projects', project => project.data.isFeatured);
 
-const sortedExpertises = expertises.toSorted((a, b) => a.data.order - b.data.order);
+// const sortedExpertises = expertises.toSorted((a, b) => a.data.order - b.data.order);
 ---
 
 <PageLayout
