@@ -26,5 +26,5 @@ questions:
     answer: Oui, nous proposons des services de migration pour transférer votre boutique en ligne actuelle vers WooCommerce ou Shopify, en préservant vos données et en optimisant les performances de votre nouveau site.
   - label: Comment puis-je augmenter les ventes sur mon site e-commerce ?
     answer: Nous mettons en place des stratégies d'optimisation des conversions, telles que l'amélioration de l'expérience utilisateur, l'optimisation SEO, et des campagnes marketing ciblées pour augmenter vos ventes en ligne.
-relatedProjects: ['titan-informatique', 'gojura', 'gastini']
+relatedProjects: ['montyon-capital', 'gojura', 'gastini']
 ---

@@ -26,5 +26,5 @@ questions:
     answer: Notre offre de maintenance et infogérance comprend l'hébergement de votre site sur des serveurs français, les mises à jour régulières, les sauvegardes automatiques, et un forfait de support qui s'adapte à vos besoins mensuels.
   - label: Puis-je bénéficier d'un support technique en cas de problème ?
     answer: Oui, votre forfait de support technique comprend l'assistance en cas de problème technique. Nous offrons un support réactif pour résoudre rapidement les incidents et minimiser les interruptions de service.
-relatedProjects: ['titan-informatique', 'gojura', 'gastini']
+relatedProjects: ['azkan-group', 'gojura', 'gastini']
 ---

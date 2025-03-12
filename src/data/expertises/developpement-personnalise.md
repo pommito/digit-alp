@@ -26,5 +26,5 @@ questions:
     answer: Les frameworks comme React et Astro offrent une grande flexibilité et des performances élevées, permettant de créer des applications web modernes et réactives, avec une maintenance facilitée.
   - label: Puis-je intégrer des fonctionnalités spécifiques à mon application ?
     answer: Oui, nous pouvons intégrer des fonctionnalités spécifiques à votre application, qu'il s'agisse d'API externes, de systèmes de paiement, ou de tout autre besoin particulier.
-relatedProjects: ['titan-informatique', 'gojura', 'gastini']
+relatedProjects: ['gaitoni-plomberie', 'gojura', 'gastini']
 ---
