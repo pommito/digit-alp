@@ -10,7 +10,9 @@ import FeaturedWorks from "@/components/FeaturedWorks.astro";
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
 
-  return projects.map((project) => ({
+  const publishedProjects = projects.filter((project) => project.data.isPublished);  
+
+  return publishedProjects.map((project) => ({
     params: { id: project.id },
     props: { project },
   }));
