@@ -14,7 +14,45 @@ const pathname = new URL(Astro.request.url).pathname.replace(".html", "");
 
 const { title, metaTitle, metaDescription } = Astro.props
 
-console.log(SITE_URL, pathname);
+const ProfessionalServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Digit'Alp",
+  "image": `${SITE_URL}${ogImage.src}`,
+  "description": "Digit'Alp est une agence web spécialisée dans le développement de sites web et applications mobiles pour les agences de voyages et de tourisme.",
+  "url": "https://digit-alp.fr",
+  "sameAs": [
+    "https://www.linkedin.com/company/digit-alp/",
+    "https://www.facebook.com/digitalp/",
+    "https://twitter.com/digitalp"
+  ],
+  "@id": `${SITE_URL}${ogImage.src}`,
+  "url": "https://digit-alp.fr",
+  "telephone": "0647936308",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "105 rue François Descotes",
+    "addressLocality": "Chambéry",
+    "postalCode": "73000",
+    "addressCountry": "FR"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Saturday",
+      "Friday",
+      "Thursday",
+      "Wednesday",
+      "Tuesday",
+      "Monday",
+      "Sunday"
+    ],
+    "opens": "09:00",
+    "closes": "18:00"
+  } 
+}
+
+
 
 
 
@@ -37,3 +75,18 @@ console.log(SITE_URL, pathname);
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta content="fr" name="og:locale" />
 <link rel="sitemap" href="/sitemap-index.xml" />
+
+<script type="application/ld+json" set:html={JSON.stringify(ProfessionalServiceSchema)} />
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Digit'Alp",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "11"
+    }
+  }
+</script>
