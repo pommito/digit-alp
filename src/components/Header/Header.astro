@@ -6,21 +6,24 @@ import NavMenu from "./NavMenu.astro";
 import logo from '../../assets/logo.svg';
 import logoBlack from '../../assets/logo_black.svg';
 
-const { pathname } = Astro.url;
-console.log(pathname)
+type Props = {
+  theme: 'light' | 'dark';
+}
 
+const { theme } = Astro.props as Props;
+
+const { pathname } = Astro.url;
 
 ---
 
 <header class="absolute top-0 left-0 w-screen flex justify-between items-center px-4 py-6 z-50 animate-header-in md:py-10 md:px-12 ">
 
   <a href="/" class="" aria-label="Retourner à l'accueil">
-    {pathname === '/' ? <Image src={logoBlack} alt="Logo" class="w-28 md:w-36" format="svg" /> : <Image src={logo} alt="Logo" class="w-28 md:w-36" format="svg" />}
-    
+    {theme === 'light' ? <Image src={logoBlack} alt="Logo" class="w-28 md:w-36" format="svg" /> : <Image src={logo} alt="Logo" class="w-28 md:w-36" format="svg" />}
   </a>
 
   <div class="relative z-9999">
-    {pathname === '/' ?
+    {theme === 'light' ?
      <NavButton theme="light" />
      <NavMenu theme="light" />
      :

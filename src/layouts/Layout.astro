@@ -11,9 +11,10 @@ type Props = {
 	title: string;
 	metaTitle?: string;
 	metaDescription: string;
+	theme?: "light" | "dark";
 }
 
-const { title, metaTitle, metaDescription } = Astro.props as Props;
+const { title, metaTitle, metaDescription, theme = 'dark' } = Astro.props as Props;
 ---
 
 <html lang="fr-FR">
@@ -23,7 +24,7 @@ const { title, metaTitle, metaDescription } = Astro.props as Props;
 		<Seo title={title} metaTitle={metaTitle} metaDescription={metaDescription} />
 		<Analytics />
 	</head>
-	<Header />
+	<Header theme={theme} />
 	<body>
 		<slot />
 	</body>
