@@ -22,10 +22,10 @@ export const navMenus = [
   {
     name: 'WordPress',
     links: [
-      { label: 'Agence WordPress à Chambéry', href: '' },
-      { label: 'Agence WordPress à Grenoble', href: '' },
-      { label: 'Agence WordPress à Annecy', href: '' },
-      { label: 'Agence WordPress à Genève', href: '' },
+      { label: 'Agence WordPress à Chambéry', href: '/agence-wordpress-chambery' },
+      { label: 'Agence WordPress à Grenoble', href: '/agence-wordpress-grenoble' },
+      { label: 'Agence WordPress à Lyon', href: '/agence-wordpress-lyon' },
+      { label: 'Agence WordPress à Annecy', href: '/agence-wordpress-annecy' },
     ],
   },
 ];
