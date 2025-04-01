@@ -8,18 +8,21 @@ import ServiceItem from '@/components/ServiceItem.astro';
 import FeaturedWorks from '@/components/FeaturedWorks.astro';
 import CtaBanner from '@/components/CtaBanner.astro';
 
-import { cities } from '@/data/agence-wordpress';
+import { cities } from '@/data/programmatic';
 import gojuraCard from "@/assets/gojura_website.png";
 import gastiniCard from "@/assets/gastini_website.png";
 import montyonCard from "@/assets/montyon_website.png";
 
 export async function getStaticPaths() {
   return cities.map((city) => ({
-    params: { city },
+    params: { city: city.toLocaleLowerCase() },
   }));
 }
 
 const { city } = Astro.params;
+
+// Get the city name with the first letter in uppercase
+const cityName = cities.find(item => item.toLocaleLowerCase() === city);
 
 const expertises = await getCollection('expertises');
 const clients = await getCollection('projects')
@@ -29,17 +32,17 @@ const sortedExpertises = expertises.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <Layout 
-title=`Digit'Alp | Agence wordpress à ${city}`
-metaTitle=`Votre agence web à ${city} | Digit'Alp`
+title=`Digit'Alp | Agence wordpress à ${cityName}`
+metaTitle=`Votre agence web à ${cityName} | Digit'Alp`
 metaDescription="Agence web expertise en création de sites web, développement web, solutions e-commerce, référencement naturel, maintenance et infogérance."
 theme='light'
 >
   <div class="w-screen h-screen mx-auto">
     <div class="relative w-screen max-w-[1920px] h-screen flex flex-col justify-center items-center gap-6 px-4 py-6 mx-auto lg:flex-row md:gap-4 md:p-12">
       <div class="order-2 lg:w-3/5 lg:order-1">
-        <h1 class="uppercase mb-1 md:text-xl">Votre agence wordpress à {city}</h1>
-        <h2 class="text-4xl text-da md:text-5xl xl:text-7xl">Créateur passioné de sites wordpress <em>performants</em> à <em>{city}</em></h2>
-        <p class="text-balance py-4 text-lg">Digit'Alp est une agence wordpress basé à {city}. Depuis 3 ans nous vous accompagnons dans la réalisation de tous vos projets digitaux. Création, optimisation, maintenance, sécurisation : ensemble, construisons des solutions concrètes pour votre activité.</p>
+        <h1 class="uppercase mb-1 md:text-xl">Votre agence wordpress à {cityName}</h1>
+        <h2 class="text-4xl text-da md:text-5xl xl:text-7xl">Créateur passioné de sites wordpress <em>performants</em> à <em>{cityName}</em></h2>
+        <p class="text-balance py-4 text-lg">Digit'Alp est une agence wordpress basé à {cityName}. Depuis 3 ans nous vous accompagnons dans la réalisation de tous vos projets digitaux. Création, optimisation, maintenance, sécurisation : ensemble, construisons des solutions concrètes pour votre activité.</p>
         <Button label="J'ai un projet !" link='/contact' style="primary" />
       </div>
       
@@ -58,8 +61,8 @@ theme='light'
   </div>
 
   <section class="container mx-auto w-full   px-4 py-10 space-y-6 md:py-20">
-		<div class="grid grid-cols-1 gap-4 mb-10 md:grid-cols-2 md:gap-0">
-      <h2 class="text-4xl text-da md:text-5xl">Une agence wordpress à {city} aux multiples casquettes</h2>
+		<div class="grid grid-cols-1 gap-4 mb-10 md:grid-cols-2">
+      <h2 class="text-4xl text-da md:text-5xl">Une agence wordpress à {cityName} aux multiples casquettes</h2>
       <p class="text-lg text-balance">Vous cherchez un accompagnement dans la création, le développement et la maintenance de votre site wordpress. Nous proposons des solutions sur mesure et performantes avec un regard vers l'avenir et l'éco-conception.</p>
   	</div>
 		<ul class="grid grid-cols-1 gap-8  container mx-auto  md:gap-4 md:grid-cols-2">
