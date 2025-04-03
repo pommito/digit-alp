@@ -1,7 +1,7 @@
 ---
 order: 1
 title: Création de site web
-description: Création de sites web optimisés et sécurisés. Sites vitrines, sites éco-conçus, multi-sites ou refontes et optimisations de sites web existants. Du design au développement, nous proposons des solutions adaptées à vos besoins.
+description: Sites vitrines, sites éco-conçus, multi-sites ou refontes et optimisations de sites web existants. Du design au développement, nous proposons des solutions adaptées à vos besoins.
 seo:
   metaTitle: Agence de création de site web | Digit'Alp
   metaDescription: Notre agence vous accompagne dans la création de sites web optimisés et sécurisés. Sites vitrines, sites éco-conçus, multi-sites ou refontes et optimisations de sites web existants.

@@ -43,7 +43,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-title text-pretty leading-none;
+  @apply font-title font-medium text-pretty leading-none;
 }
 
 p {
