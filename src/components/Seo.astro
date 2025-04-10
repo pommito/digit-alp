@@ -1,58 +1,20 @@
 ---
-import ogImage from '../../public/assets/images/agence-web-chambery-digit-alp.webp'
+import Schemas from "./Schemas.astro";
+
+import ogImage from "../../public/assets/images/agence-web-chambery-digit-alp.webp";
 
 type Props = {
-  title: string;
-  metaTitle?: string;
-  metaDescription: string;
-}
+    title: string;
+    metaTitle?: string;
+    metaDescription: string;
+};
 
 const SITE_URL = import.meta.env.SITE_URL;
 
 // This is inspired by Patrick Faramaz and his website https://goodmotion.fr
 const pathname = new URL(Astro.request.url).pathname.replace(".html", "");
 
-const { title, metaTitle, metaDescription } = Astro.props
-
-const ProfessionalServiceSchema = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Digit'Alp",
-  "image": `${SITE_URL}${ogImage.src}`,
-  "description": "Digit'Alp est une agence web spécialisée dans le développement de sites web et applications mobiles pour les agences de voyages et de tourisme.",
-  "url": "https://digit-alp.fr",
-  "sameAs": [
-    "https://www.linkedin.com/company/digit-alp/",
-  ],
-  "@id": `${SITE_URL}${ogImage.src}`,
-  "telephone": "0647936308",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "105 rue François Descotes",
-    "addressLocality": "Chambéry",
-    "postalCode": "73000",
-    "addressCountry": "FR"
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Saturday",
-      "Friday",
-      "Thursday",
-      "Wednesday",
-      "Tuesday",
-      "Monday",
-      "Sunday"
-    ],
-    "opens": "09:00",
-    "closes": "18:00"
-  } 
-}
-
-
-
-
-
+const { title, metaTitle, metaDescription } = Astro.props;
 ---
 
 <title>{title || metaTitle}</title>
@@ -72,18 +34,4 @@ const ProfessionalServiceSchema = {
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta content="fr" name="og:locale" />
 <link rel="sitemap" href="/sitemap-index.xml" />
-
-<script type="application/ld+json" set:html={JSON.stringify(ProfessionalServiceSchema)} />
-
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": "Digit'Alp",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "13"
-    }
-  }
-</script>
+<Schemas />

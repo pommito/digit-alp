@@ -1,0 +1,97 @@
+---
+import ogImage from "../../public/assets/images/agence-web-chambery-digit-alp.webp";
+
+const SITE_URL = import.meta.env.SITE_URL;
+
+const { pathname } = Astro.url;
+const paths = pathname.split("/").filter((segment) => segment);
+
+const breadcrumbs = paths.map((segment, index) => {
+    const breadcrumbPath = `${SITE_URL}/${paths.slice(0, index + 1).join("/")}`;
+    return {
+        name: segment,
+        path: breadcrumbPath,
+    };
+});
+
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbs.length
+        ? breadcrumbs.map((breadcrumb, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              item: {
+                  "@id": breadcrumb.path,
+                  name: breadcrumb.name,
+              },
+          }))
+        : [
+              {
+                  "@type": "ListItem",
+                  position: 1,
+                  item: {
+                      "@id": SITE_URL,
+                      name: "Home",
+                  },
+              },
+          ],
+};
+
+const professionalServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Digit'Alp",
+    image: `${SITE_URL}${ogImage.src}`,
+    description:
+        "Digit'Alp est une agence web spécialisée dans le développement de sites web et applications mobiles pour les agences de voyages et de tourisme.",
+    url: "https://digit-alp.fr",
+    sameAs: ["https://www.linkedin.com/company/digit-alp/"],
+    "@id": `${SITE_URL}${ogImage.src}`,
+    telephone: "0647936308",
+    address: {
+        "@type": "PostalAddress",
+        streetAddress: "105 rue François Descotes",
+        addressLocality: "Chambéry",
+        postalCode: "73000",
+        addressCountry: "FR",
+    },
+    openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+            "Saturday",
+            "Friday",
+            "Thursday",
+            "Wednesday",
+            "Tuesday",
+            "Monday",
+            "Sunday",
+        ],
+        opens: "09:00",
+        closes: "18:00",
+    },
+};
+---
+
+<script
+    type="application/ld+json"
+    set:html={JSON.stringify(breadcrumbSchema)}
+/>
+
+<script
+    type="application/ld+json"
+    set:html={JSON.stringify(professionalServiceSchema)}
+/>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Digit'Alp",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "13"
+        }
+    }
+</script>

@@ -1,41 +1,46 @@
 ---
 const { pathname } = Astro.url;
-const paths = pathname.split("/").filter(segment => segment);
+const paths = pathname.split("/").filter((segment) => segment);
 
 const breadcrumbs = paths.map((segment, index) => {
-    const breadcrumbPath = '/' + paths.slice(0, index + 1).join('/');
+    const breadcrumbPath = "/" + paths.slice(0, index + 1).join("/");
     return {
         name: segment,
-        path: breadcrumbPath
+        path: breadcrumbPath,
     };
 });
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": breadcrumbs.map((breadcrumb, index) => ({
-    "@type": "ListItem",
-    "position": index + 1,
-    "item": {
-      "@id": breadcrumb.path,
-      "name": breadcrumb.name
-    }
-  }))
-};
 ---
 
-<ul class="container flex gap-1 uppercase text-xs mb-2 mx-auto animate-fade-in transition-discrete">
-  <li><a href="/" class="relative transition-all duration-300 ease-in-out hover:text-da-300">Accueil</a> <span class="text-da-300"> / </span></li>
-  {breadcrumbs.map((breadcrumb, index) => (
+<ul
+    class="container flex gap-1 uppercase text-xs mb-2 mx-auto animate-fade-in transition-discrete"
+>
     <li>
-      {breadcrumb.path === pathname ? (
-        <span class="relative font-semibold">{breadcrumb.name}</span>
-      ) : (
-        <a href={`${breadcrumb.path}`} class="relative transition-all duration-300 ease-in-out hover:text-da-300">{breadcrumb.name}</a>
-      )}
-      {index < breadcrumbs.length - 1 && <span class="text-da-300 font-bold"> / </span>}
+        <a
+            href="/"
+            class="relative transition-all duration-300 ease-in-out hover:text-da-300"
+            >Accueil</a
+        >
+        <span class="text-da-300"> / </span>
     </li>
-  ))}
+    {
+        breadcrumbs.map((breadcrumb, index) => (
+            <li>
+                {breadcrumb.path === pathname ? (
+                    <span class="relative font-semibold">
+                        {breadcrumb.name}
+                    </span>
+                ) : (
+                    <a
+                        href={`${breadcrumb.path}`}
+                        class="relative transition-all duration-300 ease-in-out hover:text-da-300"
+                    >
+                        {breadcrumb.name}
+                    </a>
+                )}
+                {index < breadcrumbs.length - 1 && (
+                    <span class="text-da-300 font-bold"> / </span>
+                )}
+            </li>
+        ))
+    }
 </ul>
-
-<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
