@@ -5,6 +5,9 @@ import Button from "../ui/Button.astro";
 import gojuraCard from "@/assets/gojura_website.png";
 import gastiniCard from "@/assets/gastini_website.png";
 import montyonCard from "@/assets/montyon_website.png";
+import { getCollection } from "astro:content";
+
+const clients = await getCollection('projects')
 ---
 
   <div class="relative w-screen max-w-[1920px] h-screen text-center flex flex-col justify-center items-center gap-4 px-4 py-6 mx-auto md:gap-4 md:p-12">
@@ -22,7 +25,7 @@ import montyonCard from "@/assets/montyon_website.png";
     </div>
     <h1 class="opacity-0">Agence Web à Chambéry</h1>
     <h2 class="text-4xl !font-sans md:text-6xl lg:w-2/3 lg:max-w-[800px]">Constructeurs de sites web <em class="text-da font-title">performants</em> et <em class="text-da font-title">durables</em></h2>
-    <p class="text-balance md:text-lg md:max-w-[600px] ">Spécialiste du développement web, nous vous accompagnons dans la construction et la réalisation de tous vos projets web.</p>
+    <p class="text-balance md:text-lg md:max-w-[600px] ">Expert en développement web, nous vous accompagnons dans la construction et la réalisation de tous vos projets web.</p>
     <div class="flex gap-4 pt-2">
       <Button label="J'ai un projet !" secondLabel="Let's go !" link='/contact' style="primary" />
       <Button label="Réserver un appel" link='/contact' style="secondary" />

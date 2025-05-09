@@ -15,7 +15,7 @@ const colors = style === 'primary'
 
 ---
 
-<a href={link} class=`group/button ${colors} text-da-white px-6 py-3 border-b-0 border-transparent border-l-0 border-r-0 border-solid border-t-0 rounded-full opacity-100`>
+<a href={link} class=`group/button ${colors} text-da-white text-lg px-6 py-3 border-b-0 border-transparent border-l-0 border-r-0 border-solid border-t-0 rounded-full opacity-100`>
   <div class="w-full h-full flex box-border items-center justify-center transition-transform transform-3d duration-750 ease-[cubic-bezier(0.76,0,0.24,1)]  group-hover/button:rotate-x-90">
     <span class="transition-all duration-750 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover/button:-translate-y-full group-hover/button:opacity-0">{label}</span>
     <span class="absolute opacity-0 transition-all duration-750 ease-[cubic-bezier(0.76,0,0.24,1)] -rotate-x-90 group-hover/button:opacity-100">{secondLabel || label}</span>
