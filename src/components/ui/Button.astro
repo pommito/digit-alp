@@ -1,11 +1,12 @@
 ---
 type Props = {
-  label : string;
   link: string;
+  label : string;
+  secondLabel?: string;
   style : 'primary' | 'secondary';
 }
 
-const { label, link, style } = Astro.props;
+const { link, label, secondLabel, style } = Astro.props;
 
 const colors = style === 'primary'
 ? 'bg-da shadow-[0_1px_2px_0_rgba(8,38,128,0.64),0_0_0_1px_rgba(8,38,128,1),-1px_1px_0.25px_0_rgba(255,255,255,0.12)_inset,1px_1px_0.25px_0_rgba(255,255,255,0.12)_inset,0_4px_13px_0_rgba(8,38,128,0.16),0_0.602187px_0.602187px_-1.25px_rgba(8,38,128,0.18),0_2.28853px_2.28853px_-2.5px_rgba(8,38,128,0.16),0_10px_10px_-3.75px_rgba(8,38,128,0.063)]' 
@@ -14,8 +15,11 @@ const colors = style === 'primary'
 
 ---
 
-<a href={link} class=`${colors} text-da-white text-lg px-6 py-3 border-b-0 border-transparent border-l-0 border-r-0 border-solid border-t-0 rounded-full opacity-100`>
-  {label}
+<a href={link} class=`group/button ${colors} text-da-white px-6 py-3 border-b-0 border-transparent border-l-0 border-r-0 border-solid border-t-0 rounded-full opacity-100`>
+  <div class="w-full h-full flex box-border items-center justify-center transition-transform transform-3d duration-750 ease-[cubic-bezier(0.76,0,0.24,1)]  group-hover/button:rotate-x-90">
+    <span class="transition-all duration-750 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover/button:-translate-y-full group-hover/button:opacity-0">{label}</span>
+    <span class="absolute opacity-0 transition-all duration-750 ease-[cubic-bezier(0.76,0,0.24,1)] -rotate-x-90 group-hover/button:opacity-100">{secondLabel || label}</span>
+  </div>
 </a>
 <!-- <a href={link} class=`${colors} group/button block w-fit h-fit text-lg font-medium rounded-full cursor-pointer`>
   <div class="w-full h-full flex px-6 py-4 box-border items-center justify-center transition-transform transform-3d duration-750 ease-[cubic-bezier(0.76,0,0.24,1)]  group-hover/button:rotate-x-90">
