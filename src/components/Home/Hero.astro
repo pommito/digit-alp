@@ -30,5 +30,13 @@ const clients = await getCollection('projects')
       <Button label="J'ai un projet !" secondLabel="Let's go !" link='/contact' style="primary" />
       <Button label="Réserver un appel" link='/contact' style="secondary" />
     </div>
+
+    <ul class=" absolute bottom-0 flex gap-0.25 md:mx-auto ">
+			{clients.map ( client => (
+				<li class="group w-full flex items-center justify-center col-span-1 object-contain p-8">
+					<Image src={client.data.logo} alt={`Logo de l'entreprise ${client.data.client}`} class="group-hover:-translate-y-2 transition-transform ease-in-out duration-300" />
+				</li>
+			))}
+		</ul>
     
   </div>
