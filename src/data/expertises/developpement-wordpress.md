@@ -3,7 +3,7 @@ order: 2
 title: Développement WordPress
 description: Développement de sites WordPress sur-mesure, optimisés et sécurisés. Thèmes personnalisés, plugins spécifiques, et maintenance pour des performances optimales.
 seo:
-  metaTitle: Agence web de développement WordPress | Digit'Alp
+  metaTitle: Developpeur wordpress à Chambéry - Digit'Alp
   metaDescription: Notre expertise en développement WordPress nous permet de créer des sites WordPress sur-mesure, optimisés et sécurisés pour répondre à des besoins simples comme des besoins spécifiques.
 icon: ./assets/developpement-wordpress/icon.svg
 
