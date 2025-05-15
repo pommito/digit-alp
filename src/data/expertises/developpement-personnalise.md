@@ -3,7 +3,7 @@ order: 4
 title: Développement personnalisé
 description: Création d'applications web sur-mesure avec des frameworks JavaScript modernes comme React et Astro. Solutions performantes pour répondre à vos besoins les plus simples comme les plus complexes.
 seo:
-  metaTitle: Agence web de développement personnalisé | Digit'Alp
+  metaTitle: Agence web de développement personnalisé - Digit'Alp
   metaDescription: Notre expertise en développement web nous permet de créer des applications web sur-mesure avec des frameworks JavaScript modernes comme React et Astro. Solutions performantes pour répondre à vos besoins les plus simples comme les plus complexes.
 icon: ./assets/developpement-personnalise/icon.svg
 

@@ -1,10 +1,10 @@
 ---
 order: 1
-title: Création de site web
+title: Création de site internet
 description: Sites vitrines, sites éco-conçus, multi-sites ou refontes et optimisations de sites web existants. Du design au développement, nous proposons des solutions adaptées à vos besoins.
 seo:
-  metaTitle: Agence de création de site web | Digit'Alp
-  metaDescription: Notre agence vous accompagne dans la création de sites web optimisés et sécurisés. Sites vitrines, sites éco-conçus, multi-sites ou refontes et optimisations de sites web existants.
+  metaTitle: Création de site internet à Chambéry - Digit'Alp
+  metaDescription: Notre agence vous accompagne dans la création de sites internet optimisés et sécurisés. Sites vitrines, sites éco-conçus, multi-sites ou refontes et optimisations de sites web existants.
 icon: ./assets/creation-site-web/icon.svg
 
 subTitle: Un site web performant pour votre entreprise
@@ -20,9 +20,9 @@ specList:
     illustration: ./assets/creation-site-web/spec-durability.svg
     description: Nous cherchons perpétuellement à réduire notre impact sans pour autant faire de compromis sur la qualité de notre travail.
 questions:
-  - label: Combien de temps faut-il pour créer un site web ?
+  - label: Combien de temps faut-il pour créer un site internet ?
     answer: La durée de création d'un site web varie en fonction de sa complexité et de vos besoins spécifiques. En général, un site web simple peut être créé en quelques semaines, tandis qu'un site plus complexe avec des fonctionnalités personnalisées peut prendre plusieurs mois. La fréquence des échanges est également un paramètre important à prendre en compte.
-  - label: Puis-je apporter des modifications à mon site web après sa mise en ligne ?
+  - label: Puis-je apporter des modifications à mon site internet après sa mise en ligne ?
     answer: Oui, vous pouvez apporter des modifications à votre site web après sa mise en ligne. Nous vous fournissons des instructions détaillées et, si nécessaire, une formation pour vous permettre de gérer facilement le contenu de votre site. Pour des modifications plus complexes, nous offrons également des services de maintenance et d'infogérance.
   - label: Mon site web sera-t-il bien référencé par les moteurs de recherche ?
     answer: Lors de la création de votre site web, nous mettons en place une structure technique optimisée pour le référencement naturel (sémantique HTML, accessibilité, design responsive, temps de chargement optimisé, etc.). Pour aller plus loin en SEO, une stratégie de contenu ainsi qu'une stratégie de popularité (backlinks) peuvent être mises en place en complément pour accroître plus rapidement la notoriété de votre site web et son référencement.

@@ -60,7 +60,7 @@ const linkedProjects = await getEntries(relatedProjects);
     </div>
   </section>
 
-  <FeaturedWorks projects={linkedProjects} title="Nos projets" subTitle={`Nos projets en ${title}`} theme='light' />
+  <FeaturedWorks projects={linkedProjects} title="Nos projets" subTitle={`Nos projets en ${title.toLocaleLowerCase()}`} theme='light' />
 
   <Content />
 </PageLayout>
