@@ -1,3 +1,7 @@
+# Keep `overrides` in sync with the `pnpm.overrides` mirror in package.json:
+# pnpm >= 11 reads this file, pnpm 9 (used by the Railway build image) reads package.json.
+packages:
+  - '.'
 allowBuilds:
   esbuild: true
   sharp: true
